@@ -1,0 +1,61 @@
+{
+  "stats": [
+    {
+      "id": 1,
+      "label": "Happy Clients",
+      "value": 25,
+      "icon": "users",
+      "suffix": "+"
+    },
+    {
+      "id": 2,
+      "label": "Projects Completed",
+      "value": 40,
+      "icon": "briefcase",
+      "suffix": "+"
+    },
+    {
+      "id": 3,
+      "label": "Awards Won",
+      "value": 3,
+      "icon": "award",
+      "suffix": ""
+    },
+    {
+      "id": 4,
+      "label": "Support Hours",
+      "value": 1200,
+      "icon": "clock",
+      "suffix": "+"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Sarah Johnson",
+      "position": "Project Manager",
+      "company": "Tech Solutions Inc.",
+      "content": "Abdeltawab delivered exceptional work on our e-commerce platform. His attention to detail and technical expertise made the project a huge success.",
+      "rating": 5,
+      "image": "/placeholder.svg?height=80&width=80"
+    },
+    {
+      "id": 2,
+      "name": "Ahmed Hassan",
+      "position": "CEO",
+      "company": "Digital Marketing Pro",
+      "content": "Working with Abdeltawab was a pleasure. He understood our requirements perfectly and delivered a beautiful, responsive website that exceeded our expectations.",
+      "rating": 5,
+      "image": "/placeholder.svg?height=80&width=80"
+    },
+    {
+      "id": 3,
+      "name": "Maria Rodriguez",
+      "position": "Design Director",
+      "company": "Creative Studio",
+      "content": "Abdeltawab's ability to translate designs into pixel-perfect code is remarkable. He's reliable, professional, and delivers high-quality work consistently.",
+      "rating": 5,
+      "image": "/placeholder.svg?height=80&width=80"
+    }
+  ]
+}

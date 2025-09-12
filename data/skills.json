@@ -1,0 +1,82 @@
+{
+  "technical": [
+    {
+      "name": "React.js",
+      "level": 90,
+      "category": "Frontend"
+    },
+    {
+      "name": "Next.js",
+      "level": 70,
+      "category": "Frontend"
+    },
+    {
+      "name": "TypeScript",
+      "level": 65,
+      "category": "Frontend"
+    },
+    {
+      "name": "JavaScript",
+      "level": 80,
+      "category": "Language"
+    },
+        {
+      "name": "Python",
+      "level": 50,
+      "category": "Language"
+    },
+    {
+      "name": "HTML5",
+      "level": 95,
+      "category": "Frontend"
+    },
+    {
+      "name": "CSS3",
+      "level": 90,
+      "category": "Frontend"
+    },
+    {
+      "name": "Tailwind CSS",
+      "level": 88,
+      "category": "Frontend"
+    },
+    {
+      "name": "Git & GitHub",
+      "level": 85,
+      "category": "Tools"
+    },
+        {
+      "name": "Trello",
+      "level": 70,
+      "category": "Tools"
+    },
+    {
+      "name": "Responsive Design",
+      "level": 92,
+      "category": "Frontend"
+    }
+
+  ],
+  "soft": [
+    {
+      "name": "Problem Solving",
+      "level": 90
+    },
+    {
+      "name": "Team Collaboration",
+      "level": 85
+    },
+    {
+      "name": "Communication",
+      "level": 88
+    },
+    {
+      "name": "Time Management",
+      "level": 85
+    },
+    {
+      "name": "Adaptability",
+      "level": 90
+    }
+  ]
+}

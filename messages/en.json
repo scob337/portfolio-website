@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "Abdeltawab Sha`ban",
+    "title": "Front-End Developer",
+    "description": "I create modern, responsive web applications using React and Next.js",
+    "cta": "View My Work",
+    "contact": "Get In Touch"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "Hello, I'm Abdeltawab Sha`ban, a 27-year-old front-end developer from Egypt. With hands-on experience in building dynamic user interfaces and an online store using ReactJS, I'm passionate about learning and continuously evolving to stand out in the competitive tech industry, prove my worth, and leave a strong impact.",
+    "details": {
+      "age": "Age",
+      "city": "City",
+      "birthday": "Birthday",
+      "email": "Email",
+      "phone": "Phone",
+      "degree": "Degree",
+      "freelance": "Freelance"
+    },
+    "values": {
+      "age": "27",
+      "city": "Giza, Egypt",
+      "birthday": "23 March 1998",
+      "email": "scob198350@gmail.com",
+      "phone": "+201117218756",
+      "degree": "High School",
+      "freelance": "Available"
+    }
+  },
+  "projects": {
+    "title": "My Projects",
+    "viewAll": "View All Projects",
+    "filter": {
+      "all": "All",
+      "react": "React",
+      "nextjs": "Next.js",
+      "ecommerce": "E-commerce",
+      "landing": "Landing Pages"
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "description": "Let's work together on your next project",
+    "hero": {
+      "title": "Let's Work Together",
+      "subtitle": "Ready to bring your ideas to life? I'm here to help you create amazing digital experiences."
+    },
+    "info": {
+      "title": "Contact Information",
+      "description": "Feel free to reach out through any of these channels. I'm always excited to discuss new opportunities and projects.",
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location",
+      "freelance": "Freelance Status",
+      "languages": "Languages",
+      "timezone": "Timezone",
+      "available": "Available",
+      "unavailable": "Not Available"
+    },
+    "form": {
+      "title": "Send Me a Message",
+      "subtitle": "Have a project in mind? Let's discuss how we can work together.",
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "namePlaceholder": "Your full name",
+      "emailPlaceholder": "your.email@example.com",
+      "subjectPlaceholder": "What's this about?",
+      "messagePlaceholder": "Tell me about your project or inquiry...",
+      "success": {
+        "title": "Message Sent Successfully!",
+        "message": "Thank you for reaching out. I'll get back to you within 24 hours."
+      }
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Abdeltawab Sha`ban. All rights reserved."
+  }
+}

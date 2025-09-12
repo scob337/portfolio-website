@@ -1,0 +1,46 @@
+{
+  "work": [
+    {
+      "id": 1,
+      "company": "Elite Agency",
+      "position": "Front-End Developer",
+      "startDate": "2024-11-01",
+      "endDate": "2025-01-31",
+      "current": false,
+      "location": "Remote",
+      "description": "Developed responsive web applications and landing pages for various clients. Collaborated with design teams to implement pixel-perfect UI components using React and Next.js.",
+      "achievements": [
+        "Improved website performance by 40% through optimization",
+        "Implemented modern design systems and component libraries"
+      ],
+      "technologies": ["HTML","CSS" , "JavaScript" ,"Tailwindcss"]
+    },
+    {
+      "id": 2,
+      "company": "Genibridge",
+      "position": "Front-End Developer",
+      "startDate": "2024-01-01",
+      "endDate": "2024-06-30",
+      "current": false,
+      "location": "Remote",
+      "description": "Worked on developing user interfaces for web applications. Focused on creating responsive designs and implementing interactive features using modern JavaScript frameworks.",
+      "achievements": [
+        "Developed key features for the main product dashboard",
+        "Reduced load times by 30% through code optimization",
+        "Mentored junior developers on best practices"
+      ],
+      "technologies": ["React","TypeScript" , "Tailwindcss","Nextjs","soket.io","Restfull API"]
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "institution": "High School",
+      "degree": "High School Diploma",
+      "startDate": "2016-09-01",
+      "endDate": "2019-06-30",
+      "location": "Giza, Egypt",
+      "description": "Completed secondary education."
+    }
+  ]
+}
