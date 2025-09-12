@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description:
       "Get in touch for your next web development project. Professional front-end developer available for freelance work.",
     type: "website",
-    url: "https://abdeltawab-portfolio.vercel.app/contact"
+    url: "https://abdo-front-end.netlify.app/contact"
   },
   twitter: {
     card: "summary_large_image",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: "Get in touch for your next web development project",
   },
   alternates: {
-    canonical: "https://abdeltawab-portfolio.vercel.app/contact",
+    canonical: "https://abdo-front-end.netlify.app/contact",
   },
 }
 

@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     "API Integration",
     "Database Design"
   ],
-  authors: [{ name: "Abdeltawab Sha`ban", url: "https://abdeltawab-portfolio.vercel.app" }],
+  authors: [{ name: "Abdeltawab Sha`ban", url: "https://abdo-front-end.netlify.app" }],
   creator: "Abdeltawab Sha`ban",
   publisher: "Abdeltawab Sha`ban",
   formatDetection: {
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     alternateLocale: "ar_EG",
-    url: "https://abdeltawab-portfolio.vercel.app",
+    url: "https://abdo-front-end.netlify.app",
     siteName: "Abdeltawab Sha`ban Portfolio",
     title: "Abdeltawab Sha`ban - Front-End Developer | React & Next.js Expert",
     description:
@@ -94,10 +94,10 @@ export const metadata: Metadata = {
     google: "your-google-verification-code",
   },
   alternates: {
-    canonical: "https://abdeltawab-portfolio.vercel.app",
+    canonical: "https://abdo-front-end.netlify.app",
     languages: {
-      "en-US": "https://abdeltawab-portfolio.vercel.app/en",
-      "ar-EG": "https://abdeltawab-portfolio.vercel.app/ar",
+      "en-US": "https://abdo-front-end.netlify.app/en",
+      "ar-EG": "https://abdo-front-end.netlify.app/ar",
     },
   },
 }
@@ -130,10 +130,10 @@ export default async function LocaleLayout({
               alternateName: "عبد التواب شعبان",
               jobTitle: "Front-End Developer",
               description: "Professional front-end developer specializing in React, Next.js, and modern web technologies. Available for freelance projects worldwide.",
-              url: "https://abdeltawab-portfolio.vercel.app",
+              url: "https://abdo-front-end.netlify.app",
               email: "scob198350@gmail.com",
               telephone: "+201117218756",
-              image: "https://abdeltawab-portfolio.vercel.app/og-image.png",
+              image: "https://abdo-front-end.netlify.app/og-image.png",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Giza",
@@ -211,7 +211,7 @@ export default async function LocaleLayout({
               "@type": "WebSite",
               name: "Abdeltawab Sha`ban Portfolio",
               alternateName: "عبد التواب شعبان - معرض الأعمال",
-              url: "https://abdeltawab-portfolio.vercel.app",
+              url: "https://abdo-front-end.netlify.app",
               description: "Professional portfolio showcasing modern web development projects and services",
               author: {
                 "@type": "Person",
@@ -220,7 +220,7 @@ export default async function LocaleLayout({
               inLanguage: ["en", "ar"],
               potentialAction: {
                 "@type": "SearchAction",
-                target: "https://abdeltawab-portfolio.vercel.app/search?q={search_term_string}",
+                target: "https://abdo-front-end.netlify.app/search?q={search_term_string}",
                 "query-input": "required name=search_term_string"
               }
             }),

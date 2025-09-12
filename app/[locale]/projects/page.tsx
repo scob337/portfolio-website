@@ -26,7 +26,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description:
         "Comprehensive portfolio showcasing modern web development projects, applications, and innovative solutions",
       type: "website",
-      url: "https://abdeltawab-portfolio.vercel.app/projects",
+      url: "https://abdo-front-end.netlify.app/projects",
       images: [
         {
           url: "/projects-showcase.png",
@@ -43,7 +43,7 @@ export async function generateMetadata(): Promise<Metadata> {
       images: ["/projects-showcase.png"],
     },
     alternates: {
-      canonical: "https://abdeltawab-portfolio.vercel.app/projects",
+      canonical: "https://abdo-front-end.netlify.app/projects",
     },
   }
 }

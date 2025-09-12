@@ -26,7 +26,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: "About Abdeltawab Sha`ban - Front-End Developer",
       description: "Professional background, skills, and experience of a passionate front-end developer from Egypt",
       type: "profile",
-      url: "https://abdeltawab-portfolio.vercel.app/about",
+      url: "https://abdo-front-end.netlify.app/about",
       images: [
         {
           url: "/professional-developer-portrait.png",
@@ -43,7 +43,7 @@ export async function generateMetadata(): Promise<Metadata> {
       images: ["/professional-developer-portrait.png"],
     },
     alternates: {
-      canonical: "https://abdeltawab-portfolio.vercel.app/about",
+      canonical: "https://abdo-front-end.netlify.app/about",
     },
   }
 }

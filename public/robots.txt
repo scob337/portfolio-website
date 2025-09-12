@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://abdeltawab-portfolio.vercel.app/sitemap.xml
+Sitemap: https://abdo-front-end.netlify.app/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 1

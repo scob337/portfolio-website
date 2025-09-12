@@ -16,6 +16,7 @@ import { Send, CheckCircle, AlertCircle } from "lucide-react"
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email address"),
+  phone: z.string().min(10, "Phone number must be at least 10 digits").regex(/^[+]?[0-9\s\-\(\)]+$/, "Please enter a valid phone number"),
   subject: z.string().min(5, "Subject must be at least 5 characters"),
   message: z.string().min(10, "Message must be at least 10 characters"),
 })
@@ -33,6 +34,7 @@ export function ContactForm() {
     defaultValues: {
       name: "",
       email: "",
+      phone: "",
       subject: "",
       message: "",
     },
@@ -51,6 +53,7 @@ export function ContactForm() {
         body: JSON.stringify({
           name: data.name,
           email: data.email,
+          phone: data.phone,
           subject: data.subject,
           message: data.message,
         }),
@@ -139,6 +142,22 @@ export function ContactForm() {
                       <FormLabel>{t("form.email")}</FormLabel>
                       <FormControl>
                         <Input type="email" placeholder={t("form.emailPlaceholder")} {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <FormField
+                  control={form.control}
+                  name="phone"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>{t("form.phone")}</FormLabel>
+                      <FormControl>
+                        <Input type="tel" placeholder={t("form.phonePlaceholder")} {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
