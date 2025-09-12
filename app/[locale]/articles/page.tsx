@@ -61,7 +61,7 @@ const articles = [
     category: "Marketing",
     readTime: "4 دقائق",
     publishDate: "2024-01-20",
-    keywords: ["لاندنج بيدج", "تسويق", "تحويلات"]
+    keywords: ["لاندنج بيدج", "تسويق", "تحويلات","صفحات هبوط" , "Landing page"]
   },
   {
     id: "corporate-website-importance",
