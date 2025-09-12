@@ -1,140 +1,140 @@
 # 🌟 Portfolio Website
 
-موقع بورتفوليو شخصي عصري ومتجاوب مبني بأحدث التقنيات لعرض المشاريع والخبرات المهنية.
+A modern, responsive personal portfolio website built with cutting-edge technologies to showcase projects and professional experience.
 
-## ✨ المميزات
+## ✨ Features
 
-- 🎨 **تصميم عصري ومتجاوب** - يعمل بشكل مثالي على جميع الأجهزة
-- 🌐 **دعم متعدد اللغات** - العربية والإنجليزية مع next-intl
-- 🌙 **وضع داكن/فاتح** - تبديل سلس بين الأوضاع
-- 📧 **نظام اتصال متقدم** - إرسال الرسائل مباشرة عبر SMTP
-- ⚡ **أداء عالي** - مُحسن للسرعة وتجربة المستخدم
-- 🎯 **SEO محسن** - لظهور أفضل في محركات البحث
-- 📱 **PWA جاهز** - يمكن تثبيته كتطبيق
+- 🎨 **Modern & Responsive Design** - Works perfectly on all devices
+- 🌐 **Multi-language Support** - Arabic and English with next-intl
+- 🌙 **Dark/Light Mode** - Smooth theme switching
+- 📧 **Advanced Contact System** - Direct email sending via SMTP
+- ⚡ **High Performance** - Optimized for speed and user experience
+- 🎯 **SEO Optimized** - Better visibility in search engines
+- 📱 **PWA Ready** - Can be installed as an app
 
-## 🛠️ التقنيات المستخدمة
+## 🛠️ Tech Stack
 
 ### Frontend
-- **Next.js 14** - إطار عمل React مع App Router
-- **TypeScript** - للكتابة الآمنة والمنظمة
-- **Tailwind CSS** - للتصميم السريع والمرن
-- **Shadcn/ui** - مكونات UI جاهزة وقابلة للتخصيص
-- **Framer Motion** - للحركات والانتقالات السلسة
-- **next-intl** - لدعم تعدد اللغات
+- **Next.js 14** - React framework with App Router
+- **TypeScript** - For type-safe and organized development
+- **Tailwind CSS** - For rapid and flexible styling
+- **Shadcn/ui** - Ready-to-use and customizable UI components
+- **Framer Motion** - For smooth animations and transitions
+- **next-intl** - For internationalization support
 
 ### Backend & APIs
-- **Next.js API Routes** - للـ backend endpoints
-- **Nodemailer** - لإرسال الإيميلات
-- **Zod** - للتحقق من صحة البيانات
+- **Next.js API Routes** - For backend endpoints
+- **Nodemailer** - For email sending
+- **Zod** - For data validation
 
 ### Tools & Development
-- **ESLint & Prettier** - لجودة الكود
-- **TypeScript** - للتطوير الآمن
-- **Git** - لإدارة الإصدارات
+- **ESLint & Prettier** - For code quality
+- **TypeScript** - For safe development
+- **Git** - For version control
 
-## 🚀 التشغيل المحلي
+## 🚀 Getting Started
 
-### المتطلبات
+### Prerequisites
 - Node.js 18+ 
-- npm أو yarn أو pnpm
+- npm or yarn or pnpm
 
-### خطوات التشغيل
+### Installation Steps
 
-1. **استنساخ المشروع**
+1. **Clone the repository**
 ```bash
 git clone https://github.com/yourusername/portfolio-website.git
 cd portfolio-website
 ```
 
-2. **تثبيت التبعيات**
+2. **Install dependencies**
 ```bash
 npm install
-# أو
+# or
 yarn install
-# أو
+# or
 pnpm install
 ```
 
-3. **إعداد متغيرات البيئة**
+3. **Setup environment variables**
 ```bash
 cp .env.example .env.local
 ```
 
-ثم قم بتعديل ملف `.env.local` وإضافة:
+Then edit `.env.local` file and add:
 ```env
-# إعدادات SMTP للإيميل
+# SMTP settings for email
 EMAIL_USER=your-email@gmail.com
-EMAIL_PASS=your-app-password
+EMAIL_PASS=your-16-digit-app-password
 EMAIL_HOST=smtp.gmail.com
 EMAIL_PORT=587
 EMAIL_SECURE=false
 EMAIL_TO=recipient@gmail.com
 ```
 
-4. **تشغيل الخادم المحلي**
+4. **Run the development server**
 ```bash
 npm run dev
-# أو
+# or
 yarn dev
-# أو
+# or
 pnpm dev
 ```
 
-5. **فتح المتصفح**
-انتقل إلى [http://localhost:3000](http://localhost:3000)
+5. **Open your browser**
+Navigate to [http://localhost:3000](http://localhost:3000)
 
-## 📁 هيكل المشروع
+## 📁 Project Structure
 
 ```
 portfolio-website/
 ├── app/                    # Next.js App Router
-│   ├── [locale]/          # صفحات متعددة اللغات
+│   ├── [locale]/          # Multi-language pages
 │   ├── api/               # API endpoints
-│   └── globals.css        # الأنماط العامة
-├── components/            # مكونات React
-│   ├── ui/               # مكونات UI أساسية
-│   ├── sections/         # أقسام الصفحات
-│   └── layout/           # مكونات التخطيط
-├── data/                 # بيانات JSON
-├── hooks/                # React Hooks مخصصة
-├── lib/                  # مكتبات مساعدة
-├── messages/             # ملفات الترجمة
-├── public/               # الملفات الثابتة
-└── types/                # تعريفات TypeScript
+│   └── globals.css        # Global styles
+├── components/            # React components
+│   ├── ui/               # Basic UI components
+│   ├── sections/         # Page sections
+│   └── layout/           # Layout components
+├── data/                 # JSON data
+├── hooks/                # Custom React Hooks
+├── lib/                  # Helper libraries
+├── messages/             # Translation files
+├── public/               # Static files
+└── types/                # TypeScript definitions
 ```
 
-## 🎨 التخصيص
+## 🎨 Customization
 
-### الألوان والثيم
-يمكنك تخصيص الألوان في `tailwind.config.js` و `app/globals.css`
+### Colors and Theme
+You can customize colors in `tailwind.config.js` and `app/globals.css`
 
-### المحتوى
-- **البيانات الشخصية**: `data/personal.json`
-- **المشاريع**: `data/projects.json`
-- **المهارات**: `data/skills.json`
-- **الخبرات**: `data/experience.json`
+### Content
+- **Personal Data**: `data/personal.json`
+- **Projects**: `data/projects.json`
+- **Skills**: `data/skills.json`
+- **Experience**: `data/experience.json`
 
-### الترجمات
-- **الإنجليزية**: `messages/en.json`
-- **العربية**: يمكن إضافة `messages/ar.json`
+### Translations
+- **English**: `messages/en.json`
+- **Arabic**: You can add `messages/ar.json`
 
-## 📧 إعداد الإيميل
+## 📧 Email Setup
 
-1. **إنشاء App Password في Gmail**:
-   - انتقل إلى إعدادات Google Account
+1. **Create App Password in Gmail**:
+   - Go to Google Account settings
    - Security → 2-Step Verification → App passwords
-   - أنشئ كلمة مرور للتطبيق
+   - Generate an app password
 
-2. **تحديث متغيرات البيئة**:
+2. **Update environment variables**:
 ```env
 EMAIL_USER=your-gmail@gmail.com
 EMAIL_PASS=your-16-digit-app-password
 EMAIL_TO=where-to-receive@gmail.com
 ```
 
-## 🚀 النشر
+## 🚀 Deployment
 
-### Vercel (موصى به)
+### Vercel (Recommended)
 ```bash
 npm i -g vercel
 vercel
@@ -143,7 +143,7 @@ vercel
 ### Netlify
 ```bash
 npm run build
-# ارفع مجلد .next إلى Netlify
+# Upload .next folder to Netlify
 ```
 
 ### Docker
@@ -152,28 +152,28 @@ docker build -t portfolio-website .
 docker run -p 3000:3000 portfolio-website
 ```
 
-## 🤝 المساهمة
+## 🤝 Contributing
 
-1. Fork المشروع
-2. أنشئ branch جديد (`git checkout -b feature/amazing-feature`)
-3. Commit التغييرات (`git commit -m 'Add amazing feature'`)
-4. Push إلى Branch (`git push origin feature/amazing-feature`)
-5. افتح Pull Request
+1. Fork the project
+2. Create a new branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-## 📄 الرخصة
+## 📄 License
 
-هذا المشروع مرخص تحت رخصة MIT - انظر ملف [LICENSE](LICENSE) للتفاصيل.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 📞 التواصل
+## 📞 Contact
 
-- **الموقع**: [your-website.com](https://your-website.com)
-- **الإيميل**: your-email@gmail.com
+- **Website**: [your-website.com](https://your-website.com)
+- **Email**: your-email@gmail.com
 - **LinkedIn**: [your-linkedin](https://linkedin.com/in/your-profile)
 - **GitHub**: [your-github](https://github.com/your-username)
 
 ---
 
 <div align="center">
-  <p>صُنع بـ ❤️ باستخدام Next.js و TypeScript</p>
-  <p>⭐ لا تنس إعطاء المشروع نجمة إذا أعجبك!</p>
+  <p>Made with ❤️ using Next.js & TypeScript</p>
+  <p>⭐ Don't forget to give the project a star if you liked it!</p>
 </div>

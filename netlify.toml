@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  SECRETS_SCAN_OMIT_PATHS = ".netlify/.next/cache/**,.netlify/.next/server/**,.netlify/.next/standalone/**,.netlify/functions-internal/**"
+  SECRETS_SCAN_OMIT_KEYS = "EMAIL_HOST,EMAIL_USER"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
