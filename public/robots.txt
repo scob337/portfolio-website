@@ -1,22 +1,5 @@
 User-agent: *
 Allow: /
 
-# Sitemap
 Sitemap: https://abdo-front-end.netlify.app/sitemap.xml
 
-# Crawl-delay
-Crawl-delay: 1
-
-# Disallow admin or private areas (if any)
-# Disallow: /admin/
-# Disallow: /private/
-
-# Allow all search engines to crawl the site
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Slurp
-Allow: /

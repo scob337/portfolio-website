@@ -8,7 +8,7 @@ export async function POST(request: NextRequest) {
     // Validate required fields
     if (!name || !email || !phone || !subject || !message) {
       return NextResponse.json(
-        { error: 'جميع الحقول مطلوبة' },
+        { error: ' All fields is required ' },
         { status: 400 }
       )
     }

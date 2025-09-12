@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import { useTranslations } from "next-intl"
 import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { Menu, X, Home, User, Briefcase, Mail } from "lucide-react"
+import { Menu, X, Home, User, Briefcase, Mail, BookOpen } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -25,6 +25,7 @@ export function Navigation() {
     { href: `/`, label: t("home"), icon: Home },
     { href: `/about`, label: t("about"), icon: User },
     { href: `/projects`, label: t("projects"), icon: Briefcase },
+    { href: `/articles`, label: t("articles"), icon: BookOpen },
     { href: `/contact`, label: t("contact"), icon: Mail },
   ]
 
