@@ -1,5 +1,7 @@
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
 User-agent: *
 Allow: /
 
-Sitemap:https://abdo-front-end.netlify.app/sitemap.xml
-
+Sitemap: https://abdo-front-end.netlify.app/sitemap.xml
