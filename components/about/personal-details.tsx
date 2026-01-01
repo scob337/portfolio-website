@@ -7,50 +7,53 @@ import { Badge } from "@/components/ui/badge"
 import { User, MapPin, Calendar, Mail, Phone, GraduationCap, Briefcase } from "lucide-react"
 import { getPersonalInfo } from "@/lib/data"
 
+import { useTranslations } from "next-intl"
+
 export function PersonalDetails() {
+  const t = useTranslations("aboutPage.details")
   const personalInfo = getPersonalInfo()
 
   const details = [
     {
       icon: User,
-      label: "Age",
+      label: t("items.Age"),
       value: personalInfo.age.toString(),
       color: "text-blue-600",
     },
     {
       icon: MapPin,
-      label: "City",
+      label: t("items.City"),
       value: personalInfo.city,
       color: "text-green-600",
     },
     {
       icon: Calendar,
-      label: "Birthday",
+      label: t("items.Birthday"),
       value: personalInfo.birthday,
       color: "text-purple-600",
     },
     {
       icon: Mail,
-      label: "Email",
+      label: t("items.Email"),
       value: personalInfo.email,
       color: "text-red-600",
     },
     {
       icon: Phone,
-      label: "Phone",
+      label: t("items.Phone"),
       value: personalInfo.phone,
       color: "text-yellow-600",
     },
     {
       icon: GraduationCap,
-      label: "Degree",
-      value: personalInfo.degree,
+      label: t("items.Degree"),
+      value: t("values.degree"),
       color: "text-indigo-600",
     },
     {
       icon: Briefcase,
-      label: "Freelance",
-      value: personalInfo.freelance,
+      label: t("items.Freelance"),
+      value: t("values.freelance"),
       color: "text-teal-600",
     },
   ]
@@ -60,7 +63,7 @@ export function PersonalDetails() {
       {/* Background decorations */}
       <div className="absolute top-10 right-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-10 left-10 w-48 h-48 bg-secondary/5 rounded-full blur-3xl" />
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -69,16 +72,16 @@ export function PersonalDetails() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold text-foreground mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text "
           >
-            Personal Details
+            {t("title")}
           </motion.h2>
-          <motion.div 
+          <motion.div
             initial={{ width: 0 }}
             whileInView={{ width: 80 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -101,7 +104,7 @@ export function PersonalDetails() {
               <Card className="h-full hover:shadow-xl transition-all duration-300 border-0 bg-gradient-to-br from-card via-card to-card/80 backdrop-blur-sm group-hover:shadow-primary/10">
                 <CardHeader className="pb-3">
                   <div className="flex items-center space-x-3">
-                    <motion.div 
+                    <motion.div
                       whileHover={{ rotate: 360, scale: 1.1 }}
                       transition={{ duration: 0.3 }}
                       className={`p-3 rounded-full bg-gradient-to-br from-background to-background/80 shadow-md ${detail.color} group-hover:shadow-lg`}
@@ -131,17 +134,17 @@ export function PersonalDetails() {
             whileHover={{ scale: 1.05 }}
             className="inline-block"
           >
-            <Badge 
-              variant="secondary" 
+            <Badge
+              variant="secondary"
               className="text-lg px-8 py-3 bg-gradient-to-r from-green-500/10 to-emerald-500/10 border border-green-500/20 hover:border-green-500/40 transition-all duration-300 shadow-lg hover:shadow-green-500/20"
             >
-              <motion.div 
+              <motion.div
                 animate={{ scale: [1, 1.2, 1] }}
                 transition={{ duration: 2, repeat: Infinity }}
                 className="w-3 h-3 bg-green-500 rounded-full mr-3"
               />
               <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent font-semibold">
-                Available for Freelance Work
+                {t("available")}
               </span>
             </Badge>
           </motion.div>

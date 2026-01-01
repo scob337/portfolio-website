@@ -7,7 +7,10 @@ import { Button } from "@/components/ui/button"
 import { Download, GraduationCap, Award, Calendar } from "lucide-react"
 import { getEducation } from "@/lib/data"
 
+import { useTranslations } from "next-intl"
+
 export function ResumeSection() {
+  const t = useTranslations("aboutPage")
   const education = getEducation()
 
   return (
@@ -20,11 +23,11 @@ export function ResumeSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Resume</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{t("resume.title")}</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
           <Button size="lg" className="mb-8">
             <Download className="h-5 w-5 mr-2" />
-            Download Resume
+            {t("resume.download")}
           </Button>
         </motion.div>
 
@@ -40,7 +43,7 @@ export function ResumeSection() {
               <div className="p-3 rounded-full bg-primary/10 mr-4">
                 <GraduationCap className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="text-2xl font-bold text-foreground">Education</h3>
+              <h3 className="text-2xl font-bold text-foreground">{t("resume.education.title")}</h3>
             </div>
 
             <div className="space-y-6">
@@ -54,10 +57,10 @@ export function ResumeSection() {
                 >
                   <Card className="hover:shadow-lg transition-shadow duration-200">
                     <CardHeader>
-                      <CardTitle className="text-lg">{edu.degree}</CardTitle>
+                      <CardTitle className="text-lg">{t(`resume.education.items.${edu.id}.degree`)}</CardTitle>
                       <div className="flex items-center text-primary font-semibold">
                         <GraduationCap className="h-4 w-4 mr-2" />
-                        {edu.institution}
+                        {t(`resume.education.items.${edu.id}.institution`)}
                       </div>
                     </CardHeader>
                     <CardContent>
@@ -65,7 +68,7 @@ export function ResumeSection() {
                         <Calendar className="h-4 w-4 mr-2" />
                         {new Date(edu.startDate).getFullYear()} - {new Date(edu.endDate).getFullYear()}
                       </div>
-                      <p className="text-muted-foreground text-sm leading-relaxed">{edu.description}</p>
+                      <p className="text-muted-foreground text-sm leading-relaxed">{t(`resume.education.items.${edu.id}.description`)}</p>
                     </CardContent>
                   </Card>
                 </motion.div>

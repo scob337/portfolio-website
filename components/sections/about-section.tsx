@@ -1,6 +1,6 @@
 "use client"
 
-
+import { useTranslations } from "next-intl"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -16,8 +16,15 @@ const iconMap = {
 }
 
 export function AboutSection() {
+  const t = useTranslations("about")
   const personalInfo = getPersonalInfo()
   const stats = getStats()
+
+  // Map translations to stats
+  const translatedStats = stats.map(stat => ({
+    ...stat,
+    label: t(`stats.${stat.id}`)
+  }))
 
   return (
     <section id="about" className="py-20 bg-muted/30">
@@ -29,7 +36,7 @@ export function AboutSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">About Me</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{t("title")}</h2>
           <div className="w-20 h-1 bg-primary mx-auto"></div>
         </motion.div>
 
@@ -41,29 +48,29 @@ export function AboutSection() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <p className="text-lg text-muted-foreground mb-6 leading-relaxed text-pretty">{personalInfo.bio}</p>
+            <p className="text-lg text-muted-foreground mb-6 leading-relaxed text-pretty">{t("description")}</p>
 
             <div className="grid grid-cols-2 gap-4 mb-8">
               <div className="flex flex-col">
-                <span className="text-sm font-medium text-muted-foreground">Name:</span>
+                <span className="text-sm font-medium text-muted-foreground">{t("details.name") || "Name"}:</span>
                 <span className="text-foreground">{personalInfo.name}</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-sm font-medium text-muted-foreground">Location:</span>
+                <span className="text-sm font-medium text-muted-foreground">{t("details.city")}:</span>
                 <span className="text-foreground">{personalInfo.city}</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-sm font-medium text-muted-foreground">Email:</span>
+                <span className="text-sm font-medium text-muted-foreground">{t("details.email")}:</span>
                 <span className="text-foreground">{personalInfo.email}</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-sm font-medium text-muted-foreground">Phone:</span>
+                <span className="text-sm font-medium text-muted-foreground">{t("details.phone")}:</span>
                 <span className="text-foreground">{personalInfo.phone}</span>
               </div>
             </div>
 
             <Button size="lg" asChild>
-              <Link href="/about">More About Me</Link>
+              <Link href="/about">{t("more")}</Link>
             </Button>
           </motion.div>
 
@@ -75,7 +82,7 @@ export function AboutSection() {
             viewport={{ once: true }}
             className="grid grid-cols-2 gap-6"
           >
-            {stats.map((stat, index) => {
+            {translatedStats.map((stat, index) => {
               const Icon = iconMap[stat.icon as keyof typeof iconMap]
               return (
                 <motion.div

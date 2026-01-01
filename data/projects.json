@@ -4,8 +4,13 @@
       "id": 1,
       "title": "E-commerce Platform",
       "description": "A modern e-commerce platform built with React and Next.js featuring user authentication, product catalog, shopping cart, and payment integration.",
-      "image": "./projects/ashion-responsive.png",
-      "technologies": ["React", "TypeScript", "Tailwind CSS", "Redux Toolkit"],
+      "image": "/Projects/ashion-responsive.png",
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Redux Toolkit"
+      ],
       "category": "ecommerce",
       "featured": true,
       "liveUrl": "http://ashion-1.netlify.app/",
@@ -13,23 +18,31 @@
       "completedAt": "2024-12-01"
     },
     {
-      "id": 2,
-      "title": "Portfolio Template",
-      "description": "A responsive ProPortfolio Template with modern design, smooth animations, and optimized performance. Built for a tech startup.",
-      "image": "./projects/portfolio.png",
-      "technologies": ["Next.js","NodeMailer", "Framer Motion", "Tailwind CSS", "TypeScript"],
-      "category": "nextjs",
-      "featured": true,
-      "liveUrl": "https://abdo-front-end.netlify.app/",
-      "githubUrl": "https://github.com/scob337/portfolio-website",
-      "completedAt": "2025-09-11"
+      "id": 4,
+      "title": "Divani world",
+      "description": "A beautiful Divani world construction and decoration, and location information. Fully responsive design.",
+      "image": "/Projects/divani.png",
+      "technologies": [
+        "React",
+        "Gatsby",
+        "Tailwind CSS"
+      ],
+      "category": "landing",
+      "featured": false,
+      "liveUrl": "https://divaniworld.com/",
+      "githubUrl": "https://github.com/scob337/art-app",
+      "completedAt": "2024-09-10"
     },
     {
       "id": 3,
       "title": "Etqaa co for CyberSecurity",
       "description": "A collaborative Etqaa co for CyberSecuritylication with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      "image": "./projects/etqaa.png",
-      "technologies": ["React", "Framer Motion", "Tailwind CSS"],
+      "image": "/Projects/etqaa.png",
+      "technologies": [
+        "React",
+        "Framer Motion",
+        "Tailwind CSS"
+      ],
       "category": "landing",
       "featured": true,
       "liveUrl": "https://etqaa.com/",
@@ -37,18 +50,22 @@
       "completedAt": "2025-09-05"
     }
   ],
-
-
   "all": [
     {
       "id": 1,
       "title": "Chat-APP",
       "description": "A modern Chat-app platform built with React, User registration with name, phone, and password , User authentication using JWT,Profile management, User online/offline status (Coming in Sept 2025),Group Features, Create new groups, Add/remove members, Multiple admins support, Group media sharing (Coming in Sept 2025), Group search functionality (Coming in Oct 2025),Chat Features, Real-time messaging, Text messages support, Image/file sharing (Coming in Sept 2025), Message deletion (Coming in Sept 2025) , Read receipts (Coming in Oct 2025)",
-      "image": "./projects/chat.png",
-      "technologies": ["React", "TypeScript", "Tailwind CSS", "MongoDB" ,"Node.js"],
+      "image": "/Projects/chat.png",
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "MongoDB",
+        "Node.js"
+      ],
       "category": "react",
       "featured": true,
-      "liveUrl":"",
+      "liveUrl": "",
       "githubUrl": "https://github.com/scob337/chat-app",
       "completedAt": "2025-08-20"
     },
@@ -56,8 +73,12 @@
       "id": 2,
       "title": "Clinic Management System",
       "description": "A comprehensive platform for managing appointments and bookings for clinics, enhancing patient experience.",
-      "image": "./projects/clinic.png",
-      "technologies": ["React", "Framer Motion", "Tailwind CSS"],
+      "image": "/Projects/clinic.png",
+      "technologies": [
+        "React",
+        "Framer Motion",
+        "Tailwind CSS"
+      ],
       "category": "landing",
       "featured": true,
       "liveUrl": "http://clinic-square.netlify.app/",
@@ -68,8 +89,14 @@
       "id": 3,
       "title": "G-spot Blog-app",
       "description": "A collaborative Blog application with real-time updates, and team collaboration features.",
-      "image": "./projects/blog.png",
-      "technologies": ["Next.js", "Node.js", "Prisma", "MongoDB", "Tailwind CSS"],
+      "image": "/Projects/blog.png",
+      "technologies": [
+        "Next.js",
+        "Node.js",
+        "Prisma",
+        "MongoDB",
+        "Tailwind CSS"
+      ],
       "category": "nextjs",
       "featured": true,
       "liveUrl": "https://g-spot-blogs.vercel.app/",
@@ -80,50 +107,64 @@
       "id": 4,
       "title": "Divani world",
       "description": "A beautiful Divani world construction and decoration, and location information. Fully responsive design.",
-      "image": "./projects/divani.png",
-      "technologies": ["React", "Gatsby", "Tailwind CSS"],
+      "image": "/Projects/divani.png",
+      "technologies": [
+        "React",
+        "Gatsby",
+        "Tailwind CSS"
+      ],
       "category": "landing",
       "featured": false,
       "liveUrl": "https://divaniworld.com/",
       "githubUrl": "https://github.com/scob337/art-app",
       "completedAt": "2024-09-10"
     },
-{
-  "id": 5,
-  "title": "Media Broker",
-  "description": "Media Broker is a web application that streamlines media management and email creation. It features a mail builder with customizable templates, user-friendly design, and efficient tools to organize, edit, and deliver content seamlessly.",
-  "image": "./projects/media.png",
-  "technologies": ["React", "Tailwind CSS" ,"TypeScript"],
-  "category": "react",
-  "featured": false,
-  "liveUrl": "",
-  "githubUrl": "https://github.com/scob337/MediaBrokers",
-  "completedAt": "2024-05-25"
-},
-{
-  "id": 6,
-  "title": "E-commerce Website",
-  "description": "A responsive e-commerce website built with pure HTML and CSS. Features a clean design, product showcase, and user-friendly layout optimized for different devices.",
-  "image": "./projects/css-ecommerce.png",
-  "technologies": ["HTML", "CSS"],
-  "category": "ecommerce",
-  "featured": false,
-  "liveUrl": "https://scob337.github.io/E-commerce/",
-  "githubUrl": "https://github.com/scob337/E-commerce",
-  "completedAt": "2024-07-15"
-},
-{
-  "id": 7,
-  "title": "Animation Landing Page",
-  "description": "An interactive landing page built with React, Tailwind CSS, and Framer Motion. It features smooth animations, modern UI design, and a fully responsive layout to deliver an engaging user experience.",
-  "image": "./projects/Screenshot3.png",
-  "technologies": ["React", "Tailwind CSS", "Framer Motion"],
-  "category": "react",
-  "featured": false,
-  "liveUrl": "animation-landing.netlify.app",
-  "githubUrl": "https://github.com/scob337/Animation-Landing",
-  "completedAt": "2024-07-15"
-}
-
+    {
+      "id": 5,
+      "title": "Media Broker",
+      "description": "Media Broker is a web application that streamlines media management and email creation. It features a mail builder with customizable templates, user-friendly design, and efficient tools to organize, edit, and deliver content seamlessly.",
+      "image": "/Projects/media.png",
+      "technologies": [
+        "React",
+        "Tailwind CSS",
+        "TypeScript"
+      ],
+      "category": "react",
+      "featured": false,
+      "liveUrl": "",
+      "githubUrl": "https://github.com/scob337/MediaBrokers",
+      "completedAt": "2024-05-25"
+    },
+    {
+      "id": 6,
+      "title": "E-commerce Website",
+      "description": "A responsive e-commerce website built with pure HTML and CSS. Features a clean design, product showcase, and user-friendly layout optimized for different devices.",
+      "image": "/Projects/css-ecommerce.png",
+      "technologies": [
+        "HTML",
+        "CSS"
+      ],
+      "category": "ecommerce",
+      "featured": false,
+      "liveUrl": "https://scob337.github.io/E-commerce/",
+      "githubUrl": "https://github.com/scob337/E-commerce",
+      "completedAt": "2024-07-15"
+    },
+    {
+      "id": 7,
+      "title": "Animation Landing Page",
+      "description": "An interactive landing page built with React, Tailwind CSS, and Framer Motion. It features smooth animations, modern UI design, and a fully responsive layout to deliver an engaging user experience.",
+      "image": "/Projects/Screenshot3.png",
+      "technologies": [
+        "React",
+        "Tailwind CSS",
+        "Framer Motion"
+      ],
+      "category": "react",
+      "featured": false,
+      "liveUrl": "animation-landing.netlify.app",
+      "githubUrl": "https://github.com/scob337/Animation-Landing",
+      "completedAt": "2024-07-15"
+    }
   ]
 }

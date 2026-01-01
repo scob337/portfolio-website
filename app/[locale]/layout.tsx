@@ -15,6 +15,7 @@ import "../globals.css"
 const locales = ["en", "ar"]
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://abdo-front-end.netlify.app"),
   title: {
     default: "Abdeltawab Sha`ban - Front-End Developer | React & Next.js Expert",
     template: "%s | Abdeltawab Sha`ban - Front-End Developer"
@@ -76,7 +77,7 @@ export const metadata: Metadata = {
       "Professional portfolio showcasing modern web development projects built with React, Next.js, and cutting-edge technologies.",
     images: [
       {
-        url: "/og-image.png",
+        url: "/Logo.png",
         width: 1200,
         height: 630,
         alt: "Abdeltawab Sha`ban - Front-End Developer Portfolio",
@@ -87,7 +88,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Abdeltawab Sha`ban - Front-End Developer",
     description: "Professional portfolio showcasing modern web development projects",
-    images: ["/og-image.png"],
+    images: ["/Logo.png"],
     creator: "@abdeltawab_dev",
   },
   verification: {
@@ -110,7 +111,7 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
-  
+
   if (!locales.includes(locale)) {
     notFound()
   }
@@ -228,8 +229,8 @@ export default async function LocaleLayout({
         />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="./Logo.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="./Logo.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/Logo.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/Logo.png" />
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#0a192f" />
         <meta name="msapplication-TileColor" content="#0a192f" />

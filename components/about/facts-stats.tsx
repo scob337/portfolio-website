@@ -6,6 +6,8 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Users, Briefcase, Award, Clock, Star } from "lucide-react"
 import { getStats, getTestimonials } from "@/lib/data"
 
+import { useTranslations } from "next-intl"
+
 const iconMap = {
   users: Users,
   briefcase: Briefcase,
@@ -14,6 +16,7 @@ const iconMap = {
 }
 
 export function FactsStats() {
+  const t = useTranslations("aboutPage.stats")
   const stats = getStats()
   const testimonials = getTestimonials()
 
@@ -28,7 +31,7 @@ export function FactsStats() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Facts & Stats</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{t("title")}</h2>
           <div className="w-20 h-1 bg-primary mx-auto"></div>
         </motion.div>
 
@@ -60,7 +63,7 @@ export function FactsStats() {
                       {stat.value}
                       {stat.suffix}
                     </motion.div>
-                    <p className="text-muted-foreground">{stat.label}</p>
+                    <p className="text-muted-foreground">{t(`items.${stat.id}`)}</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -76,7 +79,7 @@ export function FactsStats() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">What Clients Say</h3>
+          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">{t("testimonials.title")}</h3>
           <div className="w-16 h-1 bg-primary mx-auto"></div>
         </motion.div>
 
@@ -98,7 +101,7 @@ export function FactsStats() {
                   </div>
 
                   <blockquote className="text-muted-foreground mb-6 italic leading-relaxed">
-                    "{testimonial.content}"
+                    "{t(`testimonials.items.${testimonial.id}`)}"
                   </blockquote>
 
                   <div className="flex items-center">

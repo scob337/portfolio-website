@@ -1,127 +1,158 @@
 import { Metadata } from "next"
+import { getTranslations, getLocale } from "next-intl/server"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Calendar, Clock, ArrowRight, BookOpen } from "lucide-react"
+import { Calendar, Clock, ArrowRight, ArrowLeft, BookOpen } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 
-export const metadata: Metadata = {
-  title: "Articles | Web Development Insights",
-  description: "Discover the importance of websites for businesses and individuals. Learn about landing pages, corporate websites, e-commerce solutions, and expert tips.",
-  keywords: [
-    "web development articles",
-    "website importance",
-    "landing page benefits",
-    "corporate website",
-    "e-commerce website",
-    "business website",
-    "web design tips",
-    "digital presence",
-    "online business",
-    "website development"
-  ],
-  openGraph: {
-    title: "Articles | Web Development Insights",
-    description: "Expert insights on web development, website importance, and digital business solutions.",
-    type: "website",
-    images: [
-      {
-        url: "/articles-banner.webp",
-        width: 1200,
-        height: 630,
-        alt: "Web Development Articles"
-      }
-    ]
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Articles | Web Development Insights",
-    description: "Expert insights on web development, website importance, and digital business solutions.",
-    images: ["/articles-banner.webp"]
-  }
-}
-
-const articles = [
+// Article data with slugs as keys
+const articlesData = [
   {
     id: "website-importance-businesses-individuals",
-    title: "أهمية الموقع الإلكتروني للمؤسسات والأفراد",
-    excerpt: "اكتشف كيف يمكن للموقع الإلكتروني أن يحول عملك ويعزز حضورك الرقمي في العصر الحديث.",
     image: "/articles/website-importance.svg",
-    category: "Business",
-    readTime: "5 دقائق",
     publishDate: "2024-01-15",
-    keywords: ["موقع إلكتروني", "أعمال", "حضور رقمي"]
+    keywords: {
+      en: ["website", "business", "digital presence"],
+      ar: ["موقع إلكتروني", "أعمال", "حضور رقمي"]
+    }
   },
   {
     id: "landing-page-importance",
-    title: "أهمية امتلاك موقع لاندنج بيدج للنشاط التجاري",
-    excerpt: "تعرف على كيفية زيادة معدلات التحويل وتحسين النتائج التجارية من خلال صفحات الهبوط المحسنة.",
     image: "/articles/landing-page.svg",
-    category: "Marketing",
-    readTime: "4 دقائق",
     publishDate: "2024-01-20",
-    keywords: ["لاندنج بيدج", "تسويق", "تحويلات","صفحات هبوط" , "Landing page"]
+    keywords: {
+      en: ["landing page", "marketing", "conversions"],
+      ar: ["لاندنج بيدج", "تسويق", "تحويلات"]
+    }
   },
   {
-    id: "corporate-website-importance",
-    title: "أهمية امتلاك موقع تعريفي للمؤسسات",
-    excerpt: "بناء الثقة والمصداقية من خلال موقع تعريفي احترافي يعكس قيم وخدمات مؤسستك.",
+    id: "corporate-website",
     image: "/articles/corporate-website.svg",
-    category: "Corporate",
-    readTime: "6 دقائق",
     publishDate: "2024-01-25",
-    keywords: ["موقع تعريفي", "مؤسسات", "مصداقية"]
+    keywords: {
+      en: ["corporate website", "organizations", "credibility"],
+      ar: ["موقع تعريفي", "مؤسسات", "مصداقية"]
+    }
   },
   {
-    id: "ecommerce-website-importance",
-    title: "أهمية امتلاك موقع تجارة إلكترونية",
-    excerpt: "استكشف عالم التجارة الإلكترونية وكيف يمكن لمتجرك الإلكتروني أن يفتح آفاقاً جديدة للنمو.",
+    id: "ecommerce-website",
     image: "/articles/ecommerce-website.svg",
-    category: "E-commerce",
-    readTime: "7 دقائق",
     publishDate: "2024-02-01",
-    keywords: ["تجارة إلكترونية", "متجر إلكتروني", "مبيعات"]
+    keywords: {
+      en: ["e-commerce", "online store", "sales"],
+      ar: ["تجارة إلكترونية", "متجر إلكتروني", "مبيعات"]
+    }
   },
   {
     id: "client-tips",
-    title: "نصائح مهمة للعملاء في عالم التطوير",
-    excerpt: "دليل شامل للعملاء يحتوي على أهم النصائح لضمان نجاح مشروعك الرقمي.",
     image: "/articles/client-tips.svg",
-    category: "Tips",
-    readTime: "8 دقائق",
     publishDate: "2024-02-05",
-    keywords: ["نصائح", "عملاء", "تطوير مواقع"]
+    keywords: {
+      en: ["tips", "clients", "web development"],
+      ar: ["نصائح", "عملاء", "تطوير مواقع"]
+    }
   }
 ]
 
-export default function ArticlesPage() {
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale()
+  const t = await getTranslations("articles")
+
+  const isArabic = locale === "ar"
+
+  return {
+    title: isArabic
+      ? "مقالات تطوير الويب | عبد التواب شعبان"
+      : "Web Development Articles | Abdeltawab Sha`ban",
+    description: isArabic
+      ? "اكتشف أهمية المواقع الإلكترونية للأعمال والأفراد. تعلم عن صفحات الهبوط، المواقع التعريفية، التجارة الإلكترونية، ونصائح الخبراء."
+      : "Discover the importance of websites for businesses and individuals. Learn about landing pages, corporate websites, e-commerce solutions, and expert tips.",
+    keywords: isArabic
+      ? ["مقالات تطوير الويب", "أهمية المواقع", "صفحات الهبوط", "مواقع تعريفية", "تجارة إلكترونية", "تسويق رقمي"]
+      : ["web development articles", "website importance", "landing pages", "corporate websites", "e-commerce", "digital marketing"],
+    openGraph: {
+      title: isArabic
+        ? "مقالات تطوير الويب | عبد التواب شعبان"
+        : "Web Development Articles | Abdeltawab Sha`ban",
+      description: isArabic
+        ? "مقالات متخصصة في تطوير الويب والتسويق الرقمي"
+        : "Expert insights on web development and digital marketing",
+      type: "website",
+      locale: isArabic ? "ar_EG" : "en_US",
+      url: `https://abdo-front-end.netlify.app${isArabic ? "/ar" : ""}/articles`,
+      images: [
+        {
+          url: "/Logo.png",
+          width: 1200,
+          height: 630,
+          alt: isArabic ? "مقالات تطوير الويب" : "Web Development Articles"
+        }
+      ]
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: isArabic
+        ? "مقالات تطوير الويب | عبد التواب شعبان"
+        : "Web Development Articles | Abdeltawab Sha`ban",
+      description: isArabic
+        ? "مقالات متخصصة في تطوير الويب والتسويق الرقمي"
+        : "Expert insights on web development and digital marketing",
+      images: ["/Logo.png"]
+    },
+    alternates: {
+      canonical: `https://abdo-front-end.netlify.app${isArabic ? "/ar" : ""}/articles`,
+      languages: {
+        "en": "https://abdo-front-end.netlify.app/articles",
+        "ar": "https://abdo-front-end.netlify.app/ar/articles"
+      }
+    }
+  }
+}
+
+export default async function ArticlesPage() {
+  const locale = await getLocale()
+  const t = await getTranslations("articles")
+  const isArabic = locale === "ar"
+  const ArrowIcon = isArabic ? ArrowLeft : ArrowRight
+
+  // Build articles with translations
+  const articles = articlesData.map(article => ({
+    ...article,
+    title: t(`items.${article.id}.title`),
+    excerpt: t(`items.${article.id}.excerpt`),
+    category: t(`items.${article.id}.category`),
+    readTime: t(`items.${article.id}.readTime`),
+    keywords: article.keywords[locale as "en" | "ar"] || article.keywords.en
+  }))
+
   return (
-    <main className="min-h-screen bg-background" dir="rtl">
+    <main className="min-h-screen bg-background" dir={isArabic ? "rtl" : "ltr"}>
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
         {/* Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary/5" />
         <div className="absolute inset-0 bg-[url('/modern-tech-background-pattern.jpg')] opacity-5 bg-cover bg-center" />
-        
+
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
               <BookOpen className="h-4 w-4" />
-              مقالات تطوير الويب
+              {t("pageTitle")}
             </div>
-            
+
             {/* Main Title */}
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 text-balance">
-              اكتشف عالم تطوير الويب
+              {t("heroTitle")}
             </h1>
-            
+
             {/* Description */}
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-              اكتشف أهمية المواقع الإلكترونية للأعمال والأفراد، وتعلم كيفية الاستفادة من التقنيات الحديثة لتحقيق أهدافك الرقمية
+              {t("heroDescription")}
             </p>
-            
+
             {/* Scroll Indicator */}
             <div className="flex justify-center mt-12">
               <div className="animate-bounce">
@@ -139,15 +170,15 @@ export default function ArticlesPage() {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              مقالات مختارة
+              {t("selectedArticles")}
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              مجموعة من المقالات المتخصصة في تطوير الويب والتسويق الرقمي
+              {t("selectedDescription")}
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {articles.map((article, index) => (
+            {articles.map((article) => (
               <div key={article.id}>
                 <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg overflow-hidden h-full bg-card">
                   <div className="relative overflow-hidden">
@@ -158,7 +189,7 @@ export default function ArticlesPage() {
                       height={250}
                       className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                     />
-                    <div className="absolute top-4 left-4">
+                    <div className={`absolute top-4 ${isArabic ? "right-4" : "left-4"}`}>
                       <Badge variant="secondary" className="bg-background/90 text-foreground">
                         {article.category}
                       </Badge>
@@ -168,11 +199,11 @@ export default function ArticlesPage() {
                     <div className="flex items-center justify-between text-sm text-muted-foreground mb-2">
                       <div className="flex items-center gap-1">
                         <Calendar className="h-4 w-4" />
-                        <span>{new Date(article.publishDate).toLocaleDateString('ar-EG')}</span>
+                        <span>{new Date(article.publishDate).toLocaleDateString(isArabic ? 'ar-EG' : 'en-US')}</span>
                       </div>
                       <div className="flex items-center gap-1">
                         <Clock className="h-4 w-4" />
-                        <span>{article.readTime}</span>
+                        <span>{article.readTime} {t("readTime")}</span>
                       </div>
                     </div>
                     <CardTitle className="text-xl font-bold text-foreground group-hover:text-primary transition-colors line-clamp-2">
@@ -192,8 +223,8 @@ export default function ArticlesPage() {
                     </div>
                     <Link href={`/articles/${article.id}`}>
                       <Button className="w-full group-hover:bg-primary/90 transition-colors">
-                        اقرأ المقال
-                        <ArrowRight className="ml-2 h-4 w-4" />
+                        {t("readArticle")}
+                        <ArrowIcon className={`h-4 w-4 ${isArabic ? "mr-2" : "ml-2"}`} />
                       </Button>
                     </Link>
                   </CardContent>
@@ -209,20 +240,57 @@ export default function ArticlesPage() {
         <div className="container mx-auto max-w-4xl text-center">
           <div className="bg-card rounded-2xl p-8 md:p-12 shadow-lg border">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              هل تحتاج إلى موقع إلكتروني لعملك؟
+              {t("ctaTitle")}
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              دعني أساعدك في إنشاء موقع إلكتروني يحقق أهدافك ويعزز حضورك الرقمي
+              {t("ctaDescription")}
             </p>
             <Link href="/contact">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3">
-                ابدأ مشروعك الآن
-                <ArrowRight className="ml-2 h-5 w-5" />
+                {t("ctaButton")}
+                <ArrowIcon className={`h-5 w-5 ${isArabic ? "mr-2" : "ml-2"}`} />
               </Button>
             </Link>
           </div>
         </div>
       </section>
+
+      {/* JSON-LD Structured Data for Articles List */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": isArabic ? "مقالات تطوير الويب" : "Web Development Articles",
+            "description": isArabic
+              ? "مجموعة من المقالات المتخصصة في تطوير الويب والتسويق الرقمي"
+              : "A collection of specialized articles on web development and digital marketing",
+            "url": `https://abdo-front-end.netlify.app${isArabic ? "/ar" : ""}/articles`,
+            "inLanguage": isArabic ? "ar" : "en",
+            "mainEntity": {
+              "@type": "ItemList",
+              "numberOfItems": articles.length,
+              "itemListElement": articles.map((article, index) => ({
+                "@type": "ListItem",
+                "position": index + 1,
+                "item": {
+                  "@type": "Article",
+                  "headline": article.title,
+                  "description": article.excerpt,
+                  "image": `https://abdo-front-end.netlify.app${article.image}`,
+                  "datePublished": article.publishDate,
+                  "author": {
+                    "@type": "Person",
+                    "name": "Abdeltawab Sha`ban"
+                  },
+                  "url": `https://abdo-front-end.netlify.app${isArabic ? "/ar" : ""}/articles/${article.id}`
+                }
+              }))
+            }
+          })
+        }}
+      />
     </main>
   )
 }

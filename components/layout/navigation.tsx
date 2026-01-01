@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Menu, X, Home, User, Briefcase, Mail, BookOpen } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { LanguageSwitcher } from "@/components/ui/language-switcher"
 
 export function Navigation() {
   const t = useTranslations("nav")
@@ -34,11 +35,10 @@ export function Navigation() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled
-          ? "bg-background/90 backdrop-blur-xl border-b border-border/30 shadow-2xl"
-          : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
+        ? "bg-background/90 backdrop-blur-xl border-b border-border/30 shadow-2xl"
+        : "bg-transparent"
+        }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
@@ -52,7 +52,7 @@ export function Navigation() {
           >
             <Link href="/">
               <Image
-              className="object-cover"
+                className="object-cover"
                 src="/Logo.png"
                 alt="Logo"
                 width={150}
@@ -103,9 +103,10 @@ export function Navigation() {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-            className="flex items-center space-x-4"
+            className="flex items-center space-x-4 rtl:space-x-reverse"
           >
-
+            {/* Language Switcher */}
+            <LanguageSwitcher />
             <motion.div
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -164,8 +165,8 @@ export function Navigation() {
                       initial={{ opacity: 0, x: -50, scale: 0.9 }}
                       animate={{ opacity: 1, x: 0, scale: 1 }}
                       exit={{ opacity: 0, x: -50, scale: 0.9 }}
-                      transition={{ 
-                        duration: 0.3, 
+                      transition={{
+                        duration: 0.3,
                         delay: index * 0.1,
                         ease: "easeOut"
                       }}

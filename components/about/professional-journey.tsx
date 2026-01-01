@@ -7,7 +7,10 @@ import { Badge } from "@/components/ui/badge"
 import { Calendar, MapPin, Building } from "lucide-react"
 import { getWorkExperience } from "@/lib/data"
 
+import { useTranslations } from "next-intl"
+
 export function ProfessionalJourney() {
+  const t = useTranslations("aboutPage.journey")
   const workExperience = getWorkExperience()
 
   return (
@@ -20,10 +23,10 @@ export function ProfessionalJourney() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Professional Journey</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{t("title")}</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Explore my career path and the experiences that have shaped my expertise in web development.
+            {t("subtitle")}
           </p>
         </motion.div>
 
@@ -49,7 +52,7 @@ export function ProfessionalJourney() {
                 <CardHeader>
                   <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
                     <div className="flex-1">
-                      <CardTitle className="text-2xl text-foreground mb-2">{job.position}</CardTitle>
+                      <CardTitle className="text-2xl text-foreground mb-2">{t(`items.${job.id}.position`)}</CardTitle>
                       <div className="flex items-center space-x-2 mb-3">
                         <Building className="h-5 w-5 text-primary" />
                         <span className="text-xl text-primary font-semibold">{job.company}</span>
@@ -65,7 +68,7 @@ export function ProfessionalJourney() {
                             year: "numeric",
                           })}{" "}
                           -{" "}
-                          {new Date(job.endDate).toLocaleDateString("en-US", {
+                          {job.current ? t("present") : new Date(job.endDate).toLocaleDateString("en-US", {
                             month: "long",
                             year: "numeric",
                           })}
@@ -73,29 +76,29 @@ export function ProfessionalJourney() {
                       </div>
                       <div className="flex items-center text-muted-foreground">
                         <MapPin className="h-4 w-4 mr-2" />
-                        <span className="text-sm">{job.location}</span>
+                        <span className="text-sm">{t(`items.${job.id}.location`)}</span>
                       </div>
                     </div>
                   </div>
                 </CardHeader>
 
                 <CardContent>
-                  <p className="text-muted-foreground mb-6 leading-relaxed text-pretty">{job.description}</p>
+                  <p className="text-muted-foreground mb-6 leading-relaxed text-pretty">{t(`items.${job.id}.description`)}</p>
 
                   <div className="mb-6">
-                    <h4 className="font-semibold text-foreground mb-3">Key Achievements:</h4>
+                    <h4 className="font-semibold text-foreground mb-3">{t("achievements")}</h4>
                     <ul className="space-y-2">
-                      {job.achievements.map((achievement, i) => (
+                      {job.achievements.map((_, i) => (
                         <li key={i} className="flex items-start">
                           <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0" />
-                          <span className="text-muted-foreground">{achievement}</span>
+                          <span className="text-muted-foreground">{t(`items.${job.id}.achievements.${i}`)}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
                   <div>
-                    <h4 className="font-semibold text-foreground mb-3">Technologies Used:</h4>
+                    <h4 className="font-semibold text-foreground mb-3">{t("tech")}</h4>
                     <div className="flex flex-wrap gap-2">
                       {job.technologies.map((tech) => (
                         <Badge key={tech} variant="secondary" className="text-sm">

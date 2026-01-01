@@ -1,213 +1,309 @@
-import { Metadata } from "next"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Target, TrendingUp, Users, Zap, CheckCircle, Star, BarChart3 } from "lucide-react"
-import Link from "next/link"
-import Image from "next/image"
+import { Metadata } from 'next'
+import { getTranslations, getLocale } from 'next-intl/server'
+import Image from 'next/image'
+import Link from 'next/link'
+import { ArrowLeft, ArrowRight, Calendar, Clock, Share2, User } from 'lucide-react'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { Card } from '@/components/ui/card'
 
-export const metadata: Metadata = {
-  title: "أهمية صفحات الهبوط في زيادة التحويلات | محمد عبدالله",
-  description: "اكتشف كيف تساعد صفحات الهبوط المصممة بعناية في زيادة معدلات التحويل وتحقيق أهداف التسويق الرقمي بفعالية أكبر.",
-  keywords: "صفحات الهبوط, التحويلات, التسويق الرقمي, تصميم المواقع, UX, تجربة المستخدم",
-  openGraph: {
-    title: "أهمية صفحات الهبوط في زيادة التحويلات",
-    description: "اكتشف كيف تساعد صفحات الهبوط المصممة بعناية في زيادة معدلات التحويل وتحقيق أهداف التسويق الرقمي بفعالية أكبر.",
-    type: "article",
-    images: [
+const articleContent = {
+  en: {
+    title: "The Importance of Having a Landing Page for Business",
+    subtitle: "Learn how to increase conversion rates and improve business results through optimized landing pages",
+    category: "Marketing",
+    author: "Development Team",
+    publishDate: "January 20, 2024",
+    readTime: "6 min read",
+    sections: [
       {
-        url: "/articles/landing-page.svg",
-        width: 1200,
-        height: 630,
-        alt: "أهمية صفحات الهبوط"
+        title: "What is a Landing Page?",
+        content: "A landing page is a standalone web page created specifically for a marketing or advertising campaign. It's where a visitor 'lands' after clicking on a link in an email, ads from Google, social media, or similar places on the web. Unlike general web pages, landing pages are designed with a single focused objective known as a Call to Action (CTA)."
+      },
+      {
+        title: "Why Landing Pages are Essential for Business",
+        content: "Landing pages are essential because they provide a targeted experience for visitors. When someone clicks on an ad about a specific product or service, they expect to see relevant information immediately. A well-designed landing page delivers exactly what visitors are looking for, increasing the chances of conversion significantly."
+      },
+      {
+        title: "Key Benefits of Landing Pages",
+        items: [
+          "Higher conversion rates compared to regular website pages",
+          "Better tracking and analytics for marketing campaigns",
+          "Improved user experience with focused content",
+          "Easier A/B testing for marketing optimization",
+          "Clear and direct call to action"
+        ]
+      },
+      {
+        title: "Elements of an Effective Landing Page",
+        items: [
+          "Compelling headline that matches the ad",
+          "Clear and concise value proposition",
+          "Eye-catching visuals and professional design",
+          "Trust signals like testimonials and guarantees",
+          "Simple and prominent call to action button"
+        ]
+      },
+      {
+        title: "Best Practices for Landing Page Success",
+        content: "To maximize your landing page effectiveness, ensure fast loading times, mobile responsiveness, and minimal distractions. Remove navigation menus, keep forms short, and use contrasting colors for your CTA buttons. Test different versions to find what works best for your audience."
+      }
+    ],
+    conclusion: {
+      title: "Conclusion",
+      content: "Landing pages are a crucial tool for any business looking to increase conversions and maximize ROI from their marketing efforts. By following best practices and continuously optimizing, you can create landing pages that effectively convert visitors into customers."
+    },
+    relatedArticles: [
+      {
+        title: "The Importance of Websites for Organizations and Individuals",
+        description: "Discover how a website can transform your business in the digital age",
+        href: "/articles/website-importance"
+      },
+      {
+        title: "The Importance of an E-commerce Website",
+        description: "Explore the world of e-commerce and its opportunities for growth",
+        href: "/articles/ecommerce-website"
       }
     ]
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "أهمية صفحات الهبوط في زيادة التحويلات",
-    description: "اكتشف كيف تساعد صفحات الهبوط المصممة بعناية في زيادة معدلات التحويل وتحقيق أهداف التسويق الرقمي بفعالية أكبر.",
-    images: ["/articles/landing-page.svg"]
+  ar: {
+    title: "أهمية امتلاك موقع لاندنج بيدج للنشاط التجاري",
+    subtitle: "تعرف على كيفية زيادة معدلات التحويل وتحسين النتائج التجارية من خلال صفحات الهبوط المحسنة",
+    category: "التسويق",
+    author: "فريق التطوير",
+    publishDate: "20 يناير 2024",
+    readTime: "6 دقائق قراءة",
+    sections: [
+      {
+        title: "ما هي صفحة الهبوط؟",
+        content: "صفحة الهبوط هي صفحة ويب مستقلة تم إنشاؤها خصيصاً لحملة تسويقية أو إعلانية. إنها المكان الذي 'يهبط' فيه الزائر بعد النقر على رابط في بريد إلكتروني أو إعلانات من Google أو وسائل التواصل الاجتماعي. على عكس صفحات الويب العامة، تم تصميم صفحات الهبوط بهدف واحد مركز يُعرف باسم دعوة للعمل (CTA)."
+      },
+      {
+        title: "لماذا صفحات الهبوط ضرورية للأعمال التجارية",
+        content: "صفحات الهبوط ضرورية لأنها توفر تجربة مستهدفة للزوار. عندما ينقر شخص ما على إعلان عن منتج أو خدمة معينة، يتوقع رؤية معلومات ذات صلة فوراً. تقدم صفحة الهبوط المصممة جيداً بالضبط ما يبحث عنه الزوار، مما يزيد من فرص التحويل بشكل كبير."
+      },
+      {
+        title: "الفوائد الرئيسية لصفحات الهبوط",
+        items: [
+          "معدلات تحويل أعلى مقارنة بصفحات الموقع العادية",
+          "تتبع وتحليلات أفضل لحملات التسويق",
+          "تحسين تجربة المستخدم بمحتوى مركز",
+          "سهولة اختبار A/B لتحسين التسويق",
+          "دعوة واضحة ومباشرة للعمل"
+        ]
+      },
+      {
+        title: "عناصر صفحة الهبوط الفعالة",
+        items: [
+          "عنوان جذاب يتطابق مع الإعلان",
+          "عرض قيمة واضح ومختصر",
+          "مرئيات لافتة للنظر وتصميم احترافي",
+          "إشارات الثقة مثل الشهادات والضمانات",
+          "زر دعوة للعمل بسيط وبارز"
+        ]
+      },
+      {
+        title: "أفضل الممارسات لنجاح صفحة الهبوط",
+        content: "لتعظيم فعالية صفحة الهبوط، تأكد من سرعة التحميل والتجاوبية مع الأجهزة المحمولة وتقليل الإلهاءات. قم بإزالة قوائم التنقل، واجعل النماذج قصيرة، واستخدم ألواناً متباينة لأزرار CTA. اختبر إصدارات مختلفة للعثور على ما يناسب جمهورك."
+      }
+    ],
+    conclusion: {
+      title: "الخاتمة",
+      content: "صفحات الهبوط هي أداة حاسمة لأي عمل تجاري يتطلع إلى زيادة التحويلات وتعظيم العائد على الاستثمار من جهود التسويق. من خلال اتباع أفضل الممارسات والتحسين المستمر، يمكنك إنشاء صفحات هبوط تحول الزوار إلى عملاء بفعالية."
+    },
+    relatedArticles: [
+      {
+        title: "أهمية الموقع الإلكتروني للمؤسسات والأفراد",
+        description: "اكتشف كيف يمكن للموقع الإلكتروني أن يحول عملك في العصر الرقمي",
+        href: "/articles/website-importance"
+      },
+      {
+        title: "أهمية امتلاك موقع تجارة إلكترونية",
+        description: "استكشف عالم التجارة الإلكترونية وفرص النمو",
+        href: "/articles/ecommerce-website"
+      }
+    ]
   }
 }
 
-const benefits = [
-  {
-    icon: Target,
-    title: "تركيز واضح على الهدف",
-    description: "صفحة واحدة مخصصة لهدف محدد دون تشتيت"
-  },
-  {
-    icon: TrendingUp,
-    title: "زيادة معدلات التحويل",
-    description: "تصميم محسن لتحويل الزوار إلى عملاء"
-  },
-  {
-    icon: Users,
-    title: "استهداف دقيق للجمهور",
-    description: "محتوى مخصص لشريحة معينة من العملاء"
-  },
-  {
-    icon: Zap,
-    title: "سرعة في اتخاذ القرار",
-    description: "معلومات واضحة تساعد على اتخاذ قرار سريع"
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale()
+  const isArabic = locale === "ar"
+  const content = articleContent[locale as "en" | "ar"] || articleContent.en
+
+  return {
+    title: isArabic
+      ? "أهمية صفحات الهبوط للأعمال التجارية | دليل شامل"
+      : "The Importance of Landing Pages for Business | Comprehensive Guide",
+    description: content.subtitle,
+    keywords: isArabic
+      ? ["صفحة هبوط", "لاندنج بيدج", "تسويق رقمي", "تحويلات", "حملات إعلانية"]
+      : ["landing page", "digital marketing", "conversions", "advertising campaigns", "CTA"],
+    openGraph: {
+      title: content.title,
+      description: content.subtitle,
+      images: ["/articles/landing-page.svg"],
+      type: "article",
+      locale: isArabic ? "ar_EG" : "en_US",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: content.title,
+      description: content.subtitle,
+      images: ["/articles/landing-page.svg"],
+    },
+    alternates: {
+      languages: {
+        "en": "https://abdo-front-end.netlify.app/articles/landing-page-importance",
+        "ar": "https://abdo-front-end.netlify.app/ar/articles/landing-page-importance"
+      }
+    }
   }
-]
+}
 
-const features = [
-  "عنوان جذاب ومقنع",
-  "وصف واضح للمنتج أو الخدمة",
-  "نموذج تواصل بسيط",
-  "شهادات العملاء",
-  "ضمانات وعروض خاصة",
-  "دعوة واضحة للعمل (CTA)"
-]
+export default async function LandingPageImportancePage() {
+  const locale = await getLocale()
+  const t = await getTranslations("articles")
+  const isArabic = locale === "ar"
+  const content = articleContent[locale as "en" | "ar"] || articleContent.en
+  const BackArrow = isArabic ? ArrowRight : ArrowLeft
 
-export default function LandingPageImportancePage() {
   return (
-    <main className="min-h-screen bg-background" dir="rtl">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-red-500/5 to-pink-500/10" />
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl" />
-        
-        <div className="container mx-auto relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
-            <div className="flex items-center justify-center mb-6">
-              <Target className="h-12 w-12 text-orange-500 mr-4" />
-              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 bg-clip-text text-transparent">
-                أهمية صفحات الهبوط
-              </h1>
+    <main className="min-h-screen bg-background" dir={isArabic ? "rtl" : "ltr"}>
+      {/* Header */}
+      <div className="bg-card shadow-sm border-b">
+        <div className="max-w-4xl mx-auto px-4 py-6">
+          <Link
+            href="/articles"
+            className="inline-flex items-center text-primary hover:text-primary/80 mb-4 transition-colors"
+          >
+            <BackArrow className={`w-4 h-4 ${isArabic ? "ml-2" : "mr-2"}`} />
+            {t("backToArticles")}
+          </Link>
+
+          <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-4">
+            <div className="flex items-center gap-1">
+              <Calendar className="w-4 h-4" />
+              <span>{content.publishDate}</span>
             </div>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              اكتشف كيف تساعد صفحات الهبوط المصممة بعناية في زيادة معدلات التحويل وتحقيق أهداف التسويق الرقمي بفعالية أكبر
-            </p>
-            <div className="flex items-center justify-center space-x-6 text-sm text-muted-foreground">
-              <Badge variant="secondary" className="bg-orange-100 text-orange-700">
-                <BarChart3 className="h-4 w-4 mr-2" />
-                تحسين التحويلات
-              </Badge>
-              <Badge variant="secondary" className="bg-red-100 text-red-700">
-                <Star className="h-4 w-4 mr-2" />
-                تجربة مستخدم محسنة
-              </Badge>
+            <div className="flex items-center gap-1">
+              <Clock className="w-4 h-4" />
+              <span>{content.readTime}</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <User className="w-4 h-4" />
+              <span>{content.author}</span>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Article Image */}
-      <section className="py-12 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <div className="relative h-64 md:h-96 rounded-2xl overflow-hidden shadow-2xl">
+          <Badge className="mb-4">{content.category}</Badge>
+
+          <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            {content.title}
+          </h1>
+
+          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+            {content.subtitle}
+          </p>
+        </div>
+      </div>
+
+      {/* Article Content */}
+      <div className="max-w-4xl mx-auto px-4 py-12">
+        <div className="bg-card rounded-2xl shadow-lg overflow-hidden">
+          {/* Featured Image */}
+          <div className="relative h-64 md:h-96 bg-gradient-to-r from-green-500/20 to-teal-600/20">
             <Image
               src="/articles/landing-page.svg"
-              alt="أهمية صفحات الهبوط"
+              alt={content.title}
               fill
-              className="object-cover"
+              className="object-contain p-8"
             />
           </div>
-        </div>
-      </section>
 
-      {/* Main Content */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <div className="prose prose-lg max-w-none">
-            <h2 className="text-3xl font-bold mb-6 text-foreground">ما هي صفحة الهبوط؟</h2>
-            <p className="text-muted-foreground mb-8 leading-relaxed">
-              صفحة الهبوط هي صفحة ويب مستقلة تم إنشاؤها خصيصاً لحملة تسويقية معينة. إنها المكان الذي "يهبط" فيه الزائر بعد النقر على رابط في إعلان أو بريد إلكتروني أو أي مصدر رقمي آخر. على عكس صفحات الويب العادية، تم تصميم صفحات الهبوط بهدف واحد محدد - وهو التحويل.
-            </p>
+          {/* Article Body */}
+          <div className="p-6 md:p-8 lg:p-12">
+            <div className="prose prose-lg max-w-none">
+              {content.sections.map((section, index) => (
+                <div key={index} className="mb-8">
+                  <h2 className="text-2xl font-bold text-foreground mb-4">{section.title}</h2>
+                  {section.content && (
+                    <p className="text-muted-foreground leading-relaxed mb-4">{section.content}</p>
+                  )}
+                  {section.items && (
+                    <ul className="list-disc list-inside text-muted-foreground space-y-2">
+                      {section.items.map((item, itemIndex) => (
+                        <li key={itemIndex}>{item}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
 
-            <h2 className="text-3xl font-bold mb-6 text-foreground">لماذا صفحات الهبوط مهمة؟</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-              {benefits.map((benefit, index) => {
-                const IconComponent = benefit.icon
-                return (
-                  <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow">
-                    <CardHeader>
-                      <div className="flex items-center space-x-3">
-                        <div className="p-2 bg-orange-100 rounded-lg">
-                          <IconComponent className="h-6 w-6 text-orange-600" />
-                        </div>
-                        <CardTitle className="text-lg">{benefit.title}</CardTitle>
-                      </div>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground">{benefit.description}</p>
-                    </CardContent>
-                  </Card>
-                )
-              })}
+              {/* Conclusion */}
+              <h2 className="text-2xl font-bold text-foreground mb-6 mt-8">{content.conclusion.title}</h2>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                {content.conclusion.content}
+              </p>
             </div>
 
-            <h2 className="text-3xl font-bold mb-6 text-foreground">عناصر صفحة الهبوط الناجحة</h2>
-            <div className="bg-gradient-to-r from-orange-50 to-red-50 p-8 rounded-2xl mb-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {features.map((feature, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                    <span className="text-foreground">{feature}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <h2 className="text-3xl font-bold mb-6 text-foreground">إحصائيات مهمة</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-              <Card className="text-center p-6 border-0 shadow-lg bg-gradient-to-br from-orange-50 to-red-50">
-                <div className="text-3xl font-bold text-orange-600 mb-2">160%</div>
-                <p className="text-sm text-muted-foreground">زيادة في معدل التحويل مع صفحات الهبوط المحسنة</p>
-              </Card>
-              <Card className="text-center p-6 border-0 shadow-lg bg-gradient-to-br from-red-50 to-pink-50">
-                <div className="text-3xl font-bold text-red-600 mb-2">68%</div>
-                <p className="text-sm text-muted-foreground">من الشركات تستخدم صفحات الهبوط لجمع العملاء المحتملين</p>
-              </Card>
-              <Card className="text-center p-6 border-0 shadow-lg bg-gradient-to-br from-pink-50 to-orange-50">
-                <div className="text-3xl font-bold text-pink-600 mb-2">3 ثواني</div>
-                <p className="text-sm text-muted-foreground">الوقت المتاح لجذب انتباه الزائر</p>
-              </Card>
-            </div>
-
-            <h2 className="text-3xl font-bold mb-6 text-foreground">أفضل الممارسات</h2>
-            <div className="space-y-6 mb-12">
-              <div className="border-r-4 border-orange-500 pr-6">
-                <h3 className="text-xl font-semibold mb-2 text-foreground">البساطة هي المفتاح</h3>
-                <p className="text-muted-foreground">تجنب التشتيت والتركيز على رسالة واحدة واضحة.</p>
-              </div>
-              <div className="border-r-4 border-red-500 pr-6">
-                <h3 className="text-xl font-semibold mb-2 text-foreground">اختبار A/B المستمر</h3>
-                <p className="text-muted-foreground">اختبر عناصر مختلفة لتحسين الأداء باستمرار.</p>
-              </div>
-              <div className="border-r-4 border-pink-500 pr-6">
-                <h3 className="text-xl font-semibold mb-2 text-foreground">التحسين للهواتف المحمولة</h3>
-                <p className="text-muted-foreground">تأكد من أن صفحتك تعمل بشكل مثالي على جميع الأجهزة.</p>
+            {/* Share Section */}
+            <div className="border-t pt-8 mt-8">
+              <div className="flex items-center justify-between">
+                <h3 className="text-lg font-semibold text-foreground">{t("shareArticle")}</h3>
+                <Button variant="outline" size="sm">
+                  <Share2 className={`w-4 h-4 ${isArabic ? "ml-2" : "mr-2"}`} />
+                  {t("share")}
+                </Button>
               </div>
             </div>
           </div>
         </div>
-      </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-primary/10 via-secondary/5 to-primary/5">
-        <div className="container mx-auto max-w-4xl text-center">
-          <div className="bg-card rounded-2xl p-8 md:p-12 shadow-lg border">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              هل تحتاج إلى صفحة هبوط احترافية؟
-            </h2>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              دعني أساعدك في إنشاء صفحة هبوط تحقق أهدافك التسويقية
-            </p>
-            <Link href="/contact">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3">
-                ابدأ مشروعك الآن
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
+        {/* Related Articles */}
+        <div className="mt-12">
+          <h2 className="text-2xl font-bold text-foreground mb-6">{t("relatedArticles")}</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {content.relatedArticles.map((article, index) => (
+              <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-foreground mb-2">
+                  {article.title}
+                </h3>
+                <p className="text-muted-foreground mb-4">
+                  {article.description}
+                </p>
+                <Link href={article.href} className="text-primary hover:text-primary/80 font-medium transition-colors">
+                  {t("readMore")} {isArabic ? "←" : "→"}
+                </Link>
+              </Card>
+            ))}
           </div>
         </div>
-      </section>
+      </div>
+
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": content.title,
+            "description": content.subtitle,
+            "image": "https://abdo-front-end.netlify.app/articles/landing-page.svg",
+            "datePublished": "2024-01-20",
+            "author": {
+              "@type": "Person",
+              "name": "Abdeltawab Sha`ban"
+            },
+            "publisher": {
+              "@type": "Person",
+              "name": "Abdeltawab Sha`ban"
+            },
+            "inLanguage": isArabic ? "ar" : "en"
+          })
+        }}
+      />
     </main>
   )
 }

@@ -179,8 +179,6 @@ export default function Portfolio() {
 
   return (
     <div className={`min-h-screen ${currentLang === "ar" ? "rtl" : "ltr"}`} dir={currentLang === "ar" ? "rtl" : "ltr"}>
-ٍ
-
       <section id="home" className="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
         {/* خلفية متحركة */}
         <div className="absolute inset-0 opacity-10">

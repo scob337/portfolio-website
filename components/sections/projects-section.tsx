@@ -28,7 +28,7 @@ export function ProjectsSection() {
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{t("title")}</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Here are some of my recent projects that showcase my skills and experience
+            {t("subtitle")}
           </p>
         </motion.div>
 
@@ -72,13 +72,13 @@ export function ProjectsSection() {
                   <Button size="sm" variant="outline" asChild>
                     <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="h-4 w-4 mr-2" />
-                      Live Demo
+                      {t("liveDemo")}
                     </a>
                   </Button>
                   <Button size="sm" variant="outline" asChild>
                     <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                       <Github className="h-4 w-4 mr-2" />
-                      Code
+                      {t("code")}
                     </a>
                   </Button>
                 </CardFooter>

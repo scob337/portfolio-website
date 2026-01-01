@@ -12,14 +12,17 @@ export function HeroSection() {
   const t = useTranslations("hero")
 
   const personalInfo = getPersonalInfo()
+  // Create an array of keywords from translations manually since t.raw is not available or type-safe 
+  // in all setups, or simply use keys "0", "1", "2", "3"
+  const keywords = ["0", "1", "2", "3"].map(key => t(`keywords.${key}`))
   const [currentKeyword, setCurrentKeyword] = useState(0)
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentKeyword((prev) => (prev + 1) % personalInfo.heroKeywords.length)
+      setCurrentKeyword((prev) => (prev + 1) % keywords.length)
     }, 2000)
     return () => clearInterval(interval)
-  }, [personalInfo.heroKeywords.length])
+  }, [keywords.length])
 
   const socialLinks = [
     { icon: Github, href: personalInfo.socialLinks.github, label: "GitHub" },
@@ -70,7 +73,7 @@ export function HeroSection() {
               transition={{ duration: 0.5 }}
               className="inline-block"
             >
-              {personalInfo.heroKeywords[currentKeyword]}
+              {keywords[currentKeyword]}
             </motion.span>
           </motion.div>
 

@@ -42,7 +42,7 @@ export function ContactSection() {
                 <Mail className="h-6 w-6 text-primary" />
               </div>
               <div>
-                <h3 className="font-semibold text-foreground">Email</h3>
+                <h3 className="font-semibold text-foreground">{t("info.email")}</h3>
                 <p className="text-muted-foreground">{personalInfo.email}</p>
               </div>
             </div>
@@ -52,7 +52,7 @@ export function ContactSection() {
                 <Phone className="h-6 w-6 text-primary" />
               </div>
               <div>
-                <h3 className="font-semibold text-foreground">Phone</h3>
+                <h3 className="font-semibold text-foreground">{t("info.phone")}</h3>
                 <p className="text-muted-foreground">{personalInfo.phone}</p>
               </div>
             </div>
@@ -62,7 +62,7 @@ export function ContactSection() {
                 <MapPin className="h-6 w-6 text-primary" />
               </div>
               <div>
-                <h3 className="font-semibold text-foreground">Location</h3>
+                <h3 className="font-semibold text-foreground">{t("info.location")}</h3>
                 <p className="text-muted-foreground">{personalInfo.city}</p>
               </div>
             </div>

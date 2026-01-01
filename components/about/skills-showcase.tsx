@@ -6,7 +6,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
 import { getTechnicalSkills, getSoftSkills } from "@/lib/data"
 
+import { useTranslations } from "next-intl"
+
 export function SkillsShowcase() {
+  const t = useTranslations("aboutPage.skills")
   const technicalSkills = getTechnicalSkills()
   const softSkills = getSoftSkills()
 
@@ -31,10 +34,10 @@ export function SkillsShowcase() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Skills & Expertise</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{t("title")}</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Discover my technical skills and expertise across various technologies and frameworks.
+            {t("subtitle")}
           </p>
         </motion.div>
 
@@ -84,7 +87,7 @@ export function SkillsShowcase() {
         >
           <Card>
             <CardHeader>
-              <CardTitle className="text-xl text-center">Soft Skills</CardTitle>
+              <CardTitle className="text-xl text-center">{t("soft")}</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="grid md:grid-cols-2 gap-6">

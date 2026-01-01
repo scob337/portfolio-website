@@ -12,7 +12,13 @@
     "title": "Front-End Developer",
     "description": "I create modern, responsive web applications using React and Next.js",
     "cta": "View My Work",
-    "contact": "Get In Touch"
+    "contact": "Get In Touch",
+    "keywords": {
+      "0": "Web Developer",
+      "1": "React Specialist",
+      "2": "UI/UX Enthusiast",
+      "3": "Problem Solver"
+    }
   },
   "about": {
     "title": "About Me",
@@ -34,6 +40,13 @@
       "phone": "+201117218756",
       "degree": "High School",
       "freelance": "Available"
+    },
+    "more": "More About Me",
+    "stats": {
+      "experience": "Years Experience",
+      "projects": "Completed Projects",
+      "clients": "Happy Clients",
+      "hours": "Hours of Code"
     }
   },
   "projects": {
@@ -45,6 +58,58 @@
       "nextjs": "Next.js",
       "ecommerce": "E-commerce",
       "landing": "Landing Pages"
+    },
+    "subtitle": "Here are some of my recent projects that showcase my skills and experience",
+    "liveDemo": "Live Demo",
+    "code": "Code"
+  },
+  "articles": {
+    "pageTitle": "Web Development Articles",
+    "heroTitle": "Discover the World of Web Development",
+    "heroDescription": "Discover the importance of websites for businesses and individuals, and learn how to leverage modern technologies to achieve your digital goals",
+    "selectedArticles": "Selected Articles",
+    "selectedDescription": "A collection of specialized articles on web development and digital marketing",
+    "readArticle": "Read Article",
+    "ctaTitle": "Need a website for your business?",
+    "ctaDescription": "Let me help you create a website that achieves your goals and enhances your digital presence",
+    "ctaButton": "Start Your Project Now",
+    "backToArticles": "Back to Articles",
+    "readTime": "min read",
+    "shareArticle": "Share Article",
+    "share": "Share",
+    "relatedArticles": "Related Articles",
+    "readMore": "Read More",
+    "items": {
+      "website-importance-businesses-individuals": {
+        "title": "The Importance of Websites for Organizations and Individuals",
+        "excerpt": "Discover how a website can transform your business and enhance your digital presence in the modern age.",
+        "category": "Business",
+        "readTime": "5"
+      },
+      "landing-page-importance": {
+        "title": "The Importance of Having a Landing Page for Business",
+        "excerpt": "Learn how to increase conversion rates and improve business results through optimized landing pages.",
+        "category": "Marketing",
+        "readTime": "4"
+      },
+      "corporate-website": {
+        "title": "The Importance of a Corporate Website for Organizations",
+        "excerpt": "Build trust and credibility through a professional corporate website that reflects your organization's values and services.",
+        "category": "Corporate",
+        "readTime": "6"
+      },
+      "ecommerce-website": {
+        "title": "The Importance of an E-commerce Website",
+        "excerpt": "Explore the world of e-commerce and how your online store can open new horizons for growth.",
+        "category": "E-commerce",
+        "readTime": "7"
+      },
+      "client-tips": {
+        "title": "Important Tips for Clients in Web Development",
+        "excerpt": "A comprehensive guide for clients with the most important tips to ensure the success of your digital project.",
+        "category": "Tips",
+        "readTime": "8"
+      }
     }
   },
   "contact": {
@@ -84,6 +149,94 @@
       "success": {
         "title": "Message Sent Successfully!",
         "message": "Thank you for reaching out. I'll get back to you within 24 hours."
+      }
+    }
+  },
+  "aboutPage": {
+    "hero": {
+      "title": "About Me",
+      "bio": "Hello, I'm Abdeltawab Sha`ban, a 27-year-old front-end developer from Egypt. With hands-on experience in building dynamic user interfaces and an online store using ReactJS, I'm passionate about learning and continuously evolving to stand out in the competitive tech industry, prove my worth, and leave a strong impact."
+    },
+    "journey": {
+      "title": "Professional Journey",
+      "subtitle": "Explore my career path and the experiences that have shaped my expertise in web development.",
+      "achievements": "Key Achievements:",
+      "tech": "Technologies Used:",
+      "present": "Present",
+      "items": {
+        "1": {
+          "position": "Front-End Developer",
+          "location": "Remote",
+          "description": "Developed responsive web applications and landing pages for various clients. Collaborated with design teams to implement pixel-perfect UI components using React and Next.js.",
+          "achievements": {
+            "0": "Improved website performance by 40% through optimization",
+            "1": "Implemented modern design systems and component libraries"
+          }
+        },
+        "2": {
+          "position": "Front-End Developer",
+          "location": "Remote",
+          "description": "Worked on developing user interfaces for web applications. Focused on creating responsive designs and implementing interactive features using modern JavaScript frameworks.",
+          "achievements": {
+            "0": "Developed key features for the main product dashboard",
+            "1": "Reduced load times by 30% through code optimization",
+            "2": "Mentored junior developers on best practices"
+          }
+        }
+      }
+    },
+    "details": {
+      "title": "Personal Details",
+      "items": {
+        "Age": "Age",
+        "City": "City",
+        "Birthday": "Birthday",
+        "Email": "Email",
+        "Phone": "Phone",
+        "Degree": "Degree",
+        "Freelance": "Freelance"
+      },
+      "values": {
+        "degree": "High School",
+        "freelance": "Available"
+      },
+      "available": "Available for Freelance Work"
+    },
+    "skills": {
+      "title": "Skills & Expertise",
+      "subtitle": "Discover my technical skills and expertise across various technologies and frameworks.",
+      "technical": "Technical Skills",
+      "soft": "Soft Skills"
+    },
+    "stats": {
+      "title": "Facts & Stats",
+      "items": {
+        "1": "Happy Clients",
+        "2": "Projects Completed",
+        "3": "Awards Won",
+        "4": "Support Hours"
+      },
+      "testimonials": {
+        "title": "What Clients Say",
+        "items": {
+          "1": "Abdeltawab delivered exceptional work on our e-commerce platform. His attention to detail and technical expertise made the project a huge success.",
+          "2": "Working with Abdeltawab was a pleasure. He understood our requirements perfectly and delivered a beautiful, responsive website that exceeded our expectations.",
+          "3": "Abdeltawab's ability to translate designs into pixel-perfect code is remarkable. He's reliable, professional, and delivers high-quality work consistently."
+        }
+      }
+    },
+    "resume": {
+      "title": "Resume",
+      "download": "Download Resume",
+      "education": {
+        "title": "Education",
+        "items": {
+          "1": {
+            "degree": "High School Diploma",
+            "institution": "High School",
+            "description": "Completed secondary education."
+          }
+        }
       }
     }
   },
