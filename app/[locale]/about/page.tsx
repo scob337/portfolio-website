@@ -7,43 +7,49 @@ import { SkillsShowcase } from "@/components/about/skills-showcase"
 import { FactsStats } from "@/components/about/facts-stats"
 import { ResumeSection } from "@/components/about/resume-section"
 
+import { getLocale } from "next-intl/server"
+
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("about")
+  const locale = await getLocale()
+  const isArabic = locale === "ar"
 
   return {
-    title: "About Abdeltawab Sha`ban - Front-End Developer | Professional Background",
-    description:
-      "Discover the professional journey of Abdeltawab Sha`ban, a 27-year-old front-end developer from Egypt with expertise in React, Next.js, and modern web technologies. Learn about his skills, experience, and passion for creating exceptional digital experiences.",
-    keywords: [
-      "About Abdeltawab Sha`ban",
-      "Front-End Developer Egypt",
-      "React Developer Background",
-      "Web Developer Experience",
-      "Professional Skills",
-      "Developer Portfolio",
-    ],
+    title: isArabic 
+      ? "عبد التواب شعبان - مطور واجهات أمامية | الخلفية المهنية"
+      : "About Abdeltawab Sha`ban - Front-End Developer | Professional Background",
+    description: isArabic
+      ? "اكتشف المسيرة المهنية لعبد التواب شعبان، مطور واجهات أمامية من مصر متخصص في تقنيات React و Next.js."
+      : "Discover the professional journey of Abdeltawab Sha`ban, a front-end developer from Egypt with expertise in React, Next.js, and modern web technologies.",
+    keywords: isArabic 
+      ? ["عبد التواب شعبان", "مطور واجهات أمامية مصر", "خبرة تطوير ويب", "مهارات مهنية", "معرض أعمال مطور"]
+      : ["About Abdeltawab Sha`ban", "Front-End Developer Egypt", "React Developer Background", "Web Developer Experience", "Professional Skills", "Developer Portfolio"],
     openGraph: {
-      title: "About Abdeltawab Sha`ban - Front-End Developer",
-      description: "Professional background, skills, and experience of a passionate front-end developer from Egypt",
+      title: isArabic ? "عن عبد التواب شعبان - مطور واجهات أمامية" : "About Abdeltawab Sha`ban - Front-End Developer",
+      description: isArabic ? "الخلفية المهنية والمهارات والخبرات لمطور واجهات أمامية من مصر" : "Professional background, skills, and experience of a passionate front-end developer from Egypt",
       type: "profile",
-      url: "https://abdo-front-end.netlify.app/about",
+      url: `https://abdo-front-end.netlify.app${isArabic ? "/ar" : ""}/about`,
+      locale: isArabic ? "ar_EG" : "en_US",
       images: [
         {
-          url: "/professional-developer-portrait.png",
+          url: "/professional-developer-portrait.jpg",
           width: 800,
           height: 600,
-          alt: "Abdeltawab Sha`ban - Professional Developer Portrait",
+          alt: isArabic ? "عبد التواب شعبان" : "Abdeltawab Sha`ban - Professional Developer Portrait",
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: "About Abdeltawab Sha`ban - Front-End Developer",
-      description: "Professional background and skills of a passionate front-end developer",
-      images: ["/professional-developer-portrait.png"],
+      title: isArabic ? "عن عبد التواب شعبان - مطور واجهات أمامية" : "About Abdeltawab Sha`ban - Front-End Developer",
+      description: isArabic ? "الخلفية المهنية والمهارات والخبرات" : "Professional background and skills of a passionate front-end developer",
+      images: ["/professional-developer-portrait.jpg"],
     },
     alternates: {
-      canonical: "https://abdo-front-end.netlify.app/about",
+      canonical: `https://abdo-front-end.netlify.app${isArabic ? "/ar" : ""}/about`,
+      languages: {
+        "en": "https://abdo-front-end.netlify.app/about",
+        "ar": "https://abdo-front-end.netlify.app/ar/about",
+      }
     },
   }
 }

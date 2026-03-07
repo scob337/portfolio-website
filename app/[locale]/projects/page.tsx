@@ -4,46 +4,47 @@ import { getTranslations } from "next-intl/server"
 import { ProjectsHero } from "@/components/projects/projects-hero"
 import { ProjectsGrid } from "@/components/projects/projects-grid"
 
+import { getLocale } from "next-intl/server"
+
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("projects")
+  const locale = await getLocale()
+  const isArabic = locale === "ar"
 
   return {
-    title: "Projects Portfolio - Abdeltawab Sha`ban | React & Next.js Applications",
-    description:
-      "Explore the comprehensive portfolio of Abdeltawab Sha`ban featuring modern web applications, e-commerce solutions, and landing pages built with React, Next.js, TypeScript, and cutting-edge technologies. View live demos and source code.",
-    keywords: [
-      "React Projects",
-      "Next.js Applications",
-      "Web Development Portfolio",
-      "E-commerce Solutions",
-      "Landing Pages",
-      "TypeScript Projects",
-      "Frontend Projects",
-      "Developer Portfolio",
-    ],
+    title: isArabic ? "معرض الأعمال - عبد التواب شعبان | تطبيقات React و Next.js" : "Projects Portfolio - Abdeltawab Sha`ban | React & Next.js Applications",
+    description: isArabic
+      ? "استكشف معرض أعمال عبد التواب شعبان. تطبيقات ويب حديثة ومتاجر إلكترونية وصفحات هبوط مبنية باستخدام تقنيات React و Next.js."
+      : "Explore the comprehensive portfolio of Abdeltawab Sha`ban featuring modern web applications, e-commerce solutions, and landing pages built with React, Next.js.",
+    keywords: isArabic
+      ? ["مشاريع React", "تطبيقات Next.js", "معرض أعمال ويب", "متاجر إلكترونية", "صفحات هبوط"]
+      : ["React Projects", "Next.js Applications", "Web Development Portfolio", "E-commerce Solutions", "Landing Pages", "TypeScript Projects"],
     openGraph: {
-      title: "Projects Portfolio - Abdeltawab Sha`ban",
-      description:
-        "Comprehensive portfolio showcasing modern web development projects, applications, and innovative solutions",
+      title: isArabic ? "معرض الأعمال - عبد التواب شعبان" : "Projects Portfolio - Abdeltawab Sha`ban",
+      description: isArabic ? "مجموعة شاملة من مشاريع تطوير الويب الحديثة" : "Comprehensive portfolio showcasing modern web development projects, applications, and innovative solutions",
       type: "website",
-      url: "https://abdo-front-end.netlify.app/projects",
+      url: `https://abdo-front-end.netlify.app${isArabic ? "/ar" : ""}/projects`,
+      locale: isArabic ? "ar_EG" : "en_US",
       images: [
         {
-          url: "/projects-showcase.png",
+          url: "/projects-banner.webp",
           width: 1200,
           height: 630,
-          alt: "Abdeltawab Sha`ban Projects Portfolio Showcase",
+          alt: isArabic ? "معرض مشاريع عبد التواب شعبان" : "Abdeltawab Sha`ban Projects Portfolio Showcase",
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: "Projects Portfolio - Abdeltawab Sha`ban",
-      description: "Modern web development projects and applications showcase",
-      images: ["/projects-showcase.png"],
+      title: isArabic ? "معرض الأعمال - عبد التواب شعبان" : "Projects Portfolio - Abdeltawab Sha`ban",
+      description: isArabic ? "مجموعة شاملة من مشاريع تطوير الويب الحديثة" : "Modern web development projects and applications showcase",
+      images: ["/projects-banner.webp"],
     },
     alternates: {
-      canonical: "https://abdo-front-end.netlify.app/projects",
+      canonical: `https://abdo-front-end.netlify.app${isArabic ? "/ar" : ""}/projects`,
+      languages: {
+        "en": "https://abdo-front-end.netlify.app/projects",
+        "ar": "https://abdo-front-end.netlify.app/ar/projects",
+      }
     },
   }
 }
