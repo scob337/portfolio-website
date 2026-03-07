@@ -1,19 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { ChevronUp, Menu, X, Github, Linkedin, Mail, Phone, MapPin, Download, ExternalLink } from "lucide-react"
-import {
-  SiReact,
-  SiNextdotjs,
-  SiTypescript,
-  SiTailwindcss,
-  SiNodedotjs,
-  SiJavascript,
-  SiHtml5,
-  SiCss3,
-  SiGit,
-  SiFigma,
-} from "react-icons/si"
+import { ChevronUp, Menu, X, Github, Linkedin, Mail, Phone, MapPin, Download, ExternalLink, Code2, Box, FileCode2, Wind, Server, FileCode, Layout, Brush, GitBranch, Figma } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -165,16 +153,16 @@ export default function Portfolio() {
   const t = translations[currentLang]
 
   const skills = [
-    { name: "React", level: 95, icon: SiReact, color: "#61DAFB" },
-    { name: "Next.js", level: 90, icon: SiNextdotjs, color: "#000000" },
-    { name: "TypeScript", level: 90, icon: SiTypescript, color: "#3178C6" },
-    { name: "Tailwind CSS", level: 95, icon: SiTailwindcss, color: "#06B6D4" },
-    { name: "Node.js", level: 85, icon: SiNodedotjs, color: "#339933" },
-    { name: "JavaScript", level: 92, icon: SiJavascript, color: "#F7DF1E" },
-    { name: "HTML5", level: 98, icon: SiHtml5, color: "#E34F26" },
-    { name: "CSS3", level: 95, icon: SiCss3, color: "#1572B6" },
-    { name: "Git", level: 88, icon: SiGit, color: "#F05032" },
-    { name: "Figma", level: 80, icon: SiFigma, color: "#F24E1E" },
+    { name: "React", level: 95, icon: Code2, color: "#61DAFB" },
+    { name: "Next.js", level: 90, icon: Box, color: "#000000" },
+    { name: "TypeScript", level: 90, icon: FileCode2, color: "#3178C6" },
+    { name: "Tailwind CSS", level: 95, icon: Wind, color: "#06B6D4" },
+    { name: "Node.js", level: 85, icon: Server, color: "#339933" },
+    { name: "JavaScript", level: 92, icon: FileCode, color: "#F7DF1E" },
+    { name: "HTML5", level: 98, icon: Layout, color: "#E34F26" },
+    { name: "CSS3", level: 95, icon: Brush, color: "#1572B6" },
+    { name: "Git", level: 88, icon: GitBranch, color: "#F05032" },
+    { name: "Figma", level: 80, icon: Figma, color: "#F24E1E" },
   ]
 
   return (
