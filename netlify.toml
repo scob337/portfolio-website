@@ -6,8 +6,5 @@
   SECRETS_SCAN_OMIT_KEYS = "EMAIL_HOST,EMAIL_USER,EMAIL_PASS,EMAIL_PORT,EMAIL_SECURE,EMAIL_TO"
   SECRETS_SCAN_OMIT_PATHS = ".next/**,out/**,build/**"
 
-
-  [[headers]]
-for = "/sitemap.xml"
-  [headers.values]
-  Content-Type = "application/xml"
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
