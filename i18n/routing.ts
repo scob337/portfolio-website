@@ -1,4 +1,5 @@
 import { defineRouting } from "next-intl/routing"
+import * as navigation from "next-intl/navigation"
 
 export const routing = defineRouting({
   // A list of all locales that are supported
@@ -10,3 +11,8 @@ export const routing = defineRouting({
   // Show locale prefix only for non-default locale
   localePrefix: "as-needed"
 })
+
+const { Link, redirect, usePathname, useRouter, getPathname } =
+  (navigation as any).createNavigation(routing)
+
+export { Link, redirect, usePathname, useRouter, getPathname }

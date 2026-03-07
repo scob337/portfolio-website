@@ -1,7 +1,7 @@
 "use client"
 
 import { useLocale } from "next-intl"
-import { useRouter, usePathname } from "next/navigation"
+import { useRouter, usePathname } from "@/i18n/routing"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Languages } from "lucide-react"
@@ -13,22 +13,7 @@ export function LanguageSwitcher() {
 
     const switchLocale = () => {
         const newLocale = locale === "en" ? "ar" : "en"
-
-        // Get the path without the current locale prefix
-        let newPath = pathname
-
-        // If current locale is 'ar', remove /ar prefix
-        if (locale === "ar" && pathname.startsWith("/ar")) {
-            newPath = pathname.replace(/^\/ar/, "") || "/"
-        }
-
-        // If switching to Arabic, add /ar prefix
-        if (newLocale === "ar") {
-            newPath = `/ar${newPath === "/" ? "" : newPath}`
-        }
-
-        router.push(newPath)
-        router.refresh()
+        router.push(pathname, { locale: newLocale })
     }
 
     return (
@@ -40,7 +25,7 @@ export function LanguageSwitcher() {
                 variant="ghost"
                 size="sm"
                 onClick={switchLocale}
-                className="relative p-2 rounded-full hover:bg-primary/10 transition-all duration-300 flex items-center gap-2"
+                className="relative p-2 rounded-full glass hover:bg-white/10 text-foreground transition-all duration-300 flex items-center gap-2 border border-white/5"
                 aria-label={locale === "en" ? "Switch to Arabic" : "Switch to English"}
             >
                 <Languages className="h-5 w-5" />

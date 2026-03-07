@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
+import { BackgroundShapes } from "@/components/ui/background-shapes"
 import "./globals.css"
 
 export const metadata: Metadata = {
@@ -32,5 +33,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  return children
+  return (
+    <>
+      <BackgroundShapes />
+      <div className="noise-overlay" />
+      {children}
+    </>
+  )
 }

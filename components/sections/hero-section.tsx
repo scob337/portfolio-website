@@ -1,80 +1,95 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
 import { useTranslations } from "next-intl"
-import { motion } from "framer-motion"
+import { motion, useAnimationFrame } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { ArrowDown, Github, Linkedin, Mail, Twitter } from "lucide-react"
+import { ArrowDown, Github, Linkedin, Mail, Sparkles, Code2 } from "lucide-react"
 import { getPersonalInfo } from "@/lib/data"
 import Link from "next/link"
 
+// Global BackgroundShapes handles the background now
+
+
 export function HeroSection() {
   const t = useTranslations("hero")
-
   const personalInfo = getPersonalInfo()
-  // Create an array of keywords from translations manually since t.raw is not available or type-safe 
-  // in all setups, or simply use keys "0", "1", "2", "3"
-  const keywords = ["0", "1", "2", "3"].map(key => t(`keywords.${key}`))
+  const keywords = ["0", "1", "2", "3"].map((key) => t(`keywords.${key}`))
   const [currentKeyword, setCurrentKeyword] = useState(0)
+  const [displayedText, setDisplayedText] = useState("")
+  const [isTyping, setIsTyping] = useState(true)
 
+  // Typewriter effect
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentKeyword((prev) => (prev + 1) % keywords.length)
-    }, 2000)
-    return () => clearInterval(interval)
-  }, [keywords.length])
+    const target = keywords[currentKeyword]
+    if (isTyping) {
+      if (displayedText.length < target.length) {
+        const timer = setTimeout(() => {
+          setDisplayedText(target.slice(0, displayedText.length + 1))
+        }, 70)
+        return () => clearTimeout(timer)
+      } else {
+        const timer = setTimeout(() => setIsTyping(false), 1800)
+        return () => clearTimeout(timer)
+      }
+    } else {
+      if (displayedText.length > 0) {
+        const timer = setTimeout(() => {
+          setDisplayedText((prev) => prev.slice(0, -1))
+        }, 40)
+        return () => clearTimeout(timer)
+      } else {
+        setIsTyping(true)
+        setCurrentKeyword((prev) => (prev + 1) % keywords.length)
+      }
+    }
+  }, [displayedText, isTyping, currentKeyword, keywords])
 
   const socialLinks = [
-    { icon: Github, href: personalInfo.socialLinks.github, label: "GitHub" },
-    { icon: Linkedin, href: personalInfo.socialLinks.linkedin, label: "LinkedIn" },
-    { icon: Mail, href: personalInfo.socialLinks.email, label: "Email" },
+    { icon: Github, href: personalInfo.socialLinks.github, label: "GitHub", color: "hover:text-white" },
+    { icon: Linkedin, href: personalInfo.socialLinks.linkedin, label: "LinkedIn", color: "hover:text-blue-400" },
+    { icon: Mail, href: personalInfo.socialLinks.email, label: "Email", color: "hover:text-primary" },
   ]
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary/5" />
-      <div className="absolute inset-0 bg-[url('/modern-tech-background-pattern.jpg')] opacity-5 bg-cover bg-center" />
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center max-w-4xl mx-auto">
-          {/* Greeting */}
-          <motion.p
+      <div className="container mx-auto px-4 relative z-10 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+          
+          {/* Left Column - Text Content */}
+          <div className="text-center lg:text-start flex flex-col items-center lg:items-start order-2 lg:order-1">
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-lg md:text-xl text-muted-foreground mb-4"
+            className="inline-flex items-center gap-2 glass-strong px-5 py-2.5 rounded-full text-xs font-mono uppercase tracking-widest text-primary mb-10 shadow-2xl"
           >
+            <Sparkles className="h-4 w-4 animate-spin-slow text-accent" />
             {t("greeting")}
-          </motion.p>
+          </motion.div>
 
-          {/* Name */}
+          {/* Name - Oversized Editorial Typography */}
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-4 text-balance"
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="text-5xl md:text-7xl lg:text-[6rem] font-black tracking-tighter mb-4 leading-[0.9] neon-text-glow"
           >
-            {t("name")}
+            <span className="bg-clip-text text-transparent bg-gradient-to-br from-foreground via-foreground to-foreground/30">
+              {t("name")}
+            </span>
           </motion.h1>
 
-          {/* Animated Title */}
+          {/* Typewriter role - Clinical/Technical */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-2xl md:text-3xl lg:text-4xl font-semibold text-primary mb-6 h-12 md:h-16"
+            className="flex items-center justify-center gap-3 text-xl md:text-2xl font-mono uppercase tracking-widest mb-10 h-10"
           >
-            <motion.span
-              key={currentKeyword}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5 }}
-              className="inline-block"
-            >
-              {keywords[currentKeyword]}
-            </motion.span>
+            <span className="text-secondary-foreground/70">{displayedText}</span>
+            <span className="w-1.5 h-6 bg-primary animate-[cursor-blink_1s_step-end_infinite] inline-block" />
           </motion.div>
 
           {/* Description */}
@@ -82,65 +97,136 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto text-pretty"
+            className="text-lg md:text-xl text-muted-foreground mb-10 max-w-xl leading-relaxed border-l-2 border-primary/50 pl-6 text-start"
           >
             {t("description")}
           </motion.p>
+
 
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
+            className="flex flex-col sm:flex-row gap-4 mb-12 w-full justify-center lg:justify-start"
           >
-            <Button size="lg" className="text-lg px-8 py-3" asChild>
-              <Link href={`/#projects`}>{t("cta")}</Link>
+            <Button
+              size="lg"
+              className="text-lg px-10 py-7 font-bold rounded-2xl bg-[#00FFCC] text-[#05050A] hover:bg-[#00FFCC]/90 relative overflow-hidden group shadow-[0_0_40px_-10px_#00FFCC]"
+              asChild
+            >
+              <Link href="#projects">
+                <span className="relative z-10">{t("cta")}</span>
+                <div className="absolute inset-0 bg-white/30 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
+              </Link>
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-3 bg-transparent" asChild>
-              <Link href={`/contact`}>{t("contact")}</Link>
+            <Button
+              size="lg"
+              className="text-lg px-10 py-7 font-semibold rounded-2xl glass-strong text-foreground hover:text-white hover:border-[#B026FF]/50 hover:shadow-[0_0_20px_-5px_#B026FF] transition-all duration-300 group"
+              asChild
+            >
+              <Link href="/contact">
+                {t("contact")}
+                <ArrowDown className="ml-2 h-5 w-5 -rotate-90 group-hover:translate-x-1 transition-transform" />
+              </Link>
             </Button>
           </motion.div>
 
-          {/* Social Links */}
+
+          {/* Social Icons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1 }}
-            className="flex justify-center space-x-6 mb-12"
+            className="flex justify-center lg:justify-start gap-6"
           >
-            {socialLinks.map((social, index) => (
+            {socialLinks.map((social, i) => (
               <motion.a
                 key={social.label}
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                className="p-3 rounded-full bg-card hover:bg-primary hover:text-primary-foreground transition-colors duration-200"
                 aria-label={social.label}
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.4, delay: 1.1 + i * 0.1 }}
+                whileHover={{ scale: 1.15, y: -5 }}
+                whileTap={{ scale: 0.92 }}
+                className={`p-4 rounded-full glass-strong text-muted-foreground transition-all duration-300 hover:text-white hover:border-[#FF007F]/40 hover:shadow-[0_0_20px_-5px_#FF007F]`}
               >
                 <social.icon className="h-6 w-6" />
               </motion.a>
             ))}
           </motion.div>
+          </div>
 
-          {/* Scroll Indicator */}
-          <motion.div
+          {/* Right Column - Extravagant Animated Image */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.8, rotateY: 30 }}
+            animate={{ opacity: 1, scale: 1, rotateY: 0 }}
+            transition={{ duration: 1, delay: 0.4, type: "spring" }}
+            className="order-1 lg:order-2 flex justify-center items-center relative perspective-1000 w-full mb-10 lg:mb-0"
+          >
+            {/* Massive Glowing Behind Aura */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-[#00FFCC] via-[#B026FF] to-[#FF007F] opacity-30 blur-[100px] animate-pulse rounded-full w-[80%] h-[80%] m-auto" />
+            
+            {/* The Floating Frame */}
+            <motion.div
+              animate={{ 
+                y: [-15, 15, -15],
+                rotateX: [2, -2, 2],
+                rotateY: [-2, 2, -2]
+              }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-[450px] lg:h-[450px] rounded-[3rem] p-1.5 z-10"
+            >
+              <div className="absolute inset-0 rounded-[3rem] bg-gradient-to-br from-[#00FFCC] via-[#B026FF] to-[#FF007F] animate-gradient-shift" />
+              
+              <div className="relative w-full h-full rounded-[2.8rem] bg-[#05050A] overflow-hidden group shadow-[0_0_50px_rgba(0,255,204,0.3)] hover:shadow-[0_0_80px_rgba(176,38,255,0.6)] transition-shadow duration-500">
+                {/* Image (Replace src with your actual image later) */}
+                <img 
+                  src="https://github.com/scob337.png" 
+                  alt={personalInfo.name}
+                  className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 ease-out mix-blend-screen"
+                />
+                
+                {/* Tech Overlays inside image block */}
+                <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl glass-strong border border-white/20 transform translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100">
+                  <div className="flex items-center gap-3">
+                    <Code2 className="w-8 h-8 text-[#00FFCC] animate-pulse" />
+                    <div className="text-start">
+                      <p className="text-sm text-[#00FFCC] font-mono tracking-wider font-bold">Front-End Dev</p>
+                      <p className="text-xs text-white/70">{personalInfo.city}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Orbital Rings */}
+              <div className="absolute -inset-10 rounded-full border border-[#00FFCC]/20 animate-spin-slow opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+              <div className="absolute -inset-20 rounded-[40%] border border-[#FF007F]/20 animate-[spin_15s_linear_infinite_reverse] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none delay-100" />
+            </motion.div>
+          </motion.div>
+
+        </div>
+
+        {/* Scroll Indicator (Moved outside grid to remain centered at bottom) */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 pb-10">
+          <motion.a
+            href="#about"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 1.2 }}
-            className="flex justify-center"
+            transition={{ duration: 0.6, delay: 1.4 }}
+            className="inline-flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors duration-300"
           >
-            <motion.a
-              href="#about"
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-              className="p-2 rounded-full hover:bg-card transition-colors duration-200"
+            <motion.div
+              animate={{ y: [0, 8, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+              className="p-2 rounded-full glass"
             >
-              <ArrowDown className="h-6 w-6 text-muted-foreground" />
-            </motion.a>
-          </motion.div>
+              <ArrowDown className="h-5 w-5" />
+            </motion.div>
+          </motion.a>
         </div>
       </div>
     </section>

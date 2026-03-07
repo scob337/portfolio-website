@@ -1,29 +1,29 @@
 {
   "stats": [
     {
-      "id": 1,
+      "id": "clients",
       "label": "Happy Clients",
       "value": 25,
       "icon": "users",
       "suffix": "+"
     },
     {
-      "id": 2,
+      "id": "projects",
       "label": "Projects Completed",
       "value": 40,
       "icon": "briefcase",
       "suffix": "+"
     },
     {
-      "id": 3,
-      "label": "Awards Won",
+      "id": "experience",
+      "label": "Years Experience",
       "value": 3,
       "icon": "award",
-      "suffix": ""
+      "suffix": "+"
     },
     {
-      "id": 4,
-      "label": "Support Hours",
+      "id": "hours",
+      "label": "Hours of Code",
       "value": 1200,
       "icon": "clock",
       "suffix": "+"

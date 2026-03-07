@@ -128,7 +128,7 @@ export function ContactForm() {
                     <FormItem>
                       <FormLabel>{t("form.name")}</FormLabel>
                       <FormControl>
-                        <Input placeholder={t("form.namePlaceholder")} {...field} />
+                        <Input className="bg-white/5 border-white/10 hover:border-[#00FFCC]/30 focus:border-[#00FFCC] focus:ring-[#00FFCC]/20 transition-all rounded-xl" placeholder={t("form.namePlaceholder")} {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -141,7 +141,7 @@ export function ContactForm() {
                     <FormItem>
                       <FormLabel>{t("form.email")}</FormLabel>
                       <FormControl>
-                        <Input type="email" placeholder={t("form.emailPlaceholder")} {...field} />
+                        <Input className="bg-white/5 border-white/10 hover:border-[#00FFCC]/30 focus:border-[#00FFCC] focus:ring-[#00FFCC]/20 transition-all rounded-xl" type="email" placeholder={t("form.emailPlaceholder")} {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -157,7 +157,7 @@ export function ContactForm() {
                     <FormItem>
                       <FormLabel>{t("form.phone")}</FormLabel>
                       <FormControl>
-                        <Input type="tel" placeholder={t("form.phonePlaceholder")} {...field} />
+                        <Input className="bg-white/5 border-white/10 hover:border-[#00FFCC]/30 focus:border-[#00FFCC] focus:ring-[#00FFCC]/20 transition-all rounded-xl" type="tel" placeholder={t("form.phonePlaceholder")} {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -172,7 +172,7 @@ export function ContactForm() {
                   <FormItem>
                     <FormLabel>{t("form.subject")}</FormLabel>
                     <FormControl>
-                      <Input placeholder={t("form.subjectPlaceholder")} {...field} />
+                      <Input className="bg-white/5 border-white/10 hover:border-[#00FFCC]/30 focus:border-[#00FFCC] focus:ring-[#00FFCC]/20 transition-all rounded-xl" placeholder={t("form.subjectPlaceholder")} {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -186,14 +186,14 @@ export function ContactForm() {
                   <FormItem>
                     <FormLabel>{t("form.message")}</FormLabel>
                     <FormControl>
-                      <Textarea placeholder={t("form.messagePlaceholder")} rows={6} {...field} />
+                      <Textarea className="bg-white/5 border-white/10 hover:border-[#00FFCC]/30 focus:border-[#00FFCC] focus:ring-[#00FFCC]/20 transition-all rounded-xl resize-y" placeholder={t("form.messagePlaceholder")} rows={6} {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
               />
 
-              <Button type="submit" className="w-full" disabled={isSubmitting}>
+              <Button type="submit" className="w-full text-lg py-6 font-bold rounded-xl bg-[#00FFCC] text-[#05050A] hover:bg-[#00FFCC]/90 shadow-[0_0_20px_rgba(0,255,204,0.3)] hover:shadow-[0_0_30px_rgba(0,255,204,0.5)] transition-all duration-300" disabled={isSubmitting}>
                 {isSubmitting ? (
                   <>
                     <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2" />

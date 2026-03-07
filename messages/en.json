@@ -240,7 +240,18 @@
       }
     }
   },
+  "experience": {
+    "title": "Work Experience",
+    "achievements": "Key Achievements:",
+    "tech": "Technologies:",
+    "present": "Present"
+  },
   "footer": {
-    "copyright": "© 2025 Abdeltawab Sha`ban. All rights reserved."
+    "copyright": "© 2025 Abdeltawab Sha`ban. All rights reserved.",
+    "nav": "Quick Links",
+    "contact": "Get In Touch",
+    "tagline": "Front-End Developer passionate about creating modern, responsive web applications with cutting-edge technologies.",
+    "madeWith": "Made with",
+    "inEgypt": "in Egypt"
   }
 }
