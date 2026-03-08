@@ -31,58 +31,64 @@ export function Navigation() {
   ]
 
   return (
+    <>
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-      className="fixed top-0 left-0 right-0 z-50 py-6"
+      className="fixed top-0 left-0 right-0 z-50 py-6 pointer-events-none"
     >
       <div className="container mx-auto px-4 flex justify-center">
-        <nav className={`flex items-center gap-2 px-6 py-3 rounded-2xl transition-all duration-500 ${
+        <nav className={`pointer-events-auto flex items-center gap-6 px-8 py-3.5 rounded-full transition-all duration-500 border ${
           isScrolled 
-            ? "bg-[#05050A]/80 backdrop-blur-xl border border-white/10 shadow-2xl" 
-            : "bg-white/5 backdrop-blur-md border border-white/5"
+            ? "bg-[#05050A]/80 backdrop-blur-xl border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.3)]" 
+            : "bg-white/[0.03] backdrop-blur-md border-white/5"
         }`}>
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 mr-4 group">
-            <div className="relative w-8 h-8 rounded-lg overflow-hidden border border-white/10 group-hover:border-primary/50 transition-colors">
+          <Link href="/" className="flex items-center gap-2 group">
+            <div className="relative w-7 h-7 rounded-md overflow-hidden border border-white/10 group-hover:border-primary/50 transition-all duration-300">
               <Image src="/Logo.png" alt="Logo" fill className="object-cover" />
             </div>
             <span className="font-black tracking-tighter text-lg group-hover:text-primary transition-colors">ABDO.</span>
           </Link>
 
+          {/* Divider */}
+          <div className="w-px h-4 bg-white/10 hidden md:block" />
+
           {/* Nav Items */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden md:flex items-center gap-2">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="relative px-4 py-2 text-sm font-bold text-white/70 hover:text-white transition-colors group"
+                className="relative px-4 py-1.5 text-sm font-medium text-white/60 hover:text-white transition-all duration-300 group"
               >
-                {item.label}
+                <span className="relative z-10">{item.label}</span>
                 <motion.div
-                  layoutId="nav-underline"
-                  className="absolute bottom-0 left-4 right-4 h-0.5 bg-primary opacity-0 group-hover:opacity-100 transition-opacity"
+                  layoutId="nav-pill"
+                  className="absolute inset-0 bg-white/5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
                 />
               </Link>
             ))}
           </div>
 
-          <div className="flex items-center gap-4 ml-4">
+          {/* Actions */}
+          <div className="flex items-center gap-4">
+            <div className="w-px h-4 bg-white/10 hidden md:block" />
             <LanguageSwitcher />
             
-            {/* Mobile Toggle */}
             <Button
               variant="ghost"
               size="icon"
-              className="md:hidden rounded-xl hover:bg-white/10"
+              className="md:hidden rounded-full hover:bg-white/10 w-9 h-9"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
-              {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              {isMobileMenuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
             </Button>
           </div>
         </nav>
       </div>
+    </motion.header>
 
       {/* Mobile Menu Dropdown */}
       <AnimatePresence>
@@ -121,6 +127,6 @@ export function Navigation() {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.header>
+    </>
   )
 }
