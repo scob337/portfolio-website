@@ -9,20 +9,20 @@
   "hero": {
     "greeting": "Hello, I'm",
     "name": "Abdeltawab Sha`ban",
-    "title": "Front-End Developer",
-    "description": "I create modern, responsive web applications using React and Next.js",
-    "cta": "View My Work",
+    "title": "Front-End Development Expert | React & Next.js",
+    "description": "Transforming ambitious ideas into exceptional digital experiences with clean code, pixel-perfect design, and high-performance solutions.",
+    "cta": "Explore My Work",
     "contact": "Get In Touch",
     "keywords": {
-      "0": "Web Developer",
-      "1": "React Specialist",
-      "2": "UI/UX Enthusiast",
-      "3": "Problem Solver"
+      "0": "Front-End Engineer",
+      "1": "React & Next.js Expert",
+      "2": "UI/UX Designer",
+      "3": "Digital Solution Architect"
     }
   },
   "about": {
-    "title": "About Me",
-    "description": "Hello, I'm Abdeltawab Sha`ban, a 27-year-old front-end developer from Egypt. With hands-on experience in building dynamic user interfaces and an online store using ReactJS, I'm passionate about learning and continuously evolving to stand out in the competitive tech industry, prove my worth, and leave a strong impact.",
+    "title": "My Expertise",
+    "description": "Abdeltawab Sha`ban, a Front-End Development Expert specialized in building complex web systems and advanced e-commerce solutions. With years of experience in React and Next.js, I focus on delivering unparalleled user experiences while ensuring the highest standards of performance and security. My mission is to help businesses grow through innovative, future-proof web technology.",
     "details": {
       "age": "Age",
       "city": "City",

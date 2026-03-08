@@ -10,6 +10,7 @@ import { Suspense } from "react"
 import { Navigation } from "@/components/layout/navigation"
 import { Footer } from "@/components/layout/footer"
 import { BackToTop } from "@/components/ui/back-to-top"
+import { BackgroundShapes } from "@/components/ui/background-shapes"
 import "../globals.css"
 
 const locales = ["en", "ar"]
@@ -252,7 +253,8 @@ export default async function LocaleLayout({
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
       </head>
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
+      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased relative`}>
+        <BackgroundShapes />
         <NextIntlClientProvider messages={messages}>
           <Navigation />
           <main className="pt-20">

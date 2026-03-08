@@ -168,8 +168,22 @@ export function HeroSection() {
             className="order-1 lg:order-2 flex justify-center items-center relative perspective-1000 w-full mb-10 lg:mb-0"
           >
             {/* Massive Glowing Behind Aura */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-[#00FFCC] via-[#B026FF] to-[#FF007F] opacity-30 blur-[100px] animate-pulse rounded-full w-[80%] h-[80%] m-auto" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-[#00FFCC] via-[#B026FF] to-[#FF007F] opacity-20 blur-[120px] animate-pulse rounded-full w-[80%] h-[80%] m-auto" />
             
+            {/* Animated Ring 1 */}
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+              className="absolute w-[110%] h-[110%] border border-[#00FFCC]/10 rounded-full hidden lg:block"
+            />
+            
+            {/* Animated Ring 2 */}
+            <motion.div
+              animate={{ rotate: -360 }}
+              transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+              className="absolute w-[120%] h-[120%] border border-[#B026FF]/10 rounded-full hidden lg:block"
+            />
+
             {/* The Floating Frame */}
             <motion.div
               animate={{ 
@@ -178,33 +192,34 @@ export function HeroSection() {
                 rotateY: [-2, 2, -2]
               }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-[450px] lg:h-[450px] rounded-[3rem] p-1.5 z-10"
+              className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-[480px] lg:h-[480px] rounded-[3.5rem] p-1 z-10"
             >
-              <div className="absolute inset-0 rounded-[3rem] bg-gradient-to-br from-[#00FFCC] via-[#B026FF] to-[#FF007F] animate-gradient-shift" />
+              <div className="absolute inset-0 rounded-[3.5rem] bg-gradient-to-br from-[#00FFCC] via-[#B026FF] to-[#FF007F] animate-gradient-shift opacity-80" />
               
-              <div className="relative w-full h-full rounded-[2.8rem] bg-[#05050A] overflow-hidden group shadow-[0_0_50px_rgba(0,255,204,0.3)] hover:shadow-[0_0_80px_rgba(176,38,255,0.6)] transition-shadow duration-500">
-                {/* Image (Replace src with your actual image later) */}
+              <div className="relative w-full h-full rounded-[3.3rem] bg-[#05050A] overflow-hidden group shadow-[0_0_50px_rgba(0,255,204,0.3)] hover:shadow-[0_0_80px_rgba(176,38,255,0.6)] transition-shadow duration-500">
+                {/* Image */}
                 <img 
                   src="https://github.com/scob337.png" 
                   alt={personalInfo.name}
-                  className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 ease-out mix-blend-screen"
+                  className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-1000 ease-out"
                 />
                 
+                {/* Tech Scanline Effect */}
+                <div className="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.2)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[size:100%_4px,3px_100%] pointer-events-none opacity-20" />
+                
                 {/* Tech Overlays inside image block */}
-                <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl glass-strong border border-white/20 transform translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100">
-                  <div className="flex items-center gap-3">
-                    <Code2 className="w-8 h-8 text-[#00FFCC] animate-pulse" />
+                <div className="absolute bottom-8 left-8 right-8 p-5 rounded-2xl glass-strong border border-white/20 transform translate-y-12 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-700 delay-100 backdrop-blur-xl">
+                  <div className="flex items-center gap-4">
+                    <div className="p-2.5 rounded-xl bg-[#00FFCC]/20">
+                      <Code2 className="w-8 h-8 text-[#00FFCC] animate-pulse" />
+                    </div>
                     <div className="text-start">
-                      <p className="text-sm text-[#00FFCC] font-mono tracking-wider font-bold">Front-End Dev</p>
-                      <p className="text-xs text-white/70">{personalInfo.city}</p>
+                      <p className="text-sm text-[#00FFCC] font-mono tracking-wider font-bold uppercase">{t("role") || "Senior Developer"}</p>
+                      <p className="text-xs text-white/60 font-mono">{personalInfo.city}</p>
                     </div>
                   </div>
                 </div>
               </div>
-
-              {/* Orbital Rings */}
-              <div className="absolute -inset-10 rounded-full border border-[#00FFCC]/20 animate-spin-slow opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
-              <div className="absolute -inset-20 rounded-[40%] border border-[#FF007F]/20 animate-[spin_15s_linear_infinite_reverse] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none delay-100" />
             </motion.div>
           </motion.div>
 

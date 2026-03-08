@@ -81,7 +81,7 @@ export function ProjectsSection() {
         </motion.div>
 
         {/* Projects Asymmetrical Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 auto-rows-[400px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 auto-rows-auto md:auto-rows-[400px]">
           {(filtered.length > 0 ? filtered : featuredProjects).map((project, i) => {
             // Make the first item span 2 columns and 2 rows on large screens if there are enough items
             const isFeatured = i === 0 && filtered.length > 1;
@@ -95,7 +95,7 @@ export function ProjectsSection() {
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
               className={`group bg-white/[0.01] border border-white/[0.05] hover:bg-white/[0.03] hover:border-[#00FFCC]/40 backdrop-blur-xl rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.5)] hover:shadow-[0_0_30px_rgba(0,255,204,0.15)] transition-all duration-500 flex flex-col relative ${
-                isFeatured ? "md:col-span-2 md:row-span-2" : "col-span-1 row-span-1"
+                isFeatured ? "md:col-span-2 md:row-span-2 min-h-[400px] md:min-h-[800px]" : "col-span-1 row-span-1 min-h-[400px]"
               }`}
             >
               {/* Image Background */}

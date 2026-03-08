@@ -28,11 +28,11 @@ export function Footer() {
   ]
 
   return (
-    <footer className="relative bg-[#040a12] text-white py-16 overflow-hidden border-t border-border/30">
+    <footer className="relative bg-[#05050A] text-white py-16 overflow-hidden border-t border-white/5">
       {/* Background */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-96 h-48 bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-80 h-40 bg-accent/5 rounded-full blur-3xl" />
+      <div className="absolute inset-0 pointer-events-none opacity-20">
+        <div className="absolute top-0 left-1/4 w-96 h-48 bg-primary/10 rounded-full blur-[100px]" />
+        <div className="absolute bottom-0 right-1/4 w-80 h-40 bg-accent/10 rounded-full blur-[100px]" />
         <div className="absolute inset-0 grid-bg opacity-10" />
       </div>
 

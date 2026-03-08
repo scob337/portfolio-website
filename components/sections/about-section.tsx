@@ -96,7 +96,7 @@ export function AboutSection() {
 
 
         {/* Bento Box Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[140px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-auto md:auto-rows-[140px]">
           
           {/* Main About Card (Spans 2x2) */}
           <motion.div
@@ -104,7 +104,7 @@ export function AboutSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="md:col-span-2 md:row-span-2 glass-strong rounded-3xl p-8 flex flex-col justify-between group hover:border-[#00FFCC]/40 hover:shadow-[0_0_30px_rgba(0,255,204,0.15)] transition-all duration-500"
+            className="md:col-span-2 md:row-span-2 glass-strong rounded-3xl p-6 md:p-8 flex flex-col justify-between group hover:border-[#00FFCC]/40 hover:shadow-[0_0_30px_rgba(0,255,204,0.15)] transition-all duration-500"
           >
             <div>
               <h3 className="text-2xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#00FFCC] via-[#B026FF] to-[#FF007F]">Hello, I'm Abdeltawab.</h3>
