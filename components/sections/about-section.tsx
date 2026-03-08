@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl"
 import { motion, useInView } from "framer-motion"
 import { useRef, useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
-import { getPersonalInfo, getStats, getTechnicalSkills } from "@/lib/data"
+import { getPersonalInfo, getStats, getTechnicalSkills, getSoftSkills } from "@/lib/data"
 import { Users, Briefcase, Award, Clock, Atom, Zap, Code2, FileCode, Layout, Palette, Wind, Github, Sparkles, MonitorSmartphone } from "lucide-react"
 import Link from "next/link"
 
