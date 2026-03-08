@@ -199,11 +199,11 @@ export function HeroSection() {
               transition={{ 
                 y: { duration: 5, repeat: Infinity, ease: "easeInOut" }
               }}
-              className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[450px] lg:h-[450px] rounded-[3rem] p-1 z-10 perspective-1000"
+              className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-[480px] lg:h-[480px] rounded-[3.5rem] p-1 z-10 perspective-1000"
             >
-              <div className="absolute inset-0 rounded-[3rem] bg-gradient-to-br from-primary/30 via-accent/30 to-primary/30 blur-[4px]" />
+              <div className="absolute inset-0 rounded-[3.5rem] bg-gradient-to-br from-primary/30 via-accent/30 to-primary/30 blur-[4px]" />
               
-              <div className="relative w-full h-full rounded-[2.8rem] bg-[#05050A] overflow-hidden group shadow-2xl border border-white/5 transition-all duration-700">
+              <div className="relative w-full h-full rounded-[3.3rem] bg-[#05050A] overflow-hidden group shadow-2xl border border-white/5 transition-all duration-700">
                 {/* Image */}
                 <Image 
                   src="https://github.com/scob337.png" 

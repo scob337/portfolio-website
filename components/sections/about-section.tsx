@@ -128,6 +128,7 @@ export function AboutSection() {
   const personalInfo = getPersonalInfo()
   const stats = getStats() || []
   const technicalSkills = getTechnicalSkills() || []
+  const softSkills = getSoftSkills() || []
 
   const translatedStats = stats.map((stat: any) => ({
     ...stat,
@@ -236,7 +237,7 @@ export function AboutSection() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.2 + (0.1 * i) }}
                 viewport={{ once: true }}
-                className="glass rounded-3xl p-6 flex flex-col items-center justify-center text-center group hover:bg-white/5 transition-all duration-500 hover:border-[#00FFCC]/30 hover:shadow-[0_0_20px_rgba(0,255,204,0.1)] relative overflow-hidden"
+                className="glass rounded-3xl p-6 flex flex-col items-center justify-center text-center group hover:bg-white/5 transition-all duration-500 hover:border-[#00FFCC]/30 hover:shadow-[0_0_20px_rgba(0,255,204,0.1) relative overflow-hidden"
               >
                  <div className="absolute -right-4 -top-4 opacity-5 group-hover:scale-110 group-hover:opacity-10 transition-all duration-700 ease-out text-[#00FFCC]">
                   <Icon className="w-24 h-24" />
@@ -248,21 +249,27 @@ export function AboutSection() {
               </motion.div>
             )
           })}
+        </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="col-span-1 md:col-span-3 lg:col-span-4 glass-strong rounded-3xl p-8 md:p-12 overflow-hidden flex flex-col items-center border border-white/10 hover:border-primary/30 transition-all duration-700 shadow-[0_20px_50px_rgba(0,0,0,0.3)] group"
-          >
-             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-             
-             <h3 className="text-2xl md:text-3xl font-black mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-white/40 tracking-tight">
-               {t("technicalArsenal") || "Technical Capabilities"}
-             </h3>
-             
-             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 w-full relative z-10">
+        {/* Dedicated Skills Section - Moved OUT of the Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="mt-16 glass-strong rounded-[3rem] p-10 md:p-16 border border-white/10 hover:border-primary/20 transition-all duration-1000 shadow-3xl relative overflow-hidden group"
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-30 group-hover:opacity-50 transition-opacity duration-700" />
+          
+          <div className="relative z-10">
+            <div className="text-center mb-16">
+              <h3 className="text-3xl md:text-5xl font-black mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-white/50 tracking-tight uppercase">
+                {t("technicalArsenal") || "Technical Capabilities"}
+              </h3>
+              <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full blur-[1px]" />
+            </div>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
               {technicalSkills && technicalSkills.length > 0 ? technicalSkills.map((skill, i) => {
                 const SkillIcon = skillIconMap[skill.icon as keyof typeof skillIconMap] || Code2
                 return (
@@ -272,38 +279,43 @@ export function AboutSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: i * 0.05 }}
                     viewport={{ once: true }}
-                    whileHover={{ y: -8, scale: 1.02 }}
-                    className="relative group/skill flex flex-col items-center gap-4 p-6 rounded-3xl bg-white/[0.03] border border-white/5 hover:border-primary/40 hover:bg-white/[0.07] transition-all duration-500"
+                    whileHover={{ y: -10, scale: 1.05 }}
+                    className="relative group/skill flex flex-col items-center gap-5 p-8 rounded-[2.5rem] bg-white/[0.02] border border-white/5 hover:border-primary/40 hover:bg-white/[0.05] transition-all duration-500 shadow-xl"
                   >
-                    {/* Glow effect on hover */}
-                    <div className="absolute inset-0 rounded-3xl bg-primary/5 opacity-0 group-hover/skill:opacity-100 blur-xl transition-opacity duration-500" />
+                    {/* Glowing Aura on Hover */}
+                    <div className="absolute inset-0 rounded-[2.5rem] bg-primary/10 opacity-0 group-hover/skill:opacity-100 blur-2xl transition-all duration-700" />
                     
-                    <div className="relative w-16 h-16 flex items-center justify-center rounded-2xl bg-[#05050A] border border-white/10 group-hover/skill:border-primary/50 group-hover/skill:shadow-[0_0_20px_rgba(0,255,204,0.3)] transition-all duration-500 overflow-hidden">
+                    <div className="relative w-20 h-20 flex items-center justify-center rounded-2xl bg-[#05050A] border border-white/10 group-hover/skill:border-primary/50 group-hover/skill:shadow-[0_0_30px_rgba(0,255,204,0.3)] transition-all duration-500 overflow-hidden">
                       <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-0 group-hover/skill:opacity-100 transition-opacity" />
-                      <SkillIcon className="w-8 h-8 text-white/70 group-hover/skill:text-primary transition-all duration-500 transform group-hover/skill:scale-110" />
+                      <SkillIcon className="w-10 h-10 text-white/80 group-hover/skill:text-primary transition-all duration-500 transform group-hover/skill:scale-110" />
                     </div>
                     
                     <div className="text-center">
-                      <span className="text-sm font-black text-white/60 group-hover/skill:text-white transition-colors tracking-tighter uppercase">{skill.name}</span>
-                      {/* Level bar */}
-                      <div className="mt-3 w-12 h-1 bg-white/5 rounded-full overflow-hidden">
+                      <span className="text-base font-black text-white/70 group-hover/skill:text-white transition-colors tracking-tighter uppercase block mb-3">
+                        {skill.name}
+                      </span>
+                      {/* Detailed Level Bar */}
+                      <div className="w-16 h-1.5 bg-white/5 rounded-full overflow-hidden border border-white/5">
                         <motion.div 
                           initial={{ width: 0 }}
                           whileInView={{ width: `${skill.level}%` }}
-                          transition={{ duration: 1, delay: 0.5 + i * 0.05 }}
-                          className="h-full bg-gradient-to-r from-primary to-accent"
+                          transition={{ duration: 1.5, delay: 0.6 + i * 0.05, ease: "easeOut" }}
+                          className="h-full bg-gradient-to-r from-primary to-accent shadow-[0_0_10px_rgba(0,255,204,0.5)]"
                         />
                       </div>
                     </div>
                   </motion.div>
                 )
               }) : (
-                <div className="col-span-full text-center text-muted-foreground">No skills found.</div>
+                <div className="col-span-full text-center py-10">
+                  <p className="text-muted-foreground font-mono text-sm uppercase tracking-widest">
+                    Technical capabilities loading...
+                  </p>
+                </div>
               )}
             </div>
-          </motion.div>
-
-        </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   )
