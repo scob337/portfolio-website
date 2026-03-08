@@ -135,7 +135,7 @@ export default async function LocaleLayout({
               url: "https://abdo-front-end.netlify.app",
               email: "scob198350@gmail.com",
               telephone: "+201117218756",
-              image: "https://abdo-front-end.netlify.app/og-image.png",
+              image: "https://abdo-front-end.netlify.app/Logo.png",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Giza",
@@ -229,7 +229,8 @@ export default async function LocaleLayout({
           }}
         />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" href="/Logo.png" />
+        <link rel="apple-touch-icon" href="/Logo.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/Logo.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/Logo.png" />
         <link rel="manifest" href="/site.webmanifest" />

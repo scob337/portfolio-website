@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowDown, Github, Linkedin, Mail, Sparkles, Code2 } from "lucide-react"
 import { getPersonalInfo } from "@/lib/data"
 import Link from "next/link"
+import Image from "next/image"
 
 // Global BackgroundShapes handles the background now
 
