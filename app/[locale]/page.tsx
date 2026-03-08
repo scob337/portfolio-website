@@ -99,9 +99,7 @@ export default function HomePage() {
             "@type": "Person",
             "name": "Abdeltawab Sha`ban",
             "url": "https://abdo-front-end.netlify.app",
-            "jobTitle": "Junior 
-
- Front-End Architect",
+            "jobTitle": "Junior Front-End Architect",
             "knowsAbout": ["React", "Next.js", "TypeScript", "Web Development"],
             "sameAs": [
               "https://github.com/scob337",
