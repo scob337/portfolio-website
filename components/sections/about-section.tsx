@@ -16,16 +16,81 @@ const iconMap = {
 }
 
 const skillIconMap = {
-  Atom: Atom,
-  Zap: Zap,
-  Code2: Code2,
-  FileCode: FileCode,
-  Layout: Layout,
-  Palette: Palette,
-  Wind: Wind,
-  Github: Github,
-  Sparkles: Sparkles,
-  MonitorSmartphone: MonitorSmartphone,
+  Atom: (props: any) => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <circle cx="12" cy="12" r="2" />
+      <path d="M12 7a15.3 15.3 0 0 1 4 10" />
+      <path d="m16 7-4 10" />
+      <path d="m8 7 4 10" />
+      <path d="M12 7a15.3 15.3 0 0 0-4 10" />
+    </svg>
+  ),
+  Zap: (props: any) => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="M4 14.71 14.71 4l-3.14 8.57L20 9.29 9.29 20l3.14-8.57L4 14.71z" />
+    </svg>
+  ),
+  Code2: (props: any) => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="m18 16 4-4-4-4" />
+      <path d="m6 8-4 4 4 4" />
+      <path d="m14.5 4-5 16" />
+    </svg>
+  ),
+  FileCode: (props: any) => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="M10 12.5 8 15l2 2.5" />
+      <path d="m14 12.5 2 2.5-2 2.5" />
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+      <path d="M14 2v6h6" />
+    </svg>
+  ),
+  Layout: (props: any) => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <rect width="18" height="18" x="3" y="3" rx="2" />
+      <path d="M3 9h18" />
+      <path d="M9 21V9" />
+    </svg>
+  ),
+  Palette: (props: any) => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <circle cx="13.5" cy="6.5" r=".5" fill="currentColor" />
+      <circle cx="17.5" cy="10.5" r=".5" fill="currentColor" />
+      <circle cx="8.5" cy="7.5" r=".5" fill="currentColor" />
+      <circle cx="6.5" cy="12.5" r=".5" fill="currentColor" />
+      <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.9 0 1.6-.7 1.6-1.6 0-.4-.2-.8-.5-1.1-.3-.3-.4-.7-.4-1.1 0-.9.7-1.6 1.6-1.6H17c2.8 0 5-2.2 5-5 0-4.4-4.5-8-10-8z" />
+    </svg>
+  ),
+  Wind: (props: any) => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2" />
+      <path d="M9.6 4.6A2 2 0 1 1 11 8H2" />
+      <path d="M12.6 19.4a3 3 0 1 0 3-5H2" />
+    </svg>
+  ),
+  Github: (props: any) => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3.5 1.5a10.8 10.8 0 0 0-5.5 0C7.5 2 6.5 2 6.5 2c-.28 1.15-.28 2.35 0 3.5-.73 1.02-1.08 2.25-1 3.5 0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+      <path d="M9 18c-4.51 2-4.5-2-7-2" />
+    </svg>
+  ),
+  Sparkles: (props: any) => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+      <path d="M5 3v4" />
+      <path d="M19 17v4" />
+      <path d="M3 5h4" />
+      <path d="M17 19h4" />
+    </svg>
+  ),
+  MonitorSmartphone: (props: any) => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <rect width="10" height="14" x="11" y="3" rx="2" />
+      <path d="M18 13v.01" />
+      <path d="M11 10.5V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h2" />
+      <path d="M7 9v.01" />
+    </svg>
+  ),
 }
 
 function AnimatedCounter({ value, suffix = "" }: { value: number; suffix?: string }) {
@@ -189,26 +254,47 @@ export function AboutSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
-            className="col-span-1 md:col-span-3 lg:col-span-4 glass-strong rounded-3xl p-6 md:p-8 overflow-hidden flex flex-col justify-center border-t-2 border-transparent hover:border-t-[#B026FF]/50 transition-all duration-500"
+            className="col-span-1 md:col-span-3 lg:col-span-4 glass-strong rounded-3xl p-8 md:p-12 overflow-hidden flex flex-col items-center border border-white/10 hover:border-primary/30 transition-all duration-700 shadow-[0_20px_50px_rgba(0,0,0,0.3)] group"
           >
-             <p className="text-xs font-medium uppercase tracking-widest text-[#FF007F]/80 mb-8 text-center">{t("technicalArsenal") || "Technical Capabilities"}</p>
-             <div className="flex flex-wrap justify-center gap-3 lg:gap-4 mt-2">
+             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+             
+             <h3 className="text-2xl md:text-3xl font-black mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-white/40 tracking-tight">
+               {t("technicalArsenal") || "Technical Capabilities"}
+             </h3>
+             
+             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 w-full relative z-10">
               {technicalSkills.map((skill, i) => {
                 const SkillIcon = skillIconMap[skill.icon as keyof typeof skillIconMap] || Code2
                 return (
                   <motion.div
                     key={skill.name}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.4, delay: i * 0.05 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: i * 0.05 }}
                     viewport={{ once: true }}
-                    whileHover={{ scale: 1.1, y: -5, rotate: 2 }}
-                    className="glass flex items-center gap-3 px-6 py-3 rounded-2xl border border-white/5 hover:border-[#00FFCC]/40 hover:bg-white/5 hover:shadow-[0_0_20px_rgba(0,255,204,0.2)] transition-all duration-300 cursor-default group"
+                    whileHover={{ y: -8, scale: 1.02 }}
+                    className="relative group/skill flex flex-col items-center gap-4 p-6 rounded-3xl bg-white/[0.03] border border-white/5 hover:border-primary/40 hover:bg-white/[0.07] transition-all duration-500"
                   >
-                    <div className="p-1.5 rounded-lg bg-white/5 group-hover:bg-[#00FFCC]/10 transition-colors">
-                      <SkillIcon className="w-5 h-5 text-[#00FFCC] group-hover:animate-pulse" />
+                    {/* Glow effect on hover */}
+                    <div className="absolute inset-0 rounded-3xl bg-primary/5 opacity-0 group-hover/skill:opacity-100 blur-xl transition-opacity duration-500" />
+                    
+                    <div className="relative w-16 h-16 flex items-center justify-center rounded-2xl bg-[#05050A] border border-white/10 group-hover/skill:border-primary/50 group-hover/skill:shadow-[0_0_20px_rgba(0,255,204,0.3)] transition-all duration-500 overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-0 group-hover/skill:opacity-100 transition-opacity" />
+                      <SkillIcon className="w-8 h-8 text-white/70 group-hover/skill:text-primary transition-all duration-500 transform group-hover/skill:scale-110" />
                     </div>
-                    <span className="text-sm font-bold text-foreground/90 tracking-tight group-hover:text-white transition-colors">{skill.name}</span>
+                    
+                    <div className="text-center">
+                      <span className="text-sm font-black text-white/60 group-hover/skill:text-white transition-colors tracking-tighter uppercase">{skill.name}</span>
+                      {/* Level bar */}
+                      <div className="mt-3 w-12 h-1 bg-white/5 rounded-full overflow-hidden">
+                        <motion.div 
+                          initial={{ width: 0 }}
+                          whileInView={{ width: `${skill.level}%` }}
+                          transition={{ duration: 1, delay: 0.5 + i * 0.05 }}
+                          className="h-full bg-gradient-to-r from-primary to-accent"
+                        />
+                      </div>
+                    </div>
                   </motion.div>
                 )
               })}
