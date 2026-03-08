@@ -1,257 +1,257 @@
 {
   "nav": {
     "home": "Home",
-    "about": "About",
-    "projects": "Projects",
-    "articles": "Articles",
-    "contact": "Contact"
+    "about": "Expertise",
+    "projects": "Portfolio",
+    "articles": "Insights",
+    "contact": "Connect"
   },
   "hero": {
-    "greeting": "Hello, I'm",
+    "greeting": "Hi, I'm",
     "name": "Abdeltawab Sha`ban",
-    "title": "Front-End Development Expert | React & Next.js",
-    "description": "Transforming ambitious ideas into exceptional digital experiences with clean code, pixel-perfect design, and high-performance solutions.",
-    "cta": "Explore My Work",
-    "contact": "Get In Touch",
+    "title": "Senior Front-End Architect | React & Next.js Specialist",
+    "description": "I engineer high-performance, scalable web architectures and immersive user interfaces that drive business growth through cutting-edge technology.",
+    "cta": "Explore Portfolio",
+    "contact": "Start a Project",
     "keywords": {
       "0": "Front-End Engineer",
       "1": "React & Next.js Expert",
-      "2": "UI/UX Designer",
-      "3": "Digital Solution Architect"
+      "2": "UI/UX Strategist",
+      "3": "Full-Stack Integrator"
     }
   },
   "about": {
-    "title": "My Expertise",
-    "description": "Abdeltawab Sha`ban, a Front-End Development Expert specialized in building complex web systems and advanced e-commerce solutions. With years of experience in React and Next.js, I focus on delivering unparalleled user experiences while ensuring the highest standards of performance and security. My mission is to help businesses grow through innovative, future-proof web technology.",
+    "title": "Professional Expertise",
+    "description": "Abdeltawab Sha`ban is a results-driven Front-End Architect specializing in building robust, scalable web ecosystems and high-conversion e-commerce platforms. With deep expertise in React and Next.js, I bridge the gap between complex technical requirements and intuitive user experiences. My focus is on delivering future-proof solutions that prioritize performance, security, and exceptional design standards.",
     "details": {
       "age": "Age",
-      "city": "City",
+      "city": "Location",
       "birthday": "Birthday",
       "email": "Email",
       "phone": "Phone",
-      "degree": "Degree",
-      "freelance": "Freelance"
+      "degree": "Academic Background",
+      "freelance": "Availability"
     },
     "values": {
       "age": "27",
       "city": "Giza, Egypt",
-      "birthday": "23 March 1998",
+      "birthday": "March 23, 1998",
       "email": "scob198350@gmail.com",
       "phone": "+201117218756",
-      "degree": "High School",
-      "freelance": "Available"
+      "degree": "Advanced Technical Studies",
+      "freelance": "Open for Strategic Partnerships"
     },
-    "more": "More About Me",
+    "more": "Deep Dive into My Process",
     "stats": {
-      "experience": "Years Experience",
-      "projects": "Completed Projects",
-      "clients": "Happy Clients",
-      "hours": "Hours of Code"
+      "experience": "Years of Excellence",
+      "projects": "Strategic Projects",
+      "clients": "Global Partnerships",
+      "hours": "Hours of Engineering"
     }
   },
   "projects": {
-    "title": "My Projects",
-    "viewAll": "View All Projects",
+    "title": "Selected Works",
+    "viewAll": "Browse Full Portfolio",
     "filter": {
-      "all": "All",
-      "react": "React",
-      "nextjs": "Next.js",
-      "ecommerce": "E-commerce",
-      "landing": "Landing Pages"
+      "all": "All Categories",
+      "react": "React Architecture",
+      "nextjs": "Next.js Solutions",
+      "ecommerce": "E-Commerce",
+      "landing": "High-Conversion Pages"
     },
-    "subtitle": "Here are some of my recent projects that showcase my skills and experience",
-    "liveDemo": "Live Demo",
-    "code": "Code"
+    "subtitle": "A showcase of engineering excellence and strategic web development across various industries.",
+    "liveDemo": "Live Experience",
+    "code": "View Source"
   },
   "articles": {
-    "pageTitle": "Web Development Articles",
-    "heroTitle": "Discover the World of Web Development",
-    "heroDescription": "Discover the importance of websites for businesses and individuals, and learn how to leverage modern technologies to achieve your digital goals",
-    "selectedArticles": "Selected Articles",
-    "selectedDescription": "A collection of specialized articles on web development and digital marketing",
-    "readArticle": "Read Article",
-    "ctaTitle": "Need a website for your business?",
-    "ctaDescription": "Let me help you create a website that achieves your goals and enhances your digital presence",
-    "ctaButton": "Start Your Project Now",
-    "backToArticles": "Back to Articles",
+    "pageTitle": "Technical Insights & Industry Trends",
+    "heroTitle": "Architecting the Future of Web Development",
+    "heroDescription": "Deep dives into modern web technologies, strategic digital growth, and the engineering principles behind successful online platforms.",
+    "selectedArticles": "Featured Insights",
+    "selectedDescription": "Curated expertise on web performance, scalable architecture, and digital transformation.",
+    "readArticle": "Explore Insight",
+    "ctaTitle": "Ready to Scale Your Digital Presence?",
+    "ctaDescription": "Leverage expert engineering to build a platform that exceeds your business objectives.",
+    "ctaButton": "Consult with Me",
+    "backToArticles": "Return to Insights",
     "readTime": "min read",
-    "shareArticle": "Share Article",
+    "shareArticle": "Share Insight",
     "share": "Share",
-    "relatedArticles": "Related Articles",
-    "readMore": "Read More",
+    "relatedArticles": "Related Expertise",
+    "readMore": "Read Further",
     "items": {
       "website-importance-businesses-individuals": {
-        "title": "The Importance of Websites for Organizations and Individuals",
-        "excerpt": "Discover how a website can transform your business and enhance your digital presence in the modern age.",
-        "category": "Business",
+        "title": "The Strategic Impact of Web Presence for Modern Enterprises",
+        "excerpt": "Analyzing how a high-performance web architecture serves as a cornerstone for digital transformation and business scalability.",
+        "category": "Strategy",
         "readTime": "5"
       },
       "landing-page-importance": {
-        "title": "The Importance of Having a Landing Page for Business",
-        "excerpt": "Learn how to increase conversion rates and improve business results through optimized landing pages.",
-        "category": "Marketing",
+        "title": "Optimizing High-Conversion Landing Pages for Maximum ROI",
+        "excerpt": "Technical and psychological strategies for building landing pages that turn traffic into measurable business growth.",
+        "category": "Conversion",
         "readTime": "4"
       },
       "corporate-website": {
-        "title": "The Importance of a Corporate Website for Organizations",
-        "excerpt": "Build trust and credibility through a professional corporate website that reflects your organization's values and services.",
+        "title": "Engineering Trust: The Role of Corporate Platforms in Brand Authority",
+        "excerpt": "How professional web architecture builds credibility and serves as a powerful communication tool for organizations.",
         "category": "Corporate",
         "readTime": "6"
       },
       "ecommerce-website": {
-        "title": "The Importance of an E-commerce Website",
-        "excerpt": "Explore the world of e-commerce and how your online store can open new horizons for growth.",
-        "category": "E-commerce",
+        "title": "Scaling E-Commerce: Technical Foundations for Global Growth",
+        "excerpt": "A deep dive into the architecture of modern e-commerce platforms designed for performance and global scale.",
+        "category": "E-Commerce",
         "readTime": "7"
       },
       "client-tips": {
-        "title": "Important Tips for Clients in Web Development",
-        "excerpt": "A comprehensive guide for clients with the most important tips to ensure the success of your digital project.",
-        "category": "Tips",
+        "title": "The Client’s Guide to Successful Software Development Lifecycle",
+        "excerpt": "Essential insights for stakeholders to ensure seamless collaboration and project success in the tech world.",
+        "category": "Consulting",
         "readTime": "8"
       }
     }
   },
   "contact": {
-    "title": "Get In Touch",
-    "description": "Let's work together on your next project",
+    "title": "Let's Connect",
+    "description": "Strategizing your next digital breakthrough",
     "hero": {
-      "title": "Let's Work Together",
-      "subtitle": "Ready to bring your ideas to life? I'm here to help you create amazing digital experiences."
+      "title": "Collaborate on Innovation",
+      "subtitle": "Ready to transform your vision into a market-leading digital product? Let's discuss your strategic goals."
     },
     "info": {
-      "title": "Contact Information",
-      "description": "Feel free to reach out through any of these channels. I'm always excited to discuss new opportunities and projects.",
-      "email": "Email",
-      "phone": "Phone",
-      "location": "Location",
-      "freelance": "Freelance Status",
-      "languages": "Languages",
-      "timezone": "Timezone",
-      "available": "Available",
-      "unavailable": "Not Available"
+      "title": "Direct Channels",
+      "description": "I am always open to discussing complex projects, strategic partnerships, and innovative opportunities in the tech space.",
+      "email": "Official Email",
+      "phone": "Direct Line",
+      "location": "Global Presence",
+      "freelance": "Engagement Model",
+      "languages": "Communication Languages",
+      "timezone": "Operational Timezone",
+      "available": "Accepting New Challenges",
+      "unavailable": "Fully Committed"
     },
     "form": {
-      "title": "Send Me a Message",
-      "subtitle": "Have a project in mind? Let's discuss how we can work together.",
-      "name": "Name",
-      "email": "Email",
-      "phone": "Phone Number",
-      "subject": "Subject",
-      "message": "Message",
-      "send": "Send Message",
-      "sending": "Sending...",
-      "namePlaceholder": "Your full name",
-      "emailPlaceholder": "your.email@example.com",
+      "title": "Initiate a Conversation",
+      "subtitle": "Have a complex project in mind? Let's analyze how we can achieve your objectives together.",
+      "name": "Full Name",
+      "email": "Business Email",
+      "phone": "Contact Number",
+      "subject": "Inquiry Subject",
+      "message": "Project Details",
+      "send": "Send Brief",
+      "sending": "Transmitting...",
+      "namePlaceholder": "Your Name",
+      "emailPlaceholder": "name@company.com",
       "phonePlaceholder": "+20 123 456 7890",
-      "subjectPlaceholder": "What's this about?",
-      "messagePlaceholder": "Tell me about your project or inquiry...",
+      "subjectPlaceholder": "What's the core focus of your inquiry?",
+      "messagePlaceholder": "Provide a brief overview of your project goals or specific requirements...",
       "success": {
-        "title": "Message Sent Successfully!",
-        "message": "Thank you for reaching out. I'll get back to you within 24 hours."
+        "title": "Brief Received Successfully!",
+        "message": "Thank you for reaching out. I will review your inquiry and respond within 24 hours."
       }
     }
   },
   "aboutPage": {
     "hero": {
-      "title": "About Me",
-      "bio": "Hello, I'm Abdeltawab Sha`ban, a 27-year-old front-end developer from Egypt. With hands-on experience in building dynamic user interfaces and an online store using ReactJS, I'm passionate about learning and continuously evolving to stand out in the competitive tech industry, prove my worth, and leave a strong impact."
+      "title": "The Architect Behind the Code",
+      "bio": "Abdeltawab Sha`ban is an Egyptian-based Front-End Architect with a passion for engineering high-performance web applications. With a robust background in React and Next.js, I specialize in creating seamless, scalable, and secure digital experiences. My career is defined by a commitment to continuous innovation and delivering technical excellence that drives tangible business value."
     },
     "journey": {
-      "title": "Professional Journey",
-      "subtitle": "Explore my career path and the experiences that have shaped my expertise in web development.",
-      "achievements": "Key Achievements:",
-      "tech": "Technologies Used:",
-      "present": "Present",
+      "title": "Professional Evolution",
+      "subtitle": "A timeline of technical milestones and strategic contributions in the web development industry.",
+      "achievements": "Core Contributions:",
+      "tech": "Tech Stack Proficiency:",
+      "present": "Current Focus",
       "items": {
         "1": {
-          "position": "Front-End Developer",
-          "location": "Remote",
-          "description": "Developed responsive web applications and landing pages for various clients. Collaborated with design teams to implement pixel-perfect UI components using React and Next.js.",
+          "position": "Senior Front-End Architect",
+          "location": "Strategic Remote Engagement",
+          "description": "Leading the development of high-scale web applications and responsive systems. Orchestrating design-to-code workflows using React and Next.js to deliver enterprise-grade UI components.",
           "achievements": {
-            "0": "Improved website performance by 40% through optimization",
-            "1": "Implemented modern design systems and component libraries"
+            "0": "Boosted core web vitals and overall performance by 40% through advanced optimization.",
+            "1": "Architected and maintained comprehensive design systems and component architectures."
           }
         },
         "2": {
-          "position": "Front-End Developer",
-          "location": "Remote",
-          "description": "Worked on developing user interfaces for web applications. Focused on creating responsive designs and implementing interactive features using modern JavaScript frameworks.",
+          "position": "Front-End Engineering Lead",
+          "location": "Remote Collaboration",
+          "description": "Directed user interface development for complex web platforms. Focused on responsive engineering and implementing advanced interactive features using modern JS frameworks.",
           "achievements": {
-            "0": "Developed key features for the main product dashboard",
-            "1": "Reduced load times by 30% through code optimization",
-            "2": "Mentored junior developers on best practices"
+            "0": "Engineered critical modules for core product dashboards and management systems.",
+            "1": "Optimized delivery pipelines and codebases, reducing load times by 30%.",
+            "2": "Mentored engineering teams on modern best practices and scalable architecture."
           }
         }
       }
     },
     "details": {
-      "title": "Personal Details",
+      "title": "Professional Profile",
       "items": {
-        "Age": "Age",
-        "City": "City",
-        "Birthday": "Birthday",
-        "Email": "Email",
-        "Phone": "Phone",
-        "Degree": "Degree",
-        "Freelance": "Freelance"
+        "Age": "Professional Age",
+        "City": "Base Location",
+        "Birthday": "Date of Birth",
+        "Email": "Corporate Email",
+        "Phone": "Direct Contact",
+        "Degree": "Expertise Level",
+        "Freelance": "Engagement Status"
       },
       "values": {
-        "degree": "High School",
-        "freelance": "Available"
+        "degree": "Industry Expert",
+        "freelance": "Active Engagement"
       },
-      "available": "Available for Freelance Work"
+      "available": "Available for High-Impact Projects"
     },
     "skills": {
-      "title": "Skills & Expertise",
-      "subtitle": "Discover my technical skills and expertise across various technologies and frameworks.",
-      "technical": "Technical Skills",
-      "soft": "Soft Skills"
+      "title": "Technical Arsenal & Methodologies",
+      "subtitle": "An overview of my core competencies across modern web technologies and engineering principles.",
+      "technical": "Core Technical Stack",
+      "soft": "Strategic Methodologies"
     },
     "stats": {
-      "title": "Facts & Stats",
+      "title": "Performance Metrics",
       "items": {
-        "1": "Happy Clients",
-        "2": "Projects Completed",
-        "3": "Awards Won",
-        "4": "Support Hours"
+        "1": "Successful Partnerships",
+        "2": "Architected Solutions",
+        "3": "Industry Accolades",
+        "4": "Development Lifecycle Hours"
       },
       "testimonials": {
-        "title": "What Clients Say",
+        "title": "Strategic Partner Feedback",
         "items": {
-          "1": "Abdeltawab delivered exceptional work on our e-commerce platform. His attention to detail and technical expertise made the project a huge success.",
-          "2": "Working with Abdeltawab was a pleasure. He understood our requirements perfectly and delivered a beautiful, responsive website that exceeded our expectations.",
-          "3": "Abdeltawab's ability to translate designs into pixel-perfect code is remarkable. He's reliable, professional, and delivers high-quality work consistently."
+          "1": "Abdeltawab delivered exceptional engineering on our e-commerce platform. His strategic approach and technical depth were pivotal to our success.",
+          "2": "Partnering with Abdeltawab was a masterclass in professional development. He translated complex requirements into a high-performance, beautiful reality.",
+          "3": "His ability to bridge technical engineering with design aesthetics is rare. He consistently delivers high-impact, enterprise-grade solutions."
         }
       }
     },
     "resume": {
-      "title": "Resume",
-      "download": "Download Resume",
+      "title": "Professional Portfolio",
+      "download": "Download Technical Resume",
       "education": {
-        "title": "Education",
+        "title": "Continuous Education",
         "items": {
           "1": {
-            "degree": "High School Diploma",
-            "institution": "High School",
-            "description": "Completed secondary education."
+            "degree": "Advanced Self-Directed Learning",
+            "institution": "Global Tech Ecosystem",
+            "description": "Continuous mastery of emerging web technologies and architectural patterns."
           }
         }
       }
     }
   },
   "experience": {
-    "title": "Work Experience",
-    "achievements": "Key Achievements:",
-    "tech": "Technologies:",
-    "present": "Present"
+    "title": "Professional Milestones",
+    "achievements": "Key Contributions:",
+    "tech": "Core Technologies:",
+    "present": "Current Engagement"
   },
   "footer": {
-    "copyright": "© 2025 Abdeltawab Sha`ban. All rights reserved.",
-    "nav": "Quick Links",
-    "contact": "Get In Touch",
-    "tagline": "Front-End Developer passionate about creating modern, responsive web applications with cutting-edge technologies.",
-    "madeWith": "Made with",
+    "copyright": "© 2025 Abdeltawab Sha`ban. All Rights Reserved.",
+    "nav": "Strategic Navigation",
+    "contact": "Contact & Inquiry",
+    "tagline": "Architecting the next generation of web experiences through performance-driven engineering and strategic design.",
+    "madeWith": "Engineered with",
     "inEgypt": "in Egypt"
   }
 }
