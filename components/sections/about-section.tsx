@@ -4,8 +4,8 @@ import { useTranslations } from "next-intl"
 import { motion, useInView } from "framer-motion"
 import { useRef, useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
-import { getPersonalInfo, getStats } from "@/lib/data"
-import { Users, Briefcase, Award, Clock } from "lucide-react"
+import { getPersonalInfo, getStats, getTechnicalSkills } from "@/lib/data"
+import { Users, Briefcase, Award, Clock, Atom, Zap, Code2, FileCode, Layout, Palette, Wind, Github, Sparkles, MonitorSmartphone } from "lucide-react"
 import Link from "next/link"
 
 const iconMap = {
@@ -13,6 +13,19 @@ const iconMap = {
   briefcase: Briefcase,
   award: Award,
   clock: Clock,
+}
+
+const skillIconMap = {
+  Atom: Atom,
+  Zap: Zap,
+  Code2: Code2,
+  FileCode: FileCode,
+  Layout: Layout,
+  Palette: Palette,
+  Wind: Wind,
+  Github: Github,
+  Sparkles: Sparkles,
+  MonitorSmartphone: MonitorSmartphone,
 }
 
 function AnimatedCounter({ value, suffix = "" }: { value: number; suffix?: string }) {
@@ -45,23 +58,11 @@ function AnimatedCounter({ value, suffix = "" }: { value: number; suffix?: strin
   )
 }
 
-const skillsData = [
-  { name: "React", color: "#61DAFB", level: 95 },
-  { name: "Next.js", color: "#00d2d3", level: 90 },
-  { name: "TypeScript", color: "#3178C6", level: 88 },
-  { name: "Tailwind CSS", color: "#06B6D4", level: 95 },
-  { name: "Node.js", color: "#339933", level: 82 },
-  { name: "JavaScript", color: "#F7DF1E", level: 92 },
-  { name: "HTML5", color: "#E34F26", level: 98 },
-  { name: "CSS3", color: "#1572B6", level: 95 },
-  { name: "Git", color: "#F05032", level: 85 },
-  { name: "Figma", color: "#F24E1E", level: 78 },
-]
-
 export function AboutSection() {
   const t = useTranslations("about")
   const personalInfo = getPersonalInfo()
   const stats = getStats()
+  const technicalSkills = getTechnicalSkills()
 
   const translatedStats = stats.map((stat) => ({
     ...stat,
@@ -183,7 +184,6 @@ export function AboutSection() {
             )
           })}
 
-          {/* Skills Marquee/Grid (Spans full width or large area) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -191,18 +191,27 @@ export function AboutSection() {
             viewport={{ once: true }}
             className="col-span-1 md:col-span-3 lg:col-span-4 glass-strong rounded-3xl p-6 md:p-8 overflow-hidden flex flex-col justify-center border-t-2 border-transparent hover:border-t-[#B026FF]/50 transition-all duration-500"
           >
-             <p className="text-xs font-medium uppercase tracking-widest text-[#FF007F]/80 mb-8 text-center">{t("technicalArsenal") || "Technical capabilities"}</p>
+             <p className="text-xs font-medium uppercase tracking-widest text-[#FF007F]/80 mb-8 text-center">{t("technicalArsenal") || "Technical Capabilities"}</p>
              <div className="flex flex-wrap justify-center gap-3 lg:gap-4 mt-2">
-              {skillsData.map((skill, i) => (
-                <motion.div
-                  key={skill.name}
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  className="glass flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/5 hover:border-[#00FFCC]/40 hover:bg-white/5 hover:shadow-[0_0_15px_rgba(0,255,204,0.15)] transition-all duration-300 cursor-default"
-                >
-                  <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: skill.color, boxShadow: `0 0 12px ${skill.color}` }} />
-                  <span className="text-sm font-semibold text-foreground/90">{skill.name}</span>
-                </motion.div>
-              ))}
+              {technicalSkills.map((skill, i) => {
+                const SkillIcon = skillIconMap[skill.icon as keyof typeof skillIconMap] || Code2
+                return (
+                  <motion.div
+                    key={skill.name}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.4, delay: i * 0.05 }}
+                    viewport={{ once: true }}
+                    whileHover={{ scale: 1.1, y: -5, rotate: 2 }}
+                    className="glass flex items-center gap-3 px-6 py-3 rounded-2xl border border-white/5 hover:border-[#00FFCC]/40 hover:bg-white/5 hover:shadow-[0_0_20px_rgba(0,255,204,0.2)] transition-all duration-300 cursor-default group"
+                  >
+                    <div className="p-1.5 rounded-lg bg-white/5 group-hover:bg-[#00FFCC]/10 transition-colors">
+                      <SkillIcon className="w-5 h-5 text-[#00FFCC] group-hover:animate-pulse" />
+                    </div>
+                    <span className="text-sm font-bold text-foreground/90 tracking-tight group-hover:text-white transition-colors">{skill.name}</span>
+                  </motion.div>
+                )
+              })}
             </div>
           </motion.div>
 

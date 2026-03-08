@@ -38,21 +38,21 @@
   --radius: 1.5rem;
   
   /* Advanced Premium Glassmorphism */
-  --glass-bg: rgba(255, 255, 255, 0.01);
-  --glass-border: rgba(255, 255, 255, 0.08); /* Brighter for a sharp "cut glass" rim */
+  --glass-bg: rgba(255, 255, 255, 0.02);
+  --glass-border: rgba(255, 255, 255, 0.1); /* Brighter for a sharp "cut glass" rim */
   --glass-blur: 40px; /* Deeper blur for premium feel */
 }
 
 .dark {
   --background: #05050A;
   --foreground: #F8FAFC;
-  --card: rgba(15, 15, 25, 0.2);
+  --card: rgba(15, 15, 25, 0.3);
   --card-foreground: #F8FAFC;
   --primary: #00FFCC;
   --accent: #FF007F;
-  --border: rgba(255, 255, 255, 0.05);
-  --glass-bg: rgba(255, 255, 255, 0.01);
-  --glass-border: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.08);
+  --glass-bg: rgba(255, 255, 255, 0.02);
+  --glass-border: rgba(255, 255, 255, 0.1);
 }
 
 @theme inline {

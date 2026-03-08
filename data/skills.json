@@ -3,80 +3,89 @@
     {
       "name": "React.js",
       "level": 90,
-      "category": "Frontend"
+      "category": "Frontend",
+      "icon": "Atom"
     },
     {
       "name": "Next.js",
-      "level": 70,
-      "category": "Frontend"
+      "level": 85,
+      "category": "Frontend",
+      "icon": "Zap"
     },
     {
       "name": "TypeScript",
-      "level": 65,
-      "category": "Frontend"
+      "level": 80,
+      "category": "Frontend",
+      "icon": "Code2"
     },
     {
       "name": "JavaScript",
-      "level": 80,
-      "category": "Language"
-    },
-        {
-      "name": "Python",
-      "level": 50,
-      "category": "Language"
+      "level": 90,
+      "category": "Language",
+      "icon": "FileCode"
     },
     {
       "name": "HTML5",
       "level": 95,
-      "category": "Frontend"
+      "category": "Frontend",
+      "icon": "Layout"
     },
     {
       "name": "CSS3",
       "level": 90,
-      "category": "Frontend"
+      "category": "Frontend",
+      "icon": "Palette"
     },
     {
       "name": "Tailwind CSS",
-      "level": 88,
-      "category": "Frontend"
+      "level": 92,
+      "category": "Frontend",
+      "icon": "Wind"
     },
     {
       "name": "Git & GitHub",
       "level": 85,
-      "category": "Tools"
+      "category": "Tools",
+      "icon": "Github"
     },
-        {
-      "name": "Trello",
-      "level": 70,
-      "category": "Tools"
+    {
+      "name": "Framer Motion",
+      "level": 80,
+      "category": "Frontend",
+      "icon": "Sparkles"
     },
     {
       "name": "Responsive Design",
-      "level": 92,
-      "category": "Frontend"
+      "level": 95,
+      "category": "Frontend",
+      "icon": "MonitorSmartphone"
     }
-
   ],
   "soft": [
     {
       "name": "Problem Solving",
-      "level": 90
+      "level": 90,
+      "icon": "Lightbulb"
     },
     {
       "name": "Team Collaboration",
-      "level": 85
+      "level": 85,
+      "icon": "Users2"
     },
     {
       "name": "Communication",
-      "level": 88
+      "level": 88,
+      "icon": "MessageSquare"
     },
     {
       "name": "Time Management",
-      "level": 85
+      "level": 85,
+      "icon": "Timer"
     },
     {
       "name": "Adaptability",
-      "level": 90
+      "level": 90,
+      "icon": "RefreshCcw"
     }
   ]
 }

@@ -3,28 +3,28 @@
     {
       "id": "clients",
       "label": "Happy Clients",
-      "value": 25,
+      "value": 10,
       "icon": "users",
       "suffix": "+"
     },
     {
       "id": "projects",
       "label": "Projects Completed",
-      "value": 40,
+      "value": 15,
       "icon": "briefcase",
       "suffix": "+"
     },
     {
       "id": "experience",
       "label": "Years Experience",
-      "value": 3,
+      "value": 1,
       "icon": "award",
       "suffix": "+"
     },
     {
       "id": "hours",
-      "label": "Hours of Code",
-      "value": 1200,
+      "label": "Hours of Freelance",
+      "value": 40,
       "icon": "clock",
       "suffix": "+"
     }
