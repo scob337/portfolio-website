@@ -65,14 +65,49 @@ export async function generateMetadata(): Promise<Metadata> {
       languages: {
         "en": "https://abdo-front-end.netlify.app/",
         "ar": "https://abdo-front-end.netlify.app/ar/",
+        "x-default": "https://abdo-front-end.netlify.app/",
       }
+    },
+    verification: {
+      google: "google-site-verification-id", // User should replace this
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
     },
   }
 }
 
 export default function HomePage() {
+  const locale = getLocale()
+  const isArabic = locale === "ar"
+
   return (
     <main className="min-h-screen bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Abdeltawab Sha`ban",
+            "url": "https://abdo-front-end.netlify.app",
+            "jobTitle": "Senior Front-End Architect",
+            "knowsAbout": ["React", "Next.js", "TypeScript", "Web Development"],
+            "sameAs": [
+              "https://github.com/scob337",
+              // Add other social links here
+            ]
+          })
+        }}
+      />
       <HeroSection />
       <AboutSection />
       <ProjectsSection />

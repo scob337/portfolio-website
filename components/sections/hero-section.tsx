@@ -187,46 +187,48 @@ export function HeroSection() {
             {/* The Floating Frame */}
             <motion.div
               whileHover={{ 
-                rotateX: 5,
-                rotateY: -5,
-                scale: 1.02,
-                transition: { duration: 0.4, ease: "easeOut" }
+                rotateX: 2,
+                rotateY: -2,
+                scale: 1.01,
+                transition: { duration: 0.3, ease: "easeOut" }
               }}
               animate={{ 
-                y: [-10, 10, -10],
+                y: [-8, 8, -8],
               }}
               transition={{ 
-                y: { duration: 6, repeat: Infinity, ease: "easeInOut" }
+                y: { duration: 5, repeat: Infinity, ease: "easeInOut" }
               }}
-              className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-[480px] lg:h-[480px] rounded-[3.5rem] p-1 z-10 perspective-1000"
+              className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[450px] lg:h-[450px] rounded-[3rem] p-1 z-10 perspective-1000"
             >
-              <div className="absolute inset-0 rounded-[3.5rem] bg-gradient-to-br from-primary via-accent to-primary animate-gradient-shift opacity-40 blur-[2px]" />
+              <div className="absolute inset-0 rounded-[3rem] bg-gradient-to-br from-primary/30 via-accent/30 to-primary/30 blur-[4px]" />
               
-              <div className="relative w-full h-full rounded-[3.3rem] bg-[#05050A] overflow-hidden group shadow-[0_20px_60px_rgba(0,0,0,0.5)] border border-white/10 transition-all duration-700">
+              <div className="relative w-full h-full rounded-[2.8rem] bg-[#05050A] overflow-hidden group shadow-2xl border border-white/5 transition-all duration-700">
                 {/* Image */}
-                <img 
+                <Image 
                   src="https://github.com/scob337.png" 
                   alt={personalInfo.name}
-                  className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-1000 ease-out"
+                  fill
+                  priority
+                  className="object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000 ease-out"
                 />
                 
-                {/* Glossy Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-white/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                {/* Subtle Glossy Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-white/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                 
-                {/* Tech Scanline Effect */}
-                <div className="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.1)_50%),linear-gradient(90deg,rgba(255,0,0,0.03),rgba(0,255,0,0.01),rgba(0,0,255,0.03))] bg-[size:100%_4px,3px_100%] pointer-events-none opacity-20" />
+                {/* Tech Scanline Effect - Subtler */}
+                <div className="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.05)_50%)] bg-[size:100%_4px] pointer-events-none opacity-10" />
                 
-                {/* Tech Overlays inside image block */}
-                <div className="absolute bottom-8 left-8 right-8 p-6 rounded-3xl glass-strong border border-white/20 transform translate-y-12 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-700 delay-100 backdrop-blur-2xl shadow-[0_10px_40px_rgba(0,0,0,0.4)]">
-                  <div className="flex items-center gap-5">
-                    <div className="p-3 rounded-2xl bg-primary/20 border border-primary/30 shadow-[0_0_15px_rgba(0,255,204,0.2)]">
-                      <Code2 className="w-7 h-7 text-primary animate-pulse" />
+                {/* Tech Overlays inside image block - Refined */}
+                <div className="absolute bottom-6 left-6 right-6 p-5 rounded-2xl glass-strong border border-white/10 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 backdrop-blur-xl shadow-2xl">
+                  <div className="flex items-center gap-4">
+                    <div className="p-2.5 rounded-xl bg-primary/10 border border-primary/20">
+                      <Code2 className="w-5 h-5 text-primary" />
                     </div>
                     <div className="text-start">
-                      <p className="text-sm text-primary font-black tracking-widest uppercase mb-1">{t("role")}</p>
-                      <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                        <p className="text-[10px] text-white/50 font-bold tracking-tighter uppercase">{personalInfo.city}</p>
+                      <p className="text-xs text-primary font-black tracking-widest uppercase mb-0.5">{t("role")}</p>
+                      <div className="flex items-center gap-1.5">
+                        <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+                        <p className="text-[9px] text-white/50 font-bold tracking-tighter uppercase">{personalInfo.city}</p>
                       </div>
                     </div>
                   </div>

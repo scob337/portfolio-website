@@ -126,10 +126,10 @@ function AnimatedCounter({ value, suffix = "" }: { value: number; suffix?: strin
 export function AboutSection() {
   const t = useTranslations("about")
   const personalInfo = getPersonalInfo()
-  const stats = getStats()
-  const technicalSkills = getTechnicalSkills()
+  const stats = getStats() || []
+  const technicalSkills = getTechnicalSkills() || []
 
-  const translatedStats = stats.map((stat) => ({
+  const translatedStats = stats.map((stat: any) => ({
     ...stat,
     label: t(`stats.${stat.id}`),
   }))
@@ -187,7 +187,7 @@ export function AboutSection() {
 
           {/* Stats Cards (1x1 each) */}
           {translatedStats.slice(0, 2).map((stat, i) => {
-            const Icon = iconMap[stat.icon as keyof typeof iconMap]
+            const Icon = iconMap[stat.icon as keyof typeof iconMap] || Users
             return (
               <motion.div
                 key={stat.id}
@@ -228,7 +228,7 @@ export function AboutSection() {
 
            {/* Remaining Stats Cards (1x1 each) */}
            {translatedStats.slice(2, 4).map((stat, i) => {
-            const Icon = iconMap[stat.icon as keyof typeof iconMap]
+            const Icon = iconMap[stat.icon as keyof typeof iconMap] || Clock
             return (
               <motion.div
                 key={stat.id}
@@ -263,7 +263,7 @@ export function AboutSection() {
              </h3>
              
              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 w-full relative z-10">
-              {technicalSkills.map((skill, i) => {
+              {technicalSkills && technicalSkills.length > 0 ? technicalSkills.map((skill, i) => {
                 const SkillIcon = skillIconMap[skill.icon as keyof typeof skillIconMap] || Code2
                 return (
                   <motion.div
@@ -297,7 +297,9 @@ export function AboutSection() {
                     </div>
                   </motion.div>
                 )
-              })}
+              }) : (
+                <div className="col-span-full text-center text-muted-foreground">No skills found.</div>
+              )}
             </div>
           </motion.div>
 
