@@ -122,6 +122,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
       <head>
+      <meta name="google-adsense-account" content="ca-pub-1055762061541058"></meta>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
