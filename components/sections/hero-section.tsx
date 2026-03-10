@@ -186,30 +186,21 @@ export function HeroSection() {
 
             {/* The Floating Frame */}
             <motion.div
-              whileHover={{ 
-                rotateX: 2,
-                rotateY: -2,
-                scale: 1.01,
-                transition: { duration: 0.3, ease: "easeOut" }
-              }}
-              animate={{ 
-                y: [-8, 8, -8],
-              }}
-              transition={{ 
-                y: { duration: 5, repeat: Infinity, ease: "easeInOut" }
-              }}
-              className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-[480px] lg:h-[480px] rounded-[3.5rem] p-1 z-10 perspective-1000"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-[480px] lg:h-[480px] rounded-[3.5rem] p-1 z-10"
             >
-              <div className="absolute inset-0 rounded-[3.5rem] bg-gradient-to-br from-primary/30 via-accent/30 to-primary/30 blur-[4px]" />
+              <div className="absolute inset-0 rounded-[3.5rem] bg-gradient-to-br from-primary/20 via-accent/20 to-primary/20 blur-[2px]" />
               
-              <div className="relative w-full h-full rounded-[3.3rem] bg-[#05050A] overflow-hidden group shadow-2xl border border-white/5 transition-all duration-700">
+              <div className="relative w-full h-full rounded-[3.3rem] bg-[#05050A] overflow-hidden group shadow-2xl border border-white/5">
                 {/* Image */}
                 <Image 
                   src="https://github.com/scob337.png" 
                   alt={personalInfo.name}
                   fill
                   priority
-                  className="object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000 ease-out"
+                  className="object-cover opacity-90 group-hover:opacity-100 transition-all duration-700 ease-out"
                 />
                 
                 {/* Subtle Glossy Overlay */}

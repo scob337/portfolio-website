@@ -192,19 +192,19 @@ export function AboutSection() {
             return (
               <motion.div
                 key={stat.id}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.1 * i }}
                 viewport={{ once: true }}
-                className="glass rounded-3xl p-6 flex flex-col items-center justify-center text-center group hover:bg-white/5 transition-all duration-500 hover:border-[#B026FF]/30 hover:shadow-[0_0_20px_rgba(176,38,255,0.1)] relative overflow-hidden"
+                className="glass rounded-3xl p-6 flex flex-col items-center justify-center text-center group hover:bg-white/5 transition-all duration-500 relative overflow-hidden"
               >
                 <div className="absolute -right-4 -top-4 opacity-5 group-hover:scale-110 group-hover:opacity-10 transition-all duration-700 ease-out text-[#B026FF]">
                   <Icon className="w-24 h-24" />
                 </div>
-                <div className="text-4xl lg:text-5xl font-black text-foreground mb-2 drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]">
+                <div className="text-4xl lg:text-5xl font-black text-foreground mb-2">
                   <AnimatedCounter value={stat.value} suffix={stat.suffix} />
                 </div>
-                <p className="text-xs font-medium uppercase tracking-widest text-[#00FFCC]/80 group-hover:text-[#00FFCC] transition-colors">{stat.label}</p>
+                <p className="text-xs font-medium uppercase tracking-widest text-[#00FFCC]/80 transition-colors">{stat.label}</p>
               </motion.div>
             )
           })}
@@ -233,40 +233,39 @@ export function AboutSection() {
             return (
               <motion.div
                 key={stat.id}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.2 + (0.1 * i) }}
                 viewport={{ once: true }}
-                className="glass rounded-3xl p-6 flex flex-col items-center justify-center text-center group hover:bg-white/5 transition-all duration-500 hover:border-[#00FFCC]/30 hover:shadow-[0_0_20px_rgba(0,255,204,0.1) relative overflow-hidden"
+                className="glass rounded-3xl p-6 flex flex-col items-center justify-center text-center group hover:bg-white/5 transition-all duration-500 relative overflow-hidden"
               >
                  <div className="absolute -right-4 -top-4 opacity-5 group-hover:scale-110 group-hover:opacity-10 transition-all duration-700 ease-out text-[#00FFCC]">
                   <Icon className="w-24 h-24" />
                 </div>
-                <div className="text-4xl lg:text-5xl font-black text-foreground mb-2 drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]">
+                <div className="text-4xl lg:text-5xl font-black text-foreground mb-2">
                   <AnimatedCounter value={stat.value} suffix={stat.suffix} />
                 </div>
-                <p className="text-xs font-medium uppercase tracking-widest text-[#B026FF]/80 group-hover:text-[#B026FF] transition-colors">{stat.label}</p>
+                <p className="text-xs font-medium uppercase tracking-widest text-[#B026FF]/80 transition-colors">{stat.label}</p>
               </motion.div>
             )
           })}
         </div>
 
-        {/* Dedicated Skills Section - Moved OUT of the Grid */}
+        {/* Dedicated Skills Section - Simplified */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="mt-16 glass-strong rounded-[3rem] p-10 md:p-16 border border-white/10 hover:border-primary/20 transition-all duration-1000 shadow-3xl relative overflow-hidden group"
+          className="mt-16 glass-strong rounded-[3rem] p-10 md:p-16 border border-white/10 relative overflow-hidden group"
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-30 group-hover:opacity-50 transition-opacity duration-700" />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-30" />
           
           <div className="relative z-10">
             <div className="text-center mb-16">
               <h3 className="text-3xl md:text-5xl font-black mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-white/50 tracking-tight uppercase">
                 {t("technicalArsenal") || "Technical Capabilities"}
               </h3>
-              <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full blur-[1px]" />
             </div>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
@@ -275,32 +274,25 @@ export function AboutSection() {
                 return (
                   <motion.div
                     key={skill.name}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: i * 0.05 }}
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 0.4, delay: i * 0.03 }}
                     viewport={{ once: true }}
-                    whileHover={{ y: -10, scale: 1.05 }}
-                    className="relative group/skill flex flex-col items-center gap-5 p-8 rounded-[2.5rem] bg-white/[0.02] border border-white/5 hover:border-primary/40 hover:bg-white/[0.05] transition-all duration-500 shadow-xl"
+                    className="relative flex flex-col items-center gap-5 p-8 rounded-[2.5rem] bg-white/[0.02] border border-white/5 transition-all duration-500"
                   >
-                    {/* Glowing Aura on Hover */}
-                    <div className="absolute inset-0 rounded-[2.5rem] bg-primary/10 opacity-0 group-hover/skill:opacity-100 blur-2xl transition-all duration-700" />
-                    
-                    <div className="relative w-20 h-20 flex items-center justify-center rounded-2xl bg-[#05050A] border border-white/10 group-hover/skill:border-primary/50 group-hover/skill:shadow-[0_0_30px_rgba(0,255,204,0.3)] transition-all duration-500 overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-0 group-hover/skill:opacity-100 transition-opacity" />
-                      <SkillIcon className="w-10 h-10 text-white/80 group-hover/skill:text-primary transition-all duration-500 transform group-hover/skill:scale-110" />
+                    <div className="relative w-20 h-20 flex items-center justify-center rounded-2xl bg-[#05050A] border border-white/10 transition-all duration-500 overflow-hidden">
+                      <SkillIcon className="w-10 h-10 text-white/80" />
                     </div>
                     
                     <div className="text-center">
-                      <span className="text-base font-black text-white/70 group-hover/skill:text-white transition-colors tracking-tighter uppercase block mb-3">
+                      <span className="text-base font-black text-white/70 tracking-tighter uppercase block mb-3">
                         {skill.name}
                       </span>
-                      {/* Detailed Level Bar */}
+                      {/* Detailed Level Bar - Static for Performance */}
                       <div className="w-16 h-1.5 bg-white/5 rounded-full overflow-hidden border border-white/5">
-                        <motion.div 
-                          initial={{ width: 0 }}
-                          whileInView={{ width: `${skill.level}%` }}
-                          transition={{ duration: 1.5, delay: 0.6 + i * 0.05, ease: "easeOut" }}
-                          className="h-full bg-gradient-to-r from-primary to-accent shadow-[0_0_10px_rgba(0,255,204,0.5)]"
+                        <div 
+                          style={{ width: `${skill.level}%` }}
+                          className="h-full bg-gradient-to-r from-primary to-accent shadow-[0_0_10px_rgba(0,255,204,0.3)]"
                         />
                       </div>
                     </div>

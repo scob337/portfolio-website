@@ -77,49 +77,65 @@ export function Navigation() {
             <div className="w-px h-4 bg-white/10 hidden md:block" />
             <LanguageSwitcher />
             
-            <Button
-              variant="ghost"
-              size="icon"
-              className="md:hidden rounded-full hover:bg-white/10 w-9 h-9"
+            <button
+              className="md:hidden relative w-10 h-10 flex flex-col items-center justify-center rounded-full hover:bg-white/10 transition-colors z-50 overflow-hidden"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle Menu"
             >
-              {isMobileMenuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
-            </Button>
+              <div className="relative w-5 h-4 flex flex-col justify-between">
+                <motion.span
+                  animate={isMobileMenuOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
+                  className="w-full h-0.5 bg-white rounded-full origin-center"
+                  transition={{ duration: 0.3 }}
+                />
+                <motion.span
+                  animate={isMobileMenuOpen ? { opacity: 0, x: -10 } : { opacity: 1, x: 0 }}
+                  className="w-full h-0.5 bg-white rounded-full"
+                  transition={{ duration: 0.3 }}
+                />
+                <motion.span
+                  animate={isMobileMenuOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
+                  className="w-full h-0.5 bg-white rounded-full origin-center"
+                  transition={{ duration: 0.3 }}
+                />
+              </div>
+            </button>
           </div>
         </nav>
       </div>
-    </motion.header>
 
-      {/* Mobile Menu Dropdown */}
+      {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, scale: 0.95, y: -10 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.95, y: -10 }}
-            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute top-full left-4 right-4 mt-2 origin-top md:hidden z-50"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[40] md:hidden bg-[#05050A]/98 backdrop-blur-3xl"
           >
-            <div className="bg-[#05050A]/90 backdrop-blur-3xl rounded-3xl p-4 shadow-[0_20px_60px_rgba(0,0,0,0.6)] flex flex-col gap-2 border border-white/10 relative overflow-hidden">
-              {/* Subtle inner glow for mobile menu */}
-              <div className="absolute inset-0 bg-gradient-to-b from-[#00FFCC]/5 to-transparent pointer-events-none" />
-              
+            <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-accent/10 pointer-events-none" />
+            <div className="flex flex-col items-center justify-center h-full gap-10">
               {navItems.map((item, index) => (
                 <motion.div
                   key={item.href}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.05 }}
-                  className="relative group"
+                  initial={{ opacity: 0, scale: 0.8, y: 30 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  transition={{ 
+                    delay: index * 0.08, 
+                    type: "spring", 
+                    stiffness: 100, 
+                    damping: 20 
+                  }}
                 >
                   <Link
                     href={item.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="block px-6 py-4 text-base font-semibold rounded-2xl bg-white/[0.02] hover:bg-white/5 text-foreground/80 hover:text-[#00FFCC] transition-all duration-300 border border-transparent hover:border-[#00FFCC]/30 hover:shadow-[0_0_15px_rgba(0,255,204,0.1)] relative overflow-hidden"
+                    className="text-4xl font-black tracking-tighter hover:text-primary transition-all duration-300 relative group"
                   >
-                    {/* Hover slider effect */}
-                    <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#00FFCC] block opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    {item.label}
+                    <span className="relative z-10">{item.label}</span>
+                    <motion.div
+                      className="absolute -bottom-2 left-0 right-0 h-1.5 bg-primary/30 rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+                    />
                   </Link>
                 </motion.div>
               ))}
@@ -127,6 +143,7 @@ export function Navigation() {
           </motion.div>
         )}
       </AnimatePresence>
+    </motion.header>
     </>
   )
 }

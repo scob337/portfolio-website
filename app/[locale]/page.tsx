@@ -13,8 +13,8 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     title: isArabic 
-      ? "عبد التواب شعبان | مطور واجهات أمامية | خبير React و Next.js"
-      : "Abdeltawab Sha`ban | Front-End Developer | React & Next.js Expert",
+      ? "عبد التواب شعبان | مطور واجهات أمامية (Junior) | متخصص React و Next.js"
+      : "Abdeltawab Sha`ban | Junior Front-End Developer | React & Next.js",
     description: isArabic
       ? "المعرض المهني لعبد التواب شعبان، مطور واجهات أمامية محترف من مصر متخصص في تقنيات React و Next.js وتطوير الويب الحديث. متاح للمشاريع الحرة عالمياً."
       : "Professional portfolio of Abdeltawab Sha`ban, a skilled front-end developer from Egypt specializing in React, Next.js, and modern web technologies. Available for freelance projects worldwide.",
@@ -32,8 +32,8 @@ export async function generateMetadata(): Promise<Metadata> {
     ],
     openGraph: {
       title: isArabic
-        ? "عبد التواب شعبان | مطور واجهات أمامية | خبير React و Next.js"
-        : "Abdeltawab Sha`ban | Front-End Developer | React & Next.js Expert",
+        ? "عبد التواب شعبان | مطور واجهات أمامية (Junior) | متخصص React و Next.js"
+        : "Abdeltawab Sha`ban | Junior Front-End Developer | React & Next.js",
       description: isArabic
         ? "المعرض المهني لعبد التواب شعبان، مطور واجهات أمامية محترف من مصر متخصص في تقنيات React و Next.js."
         : "Professional portfolio of Abdeltawab Sha`ban, a skilled front-end developer from Egypt specializing in React, Next.js, and modern web technologies.",
@@ -99,7 +99,7 @@ export default function HomePage() {
             "@type": "Person",
             "name": "Abdeltawab Sha`ban",
             "url": "https://abdo-front-end.netlify.app",
-            "jobTitle": "Junior Front-End Architect",
+            "jobTitle": "Junior Front-End Developer",
             "knowsAbout": ["React", "Next.js", "TypeScript", "Web Development"],
             "sameAs": [
               "https://github.com/scob337",

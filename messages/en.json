@@ -9,11 +9,11 @@
   "hero": {
     "greeting": "Hi, I'm",
     "name": "Abdeltawab Sha`ban",
-    "title": "Senior Front-End Architect | React & Next.js Specialist",
-    "description": "I engineer high-performance, scalable web architectures and immersive user interfaces that drive business growth through cutting-edge technology.",
+    "title": "Junior Front-End Developer | React & Next.js Specialist",
+    "description": "I develop interactive user interfaces and modern web applications using the latest digital technologies.",
     "cta": "Explore Portfolio",
     "contact": "Start a Project",
-    "role": "Junior Front-End Architect",
+    "role": "Junior Front-End Developer",
     "keywords": {
       "0": "Front-End Engineer",
       "1": "React & Next.js Expert",
@@ -22,8 +22,8 @@
     }
   },
   "about": {
-    "title": "Professional Expertise",
-    "description": "Abdeltawab Sha`ban is a results-driven Front-End Architect specializing in building robust, scalable web ecosystems and high-conversion e-commerce platforms. With deep expertise in React and Next.js, I bridge the gap between complex technical requirements and intuitive user experiences. My focus is on delivering future-proof solutions that prioritize performance, security, and exceptional design standards.",
+    "title": "Professional Experience",
+    "description": "Abdeltawab Sha`ban, a Junior Front-End Developer specializing in building interactive web interfaces and modern e-commerce solutions. With good experience in React and Next.js, I focus on turning designs into high-quality code with a focus on user experience and smooth performance.",
     "details": {
       "age": "Age",
       "city": "Location",
@@ -157,7 +157,7 @@
   "aboutPage": {
     "hero": {
       "title": "The Architect Behind the Code.",
-      "bio": "Abdeltawab Sha`ban is an Egyptian-based Front-End Architect with a passion for engineering high-performance web applications. With a robust background in React and Next.js, I specialize in creating seamless, scalable, and secure digital experiences. My career is defined by a commitment to continuous innovation and delivering technical excellence that drives tangible business value."
+      "bio": "Abdeltawab Sha`ban is an Egyptian-based Junior Front-End Developer with a passion for engineering high-performance web applications. With a robust background in React and Next.js, I specialize in creating seamless, scalable, and secure digital experiences. My career is defined by a commitment to continuous innovation and delivering technical excellence that drives tangible business value."
     },
     "journey": {
       "title": "Professional Evolution",
@@ -167,22 +167,22 @@
       "present": "Current Focus",
       "items": {
         "1": {
-          "position": "Junior Front-End Architect",
-          "location": "Strategic Remote Engagement",
-          "description": "Leading the development of high-scale web applications and responsive systems. Orchestrating design-to-code workflows using React and Next.js to deliver enterprise-grade UI components.",
+          "position": "Junior Front-End Developer",
+          "location": "Freelance / Remote",
+          "description": "Developing responsive user interfaces and web applications using React and Next.js. Turning Figma designs into high-quality code.",
           "achievements": {
-            "0": "Boosted core web vitals and overall performance by 40% through advanced optimization.",
-            "1": "Architected and maintained comprehensive design systems and component architectures."
+            "0": "Improved page load speed and user experience significantly.",
+            "1": "Built and maintained reusable UI components."
           }
         },
         "2": {
-          "position": "Front-End Engineering Lead",
-          "location": "Remote Collaboration",
-          "description": "Directed user interface development for complex web platforms. Focused on responsive engineering and implementing advanced interactive features using modern JS frameworks.",
+          "position": "Front-End Developer",
+          "location": "Various Projects",
+          "description": "Developing interactive features and improving performance for different websites.",
           "achievements": {
-            "0": "Engineered critical modules for core product dashboards and management systems.",
-            "1": "Optimized delivery pipelines and codebases, reducing load times by 30%.",
-            "2": "Mentored engineering teams on modern best practices and scalable architecture."
+            "0": "Implemented advanced dashboards and management systems.",
+            "1": "Optimized codebases for easier maintenance.",
+            "2": "Collaborated with designers to ensure design accuracy."
           }
         }
       }
@@ -191,18 +191,18 @@
       "title": "Professional Profile",
       "items": {
         "Age": "Professional Age",
-        "City": "Base Location",
+        "City": "Main Base",
         "Birthday": "Date of Birth",
         "Email": "Corporate Email",
-        "Phone": "Direct Contact",
-        "Degree": "Expertise Level",
-        "Freelance": "Engagement Status"
+        "Phone": "Direct Line",
+        "Degree": "Study Level",
+        "Freelance": "Work Status"
       },
       "values": {
-        "degree": "Industry Expert",
-        "freelance": "Active Engagement"
+        "degree": "Junior Developer",
+        "freelance": "Available for Work"
       },
-      "available": "Available for High-Impact Projects"
+      "available": "Available for New Projects"
     },
     "skills": {
       "title": "Technical Arsenal & Methodologies",
@@ -213,17 +213,17 @@
     "stats": {
       "title": "Performance Metrics",
       "items": {
-        "1": "Successful Partnerships",
-        "2": "Architected Solutions",
-        "3": "Industry Accolades",
-        "4": "Development Lifecycle Hours"
+        "1": "Successful Projects",
+        "2": "Software Solutions",
+        "3": "Mastered Techs",
+        "4": "Development Hours"
       },
       "testimonials": {
-        "title": "Strategic Partner Feedback",
+        "title": "Client Feedback",
         "items": {
-          "1": "Abdeltawab delivered exceptional engineering on our e-commerce platform. His strategic approach and technical depth were pivotal to our success.",
-          "2": "Partnering with Abdeltawab was a masterclass in professional development. He translated complex requirements into a high-performance, beautiful reality.",
-          "3": "His ability to bridge technical engineering with design aesthetics is rare. He consistently delivers high-impact, enterprise-grade solutions."
+          "1": "Abdeltawab did a great job on our e-commerce site. He was very cooperative and precise in execution.",
+          "2": "Working with Abdeltawab was a great experience. He turned our ideas into reality with high performance.",
+          "3": "His ability to implement designs accurately and quickly is amazing. He is a very promising and committed developer."
         }
       }
     },
