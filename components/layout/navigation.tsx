@@ -78,27 +78,21 @@ export function Navigation() {
             <LanguageSwitcher />
             
             <button
-              className="md:hidden relative w-10 h-10 flex flex-col items-center justify-center rounded-full hover:bg-white/10 transition-colors z-50 overflow-hidden"
+              className="md:hidden relative w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors z-50"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle Menu"
             >
-              <div className="relative w-5 h-4 flex flex-col justify-between">
-                <motion.span
-                  animate={isMobileMenuOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
-                  className="w-full h-0.5 bg-white rounded-full origin-center"
-                  transition={{ duration: 0.3 }}
-                />
-                <motion.span
-                  animate={isMobileMenuOpen ? { opacity: 0, x: -10 } : { opacity: 1, x: 0 }}
-                  className="w-full h-0.5 bg-white rounded-full"
-                  transition={{ duration: 0.3 }}
-                />
-                <motion.span
-                  animate={isMobileMenuOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
-                  className="w-full h-0.5 bg-white rounded-full origin-center"
-                  transition={{ duration: 0.3 }}
-                />
-              </div>
+              <AnimatePresence initial={false} mode="wait">
+                <motion.div
+                  key={isMobileMenuOpen ? "x" : "menu"}
+                  initial={{ opacity: 0, rotate: -90, scale: 0.5 }}
+                  animate={{ opacity: 1, rotate: 0, scale: 1 }}
+                  exit={{ opacity: 0, rotate: 90, scale: 0.5 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                </motion.div>
+              </AnimatePresence>
             </button>
           </div>
         </nav>
