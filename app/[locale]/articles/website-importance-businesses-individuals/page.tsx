@@ -127,7 +127,8 @@ export async function generateMetadata(): Promise<Metadata> {
     alternates: {
       languages: {
         "en": "https://abdo-front-end.netlify.app/articles/website-importance-businesses-individuals",
-        "ar": "https://abdo-front-end.netlify.app/ar/articles/website-importance-businesses-individuals"
+        "ar": "https://abdo-front-end.netlify.app/ar/articles/website-importance-businesses-individuals",
+        "x-default": "https://abdo-front-end.netlify.app/articles/website-importance-businesses-individuals",
       }
     }
   }

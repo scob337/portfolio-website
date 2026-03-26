@@ -93,14 +93,7 @@ export const metadata: Metadata = {
     creator: "@abdeltawab_dev",
   },
   verification: {
-    google: "your-google-verification-code",
-  },
-  alternates: {
-    canonical: "https://abdo-front-end.netlify.app",
-    languages: {
-      "en-US": "https://abdo-front-end.netlify.app/en",
-      "ar-EG": "https://abdo-front-end.netlify.app/ar",
-    },
+    google: "google-site-verification-id",
   },
 }
 

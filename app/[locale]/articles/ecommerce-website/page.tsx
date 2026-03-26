@@ -151,7 +151,8 @@ export async function generateMetadata(): Promise<Metadata> {
     alternates: {
       languages: {
         "en": "https://abdo-front-end.netlify.app/articles/ecommerce-website",
-        "ar": "https://abdo-front-end.netlify.app/ar/articles/ecommerce-website"
+        "ar": "https://abdo-front-end.netlify.app/ar/articles/ecommerce-website",
+        "x-default": "https://abdo-front-end.netlify.app/articles/ecommerce-website",
       }
     }
   }

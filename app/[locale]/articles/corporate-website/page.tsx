@@ -147,7 +147,8 @@ export async function generateMetadata(): Promise<Metadata> {
     alternates: {
       languages: {
         "en": "https://abdo-front-end.netlify.app/articles/corporate-website",
-        "ar": "https://abdo-front-end.netlify.app/ar/articles/corporate-website"
+        "ar": "https://abdo-front-end.netlify.app/ar/articles/corporate-website",
+        "x-default": "https://abdo-front-end.netlify.app/articles/corporate-website",
       }
     }
   }

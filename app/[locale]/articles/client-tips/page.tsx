@@ -203,7 +203,8 @@ export async function generateMetadata(): Promise<Metadata> {
     alternates: {
       languages: {
         "en": "https://abdo-front-end.netlify.app/articles/client-tips",
-        "ar": "https://abdo-front-end.netlify.app/ar/articles/client-tips"
+        "ar": "https://abdo-front-end.netlify.app/ar/articles/client-tips",
+        "x-default": "https://abdo-front-end.netlify.app/articles/client-tips",
       }
     }
   }

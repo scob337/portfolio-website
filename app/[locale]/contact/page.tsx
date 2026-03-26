@@ -44,6 +44,7 @@ export async function generateMetadata(): Promise<Metadata> {
       languages: {
         "en": "https://abdo-front-end.netlify.app/contact",
         "ar": "https://abdo-front-end.netlify.app/ar/contact",
+        "x-default": "https://abdo-front-end.netlify.app/contact",
       }
     },
   }

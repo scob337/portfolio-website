@@ -44,14 +44,46 @@ export async function generateMetadata(): Promise<Metadata> {
       languages: {
         "en": "https://abdo-front-end.netlify.app/projects",
         "ar": "https://abdo-front-end.netlify.app/ar/projects",
+        "x-default": "https://abdo-front-end.netlify.app/projects",
       }
     },
   }
 }
 
+import { getAllProjects } from "@/lib/data"
+
 export default function ProjectsPage() {
+  const projects = getAllProjects()
+  const locale = getLocale()
+  
   return (
     <main className="min-h-screen bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Abdeltawab Sha`ban - Projects Portfolio",
+            "description": "A showcase of web development projects, including React, Next.js, and modern web applications.",
+            "mainEntity": {
+              "@type": "ItemList",
+              "numberOfItems": projects.length,
+              "itemListElement": projects.map((project, index) => ({
+                "@type": "ListItem",
+                "position": index + 1,
+                "item": {
+                  "@type": "CreativeWork",
+                  "name": project.title,
+                  "description": project.description,
+                  "url": project.liveUrl || project.githubUrl,
+                  "image": `https://abdo-front-end.netlify.app${project.image}`
+                }
+              }))
+            }
+          })
+        }}
+      />
       <ProjectsHero />
       <ProjectsGrid />
     </main>

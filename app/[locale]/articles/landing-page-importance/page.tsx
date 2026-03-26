@@ -155,7 +155,8 @@ export async function generateMetadata(): Promise<Metadata> {
     alternates: {
       languages: {
         "en": "https://abdo-front-end.netlify.app/articles/landing-page-importance",
-        "ar": "https://abdo-front-end.netlify.app/ar/articles/landing-page-importance"
+        "ar": "https://abdo-front-end.netlify.app/ar/articles/landing-page-importance",
+        "x-default": "https://abdo-front-end.netlify.app/articles/landing-page-importance",
       }
     }
   }
