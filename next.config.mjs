@@ -15,10 +15,13 @@ const nextConfig = {
       },
       {
         protocol: 'https',
+        hostname: 'github.com',
+      },
+      {
+        protocol: 'https',
         hostname: 'via.placeholder.com',
       },
     ],
-    unoptimized: true,
   },
 };
 

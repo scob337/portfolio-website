@@ -12,7 +12,7 @@ const articleContent = {
     title: "Important Tips for Clients in Web Development",
     subtitle: "A comprehensive guide for clients with the most important tips to ensure the success of your digital project",
     category: "Tips",
-    author: "Development Team",
+    author: "Abdeltawab Sha`ban",
     publishDate: "February 5, 2024",
     readTime: "10 min read",
     sections: [
@@ -98,7 +98,7 @@ const articleContent = {
     title: "نصائح مهمة للعملاء في عالم التطوير",
     subtitle: "دليل شامل للعملاء يحتوي على أهم النصائح لضمان نجاح مشروعك الرقمي",
     category: "نصائح",
-    author: "فريق التطوير",
+    author: "عبد التواب شعبان",
     publishDate: "5 فبراير 2024",
     readTime: "10 دقائق قراءة",
     sections: [

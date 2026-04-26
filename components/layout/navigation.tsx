@@ -105,8 +105,17 @@ export function Navigation() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[40] md:hidden bg-[#05050A]/98 backdrop-blur-3xl"
+            className="fixed inset-0 z-[60] md:hidden bg-[#05050A]/98 backdrop-blur-3xl pointer-events-auto"
           >
+            <div className="absolute top-8 right-8 z-[70]">
+              <button
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="w-12 h-12 flex items-center justify-center rounded-full bg-white/5 border border-white/10 text-white hover:bg-white/10 transition-colors"
+                aria-label="Close Menu"
+              >
+                <X className="h-8 w-8" />
+              </button>
+            </div>
             <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-accent/10 pointer-events-none" />
             <div className="flex flex-col items-center justify-center h-full gap-10">
               {navItems.map((item, index) => (

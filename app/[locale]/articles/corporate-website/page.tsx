@@ -12,7 +12,7 @@ const articleContent = {
     title: "The Importance of a Corporate Website for Organizations",
     subtitle: "Build trust and credibility through a professional corporate website that reflects your organization's values and services",
     category: "Corporate",
-    author: "Development Team",
+    author: "Abdeltawab Sha`ban",
     publishDate: "January 25, 2024",
     readTime: "7 min read",
     sections: [
@@ -70,7 +70,7 @@ const articleContent = {
     title: "أهمية امتلاك موقع تعريفي للمؤسسات",
     subtitle: "بناء الثقة والمصداقية من خلال موقع تعريفي احترافي يعكس قيم وخدمات مؤسستك",
     category: "المؤسسات",
-    author: "فريق التطوير",
+    author: "عبد التواب شعبان",
     publishDate: "25 يناير 2024",
     readTime: "7 دقائق قراءة",
     sections: [

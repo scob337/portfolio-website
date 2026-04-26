@@ -12,7 +12,7 @@ const articleContent = {
     title: "The Importance of an E-commerce Website",
     subtitle: "Explore the world of e-commerce and how your online store can open new horizons for growth",
     category: "E-commerce",
-    author: "Development Team",
+    author: "Abdeltawab Sha`ban",
     publishDate: "February 1, 2024",
     readTime: "8 min read",
     sections: [
@@ -72,7 +72,7 @@ const articleContent = {
     title: "أهمية امتلاك موقع تجارة إلكترونية",
     subtitle: "استكشف عالم التجارة الإلكترونية وكيف يمكن لمتجرك الإلكتروني أن يفتح آفاقاً جديدة للنمو",
     category: "التجارة الإلكترونية",
-    author: "فريق التطوير",
+    author: "عبد التواب شعبان",
     publishDate: "1 فبراير 2024",
     readTime: "8 دقائق قراءة",
     sections: [

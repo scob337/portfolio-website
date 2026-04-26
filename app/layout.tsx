@@ -6,25 +6,40 @@ import { BackgroundShapes } from "@/components/ui/background-shapes"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "عبد التواب شعبان - مطور واجهات أمامية | Abdeltawab Sha`ban - Front-End Developer",
-  description:
-    "معرض أعمال احترافي لعبد التواب شعبان، مطور واجهات أمامية متخصص في React و Next.js | Professional portfolio of Abdeltawab Sha`ban, a front-end developer specializing in React and Next.js",
-  generator: "v0.app",
+  title: {
+    default: "عبد التواب شعبان | مطور واجهات أمامية محترف",
+    template: "%s | عبد التواب شعبان"
+  },
+  description: "مطور واجهات أمامية (Front-End) متخصص في بناء تجارب مستخدم استثنائية باستخدام React و Next.js و TypeScript. خبير في تحويل التصاميم إلى مواقع سريعة ومتجاوبة.",
   keywords: [
     "Front-End Developer",
-    "React",
-    "Next.js",
+    "مطور واجهات أمامية",
+    "React Developer",
+    "Next.js Expert",
     "TypeScript",
-    "Web Developer",
-    "مطور واجهات",
-    "ريأكت",
-    "نكست جي اس",
+    "UI/UX Design",
+    "Web Performance",
+    "Portfolio",
+    "عبد التواب شعبان",
+    "Abdeltawab Sha`ban"
   ],
-  authors: [{ name: "Abdeltawab Sha`ban" }, { name: "عبد التواب شعبان" }],
+  authors: [{ name: "Abdeltawab Sha`ban", url: "https://abdeltawab.com" }],
+  creator: "Abdeltawab Sha`ban",
+  themeColor: "#05050A",
+  viewport: "width=device-width, initial-scale=1",
+  robots: "index, follow",
   openGraph: {
-    title: "عبد التواب شعبان - مطور واجهات أمامية",
-    description: "معرض أعمال احترافي يعرض مشاريع تطوير الويب الحديثة",
+    title: "عبد التواب شعبان | مطور واجهات أمامية",
+    description: "استعرض مشاريعي وتجاربي في تطوير الويب الحديث والواجهات المبتكرة.",
+    url: "https://abdeltawab.com",
+    siteName: "Portfolio | Abdeltawab",
+    locale: "ar_SA",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Abdeltawab Sha`ban | Front-End Developer",
+    description: "Professional Front-End Developer specializing in modern web technologies.",
   },
 }
 
@@ -35,7 +50,6 @@ export default function RootLayout({
 }>) {
   return (
     <>
-      <BackgroundShapes />
       <div className="noise-overlay" />
       {children}
     </>

@@ -12,7 +12,7 @@ const articleContent = {
     title: "The Importance of Having a Landing Page for Business",
     subtitle: "Learn how to increase conversion rates and improve business results through optimized landing pages",
     category: "Marketing",
-    author: "Development Team",
+    author: "Abdeltawab Sha`ban",
     publishDate: "January 20, 2024",
     readTime: "6 min read",
     sections: [
@@ -70,7 +70,7 @@ const articleContent = {
     title: "أهمية امتلاك موقع لاندنج بيدج للنشاط التجاري",
     subtitle: "تعرف على كيفية زيادة معدلات التحويل وتحسين النتائج التجارية من خلال صفحات الهبوط المحسنة",
     category: "التسويق",
-    author: "فريق التطوير",
+    author: "عبد التواب شعبان",
     publishDate: "20 يناير 2024",
     readTime: "6 دقائق قراءة",
     sections: [

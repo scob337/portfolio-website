@@ -12,7 +12,7 @@ const articleContent = {
     title: "The Importance of Websites for Businesses and Individuals",
     subtitle: "Discover how a website can transform your business and enhance your digital presence in the modern age.",
     category: "Business",
-    author: "Development Team",
+    author: "Abdeltawab Sha`ban",
     publishDate: "January 15, 2024",
     readTime: "5 min read",
     sections: [
@@ -60,7 +60,7 @@ const articleContent = {
     title: "أهمية الموقع الإلكتروني للمؤسسات والأفراد",
     subtitle: "اكتشف كيف يمكن للموقع الإلكتروني أن يحول عملك ويعزز حضورك الرقمي في العصر الحديث.",
     category: "أعمال",
-    author: "فريق التطوير",
+    author: "عبد التواب شعبان",
     publishDate: "15 يناير 2024",
     readTime: "5 دقائق قراءة",
     sections: [

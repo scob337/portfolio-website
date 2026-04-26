@@ -4,21 +4,21 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Ultra-Premium Cosmic Deep Space Theme */
-  --background: #05050A; /* Extremely deep, almost black with a hint of violet */
+  /* Core Design System Tokens */
+  --background: #05050A;
   --foreground: #F8FAFC;
   
-  /* Aurora Accents - Extremely Vibrant */
-  --primary: #00FFCC; /* Electric Cyan/Teal */
+  /* Brand Identity Colors */
+  --primary: #00FFCC; 
   --primary-foreground: #05050A;
   
-  --secondary: #B026FF; /* Deep Neon Violet */
+  --secondary: #B026FF;
   --secondary-foreground: #F8FAFC;
   
-  --accent: #FF007F; /* Hot Pink/Magenta */
+  --accent: #FF007F;
   --accent-foreground: #F8FAFC;
 
-  /* Surfaces - Highly translucent for Aurora bleed-through */
+  /* Component Surface Tokens */
   --card: rgba(15, 15, 25, 0.2);
   --card-foreground: #F8FAFC;
   --popover: rgba(10, 10, 18, 0.6);

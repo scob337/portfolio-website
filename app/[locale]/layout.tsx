@@ -115,7 +115,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
       <head>
-      <meta name="google-adsense-account" content="ca-pub-1055762061541058"></meta>
+        <meta name="google-adsense-account" content="ca-pub-1055762061541058"></meta>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -124,135 +124,52 @@ export default async function LocaleLayout({
               "@type": ["Person", "ProfessionalService"],
               name: "Abdeltawab Sha`ban",
               alternateName: "عبد التواب شعبان",
-              jobTitle: "Junior Front-End Developer",
-              description: "Professional Junior front-end developer specializing in React, Next.js, and modern web technologies.",
-              url: "https://abdo-front-end.netlify.app",
+              jobTitle: "Front-End Developer",
+              description: "Professional front-end developer specializing in React, Next.js, and modern web technologies.",
+              url: "https://abdeltawab.com",
               email: "scob198350@gmail.com",
               telephone: "+201117218756",
-              image: "https://abdo-front-end.netlify.app/Logo.png",
+              image: "https://abdeltawab.com/Logo.png",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Giza",
                 addressRegion: "Giza Governorate",
                 addressCountry: "Egypt",
-                postalCode: "12345"
-              },
-              geo: {
-                "@type": "GeoCoordinates",
-                latitude: "30.0444",
-                longitude: "31.2357"
               },
               sameAs: [
-                "https://github.com/abdeltawab",
+                "https://github.com/scob337",
                 "https://linkedin.com/in/abdeltawab",
-                "https://twitter.com/abdeltawab_dev"
               ],
               knowsAbout: [
-                "React",
-                "Next.js",
-                "TypeScript",
-                "JavaScript",
-                "HTML5",
-                "CSS3",
-                "Tailwind CSS",
-                "Web Development",
-                "Front-End Development",
-                "Responsive Design",
-                "Progressive Web Apps",
-                "Performance Optimization",
-                "SEO",
-                "Accessibility",
-                "UI/UX Design",
-                "API Integration",
-                "Database Design",
-                "Version Control",
-                "Agile Development"
-              ],
-              hasOccupation: {
-                "@type": "Occupation",
-                name: "Front-End Developer",
-                occupationLocation: {
-                  "@type": "Country",
-                  name: "Egypt"
-                },
-                skills: [
-                  "React", "Next.js", "TypeScript", "JavaScript", "HTML", "CSS",
-                  "Tailwind CSS", "Responsive Design", "Performance Optimization"
-                ]
-              },
-              worksFor: {
-                "@type": "Organization",
-                name: "Freelance",
-                description: "Independent front-end development services"
-              },
-              offers: {
-                "@type": "Service",
-                name: "Front-End Development Services",
-                description: "Professional web development services including React, Next.js, and modern web technologies",
-                provider: {
-                  "@type": "Person",
-                  name: "Abdeltawab Sha`ban"
-                },
-                areaServed: "Worldwide",
-                availableLanguage: ["English", "Arabic"]
-              }
-            }),
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              name: "Abdeltawab Sha`ban Portfolio",
-              alternateName: "عبد التواب شعبان - معرض الأعمال",
-              url: "https://abdo-front-end.netlify.app",
-              description: "Professional portfolio showcasing modern web development projects and services",
-              author: {
-                "@type": "Person",
-                name: "Abdeltawab Sha`ban"
-              },
-              inLanguage: ["en", "ar"],
-              potentialAction: {
-                "@type": "SearchAction",
-                target: "https://abdo-front-end.netlify.app/search?q={search_term_string}",
-                "query-input": "required name=search_term_string"
-              }
+                "React", "Next.js", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Web Performance", "SEO", "Accessibility"
+              ]
             }),
           }}
         />
         <link rel="icon" href="/favicon.ico" />
         <link rel="icon" href="/Logo.png" />
         <link rel="apple-touch-icon" href="/Logo.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/Logo.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/Logo.png" />
         <link rel="manifest" href="/site.webmanifest" />
-        <meta name="theme-color" content="#0a192f" />
-        <meta name="msapplication-TileColor" content="#0a192f" />
+        <meta name="theme-color" content="#05050A" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <meta name="apple-mobile-web-app-title" content="Abdeltawab Portfolio" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="HandheldFriendly" content="True" />
-        <meta name="MobileOptimized" content="320" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
           href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
         />
-        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
       </head>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased relative`}>
+        <a 
+          href="#main-content" 
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-md transition-all duration-300"
+        >
+          {locale === "ar" ? "تجاوز إلى المحتوى" : "Skip to content"}
+        </a>
         <BackgroundShapes />
         <NextIntlClientProvider messages={messages}>
           <Navigation />
-          <main className="pt-20">
+          <main id="main-content" className="pt-20">
             <Suspense fallback={null}>{children}</Suspense>
           </main>
           <Footer />
