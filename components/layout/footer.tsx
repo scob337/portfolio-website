@@ -110,7 +110,7 @@ export function Footer() {
                 whileHover={{ x: 4 }}
               >
                 <span className="text-accent">📱</span>
-                {personalInfo.phone}
+                {Array.isArray(personalInfo.phone) ? personalInfo.phone.join(" / ") : personalInfo.phone}
               </motion.div>
               <motion.div
                 className="flex items-center gap-3 text-slate-400 text-sm"

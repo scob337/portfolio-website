@@ -128,7 +128,7 @@ export function AboutSection() {
   const details = [
     { label: t("details.city"), value: personalInfo.city },
     { label: t("details.email"), value: personalInfo.email },
-    { label: t("details.phone"), value: personalInfo.phone },
+    { label: t("details.phone"), value: Array.isArray(personalInfo.phone) ? personalInfo.phone.join(" / ") : personalInfo.phone },
   ]
 
   return (

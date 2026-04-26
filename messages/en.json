@@ -34,11 +34,11 @@
       "freelance": "Availability"
     },
     "values": {
-      "age": "27",
+      "age": "28",
       "city": "Giza, Egypt",
       "birthday": "March 23, 1998",
       "email": "scob198350@gmail.com",
-      "phone": "+201117218756",
+      "phone": "+201117218756 / 01206228285",
       "degree": "Advanced Technical Studies",
       "freelance": "Open for Strategic Partnerships"
     },
@@ -213,17 +213,17 @@
     "stats": {
       "title": "Performance Metrics",
       "items": {
-        "1": "Successful Projects",
-        "2": "Software Solutions",
-        "3": "Mastered Techs",
-        "4": "Development Hours"
+        "experience": "Year of Excellence",
+        "projects": "Strategic Projects",
+        "clients": "Happy Clients",
+        "hours": "Freelance Hours"
       },
       "testimonials": {
         "title": "Client Feedback",
         "items": {
-          "1": "Abdeltawab did a great job on our e-commerce site. He was very cooperative and precise in execution.",
-          "2": "Working with Abdeltawab was a great experience. He turned our ideas into reality with high performance.",
-          "3": "His ability to implement designs accurately and quickly is amazing. He is a very promising and committed developer."
+          "1": "Ahmed did a great job on our e-commerce site. He was very cooperative and precise in execution.",
+          "2": "Working with Mohamed was a great experience. He turned our ideas into reality with high performance.",
+          "3": "Yasser's ability to implement designs accurately and quickly is amazing. He is a very promising and committed developer."
         }
       }
     },
@@ -249,7 +249,7 @@
     "present": "Current Engagement"
   },
   "footer": {
-    "copyright": "© 2025 Abdeltawab Sha`ban. All Rights Reserved.",
+    "copyright": "© 2026 Abdeltawab Sha`ban. All Rights Reserved.",
     "nav": "Strategic Navigation",
     "contact": "Contact & Inquiry",
     "tagline": "Architecting the next generation of web experiences through performance-driven engineering and strategic design.",

@@ -41,7 +41,7 @@ export function PersonalDetails() {
     {
       icon: Phone,
       label: t("items.Phone"),
-      value: personalInfo.phone,
+      value: Array.isArray(personalInfo.phone) ? personalInfo.phone.join(" / ") : personalInfo.phone,
       color: "text-yellow-600",
     },
     {

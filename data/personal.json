@@ -1,14 +1,14 @@
 {
   "name": "Abdeltawab Sha`ban",
   "title": "Front-End Developer",
-  "age": 27,
+  "age": 28,
   "city": "Giza, Egypt",
-  "birthday": "23 March 1998",
+  "birthday": "1998-03-23",
   "email": "scob198350@gmail.com",
-  "phone": "+201117218756",
+  "phone": ["+201117218756", "01206228285"],
   "degree": "High School",
   "freelance": "Available",
-  "bio": "Hello, I'm Abdeltawab Sha`ban, a 27-year-old front-end developer from Egypt. With hands-on experience in building dynamic user interfaces and an online store using ReactJS, I'm passionate about learning and continuously evolving to stand out in the competitive tech industry, prove my worth, and leave a strong impact.",
+  "bio": "Hello, I'm Abdeltawab Sha`ban, a {{age}}-year-old front-end developer from Egypt. With hands-on experience in building dynamic user interfaces and an online store using ReactJS, I'm passionate about learning and continuously evolving to stand out in the competitive tech industry, prove my worth, and leave a strong impact.",
   "heroKeywords": ["Web Developer", "React Developer", "Next.js Developer", "UI/UX Designer", "Frontend Specialist"],
   "socialLinks": {
     "github": "https://github.com/scob337",

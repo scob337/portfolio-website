@@ -20,8 +20,8 @@ export function ContactInfo() {
     {
       icon: Phone,
       label: t("info.phone"),
-      value: personalInfo.phone,
-      href: `tel:${personalInfo.phone}`,
+      value: Array.isArray(personalInfo.phone) ? personalInfo.phone.join(" / ") : personalInfo.phone,
+      href: Array.isArray(personalInfo.phone) ? `tel:${personalInfo.phone[0]}` : `tel:${personalInfo.phone}`,
     },
     {
       icon: MapPin,

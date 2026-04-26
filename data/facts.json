@@ -32,28 +32,28 @@
   "testimonials": [
     {
       "id": 1,
-      "name": "Sarah Johnson",
-      "position": "Project Manager",
-      "company": "Tech Solutions Inc.",
-      "content": "Abdeltawab delivered exceptional work on our e-commerce platform. His attention to detail and technical expertise made the project a huge success.",
+      "name": "أحمد كمال",
+      "position": "مدير مشروع",
+      "company": "شركة النيل للنظم",
+      "content": "عبد التواب قدم عملاً استثنائياً في تطوير متجرنا الإلكتروني. اهتمامه بالتفاصيل وخبرته التقنية جعلت المشروع نجاحاً كبيراً.",
       "rating": 5,
       "image": "/placeholder.svg?height=80&width=80"
     },
     {
       "id": 2,
-      "name": "Ahmed Hassan",
-      "position": "CEO",
-      "company": "Digital Marketing Pro",
-      "content": "Working with Abdeltawab was a pleasure. He understood our requirements perfectly and delivered a beautiful, responsive website that exceeded our expectations.",
+      "name": "محمد إبراهيم",
+      "position": "مؤسس",
+      "company": "متجر التقنية العربي",
+      "content": "التعامل مع عبد التواب كان تجربة ممتازة. لقد فهم متطلباتنا تماماً وقدم موقعاً جميلاً ومتجاوباً تجاوز توقعاتنا.",
       "rating": 5,
       "image": "/placeholder.svg?height=80&width=80"
     },
     {
       "id": 3,
-      "name": "Maria Rodriguez",
-      "position": "Design Director",
-      "company": "Creative Studio",
-      "content": "Abdeltawab's ability to translate designs into pixel-perfect code is remarkable. He's reliable, professional, and delivers high-quality work consistently.",
+      "name": "ياسر محمود",
+      "position": "مدير تقني",
+      "company": "ستارت أب مصر",
+      "content": "قدرة عبد التواب على تحويل التصاميم إلى كود برمج بدقة عالية أمر مذهل. إنه محترف، ملتزم، ويقدم عملاً عالي الجودة باستمرار.",
       "rating": 5,
       "image": "/placeholder.svg?height=80&width=80"
     }

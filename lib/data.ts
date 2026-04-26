@@ -4,8 +4,26 @@ import projectsData from "@/data/projects.json"
 import experienceData from "@/data/experience.json"
 import factsData from "@/data/facts.json"
 
+const calculateAge = (birthday: string) => {
+  const birthDate = new Date(birthday)
+  const today = new Date()
+  let age = today.getFullYear() - birthDate.getFullYear()
+  const m = today.getMonth() - birthDate.getMonth()
+  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+    age--
+  }
+  return age
+}
+
 // Personal Information
-export const getPersonalInfo = () => personalData
+export const getPersonalInfo = () => {
+  const age = calculateAge(personalData.birthday)
+  return {
+    ...personalData,
+    age,
+    bio: personalData.bio.replace("{{age}}", age.toString()),
+  }
+}
 
 // Skills
 export const getSkills = () => skillsData
