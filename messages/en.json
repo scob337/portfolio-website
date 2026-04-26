@@ -229,17 +229,7 @@
     },
     "resume": {
       "title": "Professional Portfolio",
-      "download": "Download Technical Resume",
-      "education": {
-        "title": "Continuous Education",
-        "items": {
-          "1": {
-            "degree": "Advanced Self-Directed Learning",
-            "institution": "Global Tech Ecosystem",
-            "description": "Continuous mastery of emerging web technologies and architectural patterns."
-          }
-        }
-      }
+      "download": "Download Technical Resume"
     }
   },
   "experience": {
