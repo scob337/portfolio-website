@@ -125,6 +125,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-W8XVP7QZ');`,
           }}
         />
+
+        {/* End Google Tag Manager */}
         {/* End Google Tag Manager */}
         <meta name="google-adsense-account" content="ca-pub-1055762061541058" />
         <script
