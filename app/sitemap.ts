@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { articlesData } from '@/lib/articles'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://abdo-front-end.netlify.app";
+  const baseUrl = "https://abdeltawab.com";
   const locales = ["en", "ar"];
   const staticRoutes = ["", "/about", "/projects", "/articles", "/contact"];
 

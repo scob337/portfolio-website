@@ -144,8 +144,8 @@ export function AboutSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-7xl font-black mb-4 section-title inline-block tracking-tighter neon-text-glow">
-            <span className="bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/50">
+          <h2 className="text-5xl md:text-7xl font-bold mb-4 section-title inline-block tracking-tight">
+            <span className="text-foreground">
               {t("title")}
             </span>
           </h2>
@@ -188,10 +188,7 @@ export function AboutSection() {
                 viewport={{ once: true }}
                 className="glass rounded-3xl p-6 flex flex-col items-center justify-center text-center group hover:bg-white/5 transition-all duration-500 relative overflow-hidden"
               >
-                <div className="absolute -right-4 -top-4 opacity-5 group-hover:scale-110 group-hover:opacity-10 transition-all duration-700 ease-out text-[#B026FF]">
-                  <Icon className="w-24 h-24" />
-                </div>
-                <div className="text-4xl lg:text-5xl font-black text-foreground mb-2">
+                <div className="text-4xl lg:text-5xl font-bold text-foreground mb-2">
                   <AnimatedCounter value={stat.value} suffix={stat.suffix} />
                 </div>
                 <p className="text-xs font-medium uppercase tracking-widest text-[#00FFCC]/80 transition-colors">{stat.label}</p>
@@ -229,10 +226,7 @@ export function AboutSection() {
                 viewport={{ once: true }}
                 className="glass rounded-3xl p-6 flex flex-col items-center justify-center text-center group hover:bg-white/5 transition-all duration-500 relative overflow-hidden"
               >
-                 <div className="absolute -right-4 -top-4 opacity-5 group-hover:scale-110 group-hover:opacity-10 transition-all duration-700 ease-out text-[#00FFCC]">
-                  <Icon className="w-24 h-24" />
-                </div>
-                <div className="text-4xl lg:text-5xl font-black text-foreground mb-2">
+                <div className="text-4xl lg:text-5xl font-bold text-foreground mb-2">
                   <AnimatedCounter value={stat.value} suffix={stat.suffix} />
                 </div>
                 <p className="text-xs font-medium uppercase tracking-widest text-[#B026FF]/80 transition-colors">{stat.label}</p>

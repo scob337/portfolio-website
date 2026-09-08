@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from "react"
 import { useTranslations } from "next-intl"
 import { motion, useAnimationFrame } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { ArrowDown, Github, Linkedin, Mail, Sparkles, Code2 } from "lucide-react"
+import { ArrowDown, Github, Linkedin, Mail } from "lucide-react"
 import { getPersonalInfo } from "@/lib/data"
 import Link from "next/link"
 import Image from "next/image"
@@ -64,9 +64,8 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 glass-strong px-5 py-2.5 rounded-full text-xs font-mono uppercase tracking-widest text-primary mb-10 shadow-2xl"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-mono tracking-wide bg-secondary text-primary mb-8"
           >
-            <Sparkles className="h-4 w-4 animate-spin-slow text-accent" />
             {t("greeting")}
           </motion.div>
 
@@ -75,9 +74,9 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-5xl md:text-7xl lg:text-[6rem] font-black tracking-tighter mb-4 leading-[0.9] neon-text-glow"
+            className="text-5xl md:text-7xl lg:text-[6rem] font-bold tracking-tight mb-6 leading-tight text-foreground"
           >
-            <span className="bg-clip-text text-transparent bg-gradient-to-br from-foreground via-foreground to-foreground/30">
+            <span>
               {t("name")}
             </span>
           </motion.h1>
@@ -112,22 +111,22 @@ export function HeroSection() {
           >
             <Button
               size="lg"
-              className="text-lg px-10 py-7 font-bold rounded-2xl bg-[#00FFCC] text-[#05050A] hover:bg-[#00FFCC]/90 relative overflow-hidden group shadow-[0_0_40px_-10px_#00FFCC]"
+              className="text-lg px-8 py-6 rounded-xl bg-foreground text-background hover:bg-foreground/90 transition-all font-medium"
               asChild
             >
               <Link href="#projects">
-                <span className="relative z-10">{t("cta")}</span>
-                <div className="absolute inset-0 bg-white/30 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
+                {t("cta")}
               </Link>
             </Button>
             <Button
               size="lg"
-              className="text-lg px-10 py-7 font-semibold rounded-2xl glass-strong text-foreground hover:text-white hover:border-[#B026FF]/50 hover:shadow-[0_0_20px_-5px_#B026FF] transition-all duration-300 group"
+              variant="outline"
+              className="text-lg px-8 py-6 rounded-xl transition-all font-medium"
               asChild
             >
               <Link href="/contact">
                 {t("contact")}
-                <ArrowDown className="ml-2 h-5 w-5 -rotate-90 group-hover:translate-x-1 transition-transform" />
+                <ArrowDown className="ml-2 h-5 w-5 -rotate-90 group-hover:translate-x-1" />
               </Link>
             </Button>
           </motion.div>
@@ -162,68 +161,28 @@ export function HeroSection() {
 
           {/* Right Column - Extravagant Animated Image */}
           <motion.div 
-            initial={{ opacity: 0, scale: 0.8, rotateY: 30 }}
-            animate={{ opacity: 1, scale: 1, rotateY: 0 }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.4, type: "spring" }}
-            className="order-1 lg:order-2 flex justify-center items-center relative perspective-1000 w-full mb-10 lg:mb-0"
+            className="order-1 lg:order-2 flex justify-center items-center relative w-full mb-10 lg:mb-0"
           >
-            {/* Massive Glowing Behind Aura */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-[#00FFCC] via-[#B026FF] to-[#FF007F] opacity-20 blur-[120px] animate-pulse rounded-full w-[80%] h-[80%] m-auto" />
-            
-            {/* Animated Ring 1 */}
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-              className="absolute w-[110%] h-[110%] border border-[#00FFCC]/10 rounded-full hidden lg:block"
-            />
-            
-            {/* Animated Ring 2 */}
-            <motion.div
-              animate={{ rotate: -360 }}
-              transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-              className="absolute w-[120%] h-[120%] border border-[#B026FF]/10 rounded-full hidden lg:block"
-            />
-
             {/* The Floating Frame */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
+              initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-[480px] lg:h-[480px] rounded-[3.5rem] p-1 z-10"
+              className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-[480px] lg:h-[480px] rounded-[2rem] p-[2px] z-10 bg-gradient-to-br from-border to-transparent"
             >
-              <div className="absolute inset-0 rounded-[3.5rem] bg-gradient-to-br from-primary/20 via-accent/20 to-primary/20 blur-[2px]" />
               
-              <div className="relative w-full h-full rounded-[3.3rem] bg-[#05050A] overflow-hidden group shadow-2xl border border-white/5">
+              <div className="relative w-full h-full rounded-[1.9rem] bg-card overflow-hidden group shadow-lg">
                 {/* Image */}
                 <Image 
                   src="https://github.com/scob337.png" 
                   alt={personalInfo.name}
                   fill
                   priority
-                  className="object-cover opacity-90 group-hover:opacity-100 transition-all duration-700 ease-out"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 />
-                
-                {/* Subtle Glossy Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-white/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                
-                {/* Tech Scanline Effect - Subtler */}
-                <div className="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.05)_50%)] bg-[size:100%_4px] pointer-events-none opacity-10" />
-                
-                {/* Tech Overlays inside image block - Refined */}
-                <div className="absolute bottom-6 left-6 right-6 p-5 rounded-2xl glass-strong border border-white/10 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 backdrop-blur-xl shadow-2xl">
-                  <div className="flex items-center gap-4">
-                    <div className="p-2.5 rounded-xl bg-primary/10 border border-primary/20">
-                      <Code2 className="w-5 h-5 text-primary" />
-                    </div>
-                    <div className="text-start">
-                      <p className="text-xs text-primary font-black tracking-widest uppercase mb-0.5">{t("role")}</p>
-                      <div className="flex items-center gap-1.5">
-                        <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-                        <p className="text-[9px] text-white/50 font-bold tracking-tighter uppercase">{personalInfo.city}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </motion.div>
           </motion.div>

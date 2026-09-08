@@ -146,9 +146,9 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     alternates: {
       languages: {
-        "en": "https://abdo-front-end.netlify.app/articles/corporate-website",
-        "ar": "https://abdo-front-end.netlify.app/ar/articles/corporate-website",
-        "x-default": "https://abdo-front-end.netlify.app/articles/corporate-website",
+        "en": "https://abdeltawab.com/articles/corporate-website",
+        "ar": "https://abdeltawab.com/ar/articles/corporate-website",
+        "x-default": "https://abdeltawab.com/articles/corporate-website",
       }
     }
   }
@@ -234,7 +234,7 @@ export default async function CorporateWebsitePage() {
         __html: JSON.stringify({
           "@context": "https://schema.org", "@type": "Article",
           "headline": content.title, "description": content.subtitle,
-          "image": "https://abdo-front-end.netlify.app/articles/corporate-website.svg",
+          "image": "https://abdeltawab.com/articles/corporate-website.svg",
           "datePublished": "2024-01-25",
           "author": { "@type": "Person", "name": "Abdeltawab Sha`ban" },
           "inLanguage": isArabic ? "ar" : "en"

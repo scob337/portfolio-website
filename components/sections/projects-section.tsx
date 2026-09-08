@@ -71,8 +71,8 @@ export function ProjectsSection() {
               whileTap={{ scale: 0.97 }}
               className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
                 activeFilter === f
-                  ? "bg-[#00FFCC] text-[#05050A] shadow-[0_0_20px_-5px_#00FFCC]"
-                  : "glass border-white/10 text-muted-foreground hover:text-white hover:border-[#00FFCC]/50 hover:shadow-[0_0_15px_rgba(0,255,204,0.2)]"
+                  ? "bg-foreground text-background"
+                  : "glass border-white/10 text-muted-foreground hover:text-foreground hover:border-border/50"
               }`}
             >
               {filterLabels[f]}
@@ -94,7 +94,7 @@ export function ProjectsSection() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
-              className={`group bg-white/[0.01] border border-white/[0.05] hover:bg-white/[0.03] hover:border-[#00FFCC]/40 backdrop-blur-xl rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.5)] hover:shadow-[0_0_30px_rgba(0,255,204,0.15)] transition-all duration-500 flex flex-col relative ${
+              className={`group bg-card border border-border hover:border-foreground/40 backdrop-blur-xl rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 flex flex-col relative ${
                 isFeatured ? "md:col-span-2 md:row-span-2 min-h-[400px] md:min-h-[800px]" : "col-span-1 row-span-1 min-h-[400px]"
               }`}
             >
@@ -144,7 +144,7 @@ export function ProjectsSection() {
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#00FFCC]/10 text-[#00FFCC] border border-[#00FFCC]/30 text-sm font-semibold hover:bg-[#00FFCC] hover:text-[#05050A] hover:shadow-[0_0_20px_rgba(0,255,204,0.4)] transition-all duration-300"
+                      className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary/10 text-primary border border-primary/30 text-sm font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300"
                     >
                       <ExternalLink className="h-4 w-4" />
                       {t("liveDemo")}
@@ -153,7 +153,7 @@ export function ProjectsSection() {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#B026FF]/10 text-[#B026FF] border border-[#B026FF]/30 text-sm font-semibold hover:bg-[#B026FF] hover:text-white hover:shadow-[0_0_20px_rgba(176,38,255,0.4)] transition-all duration-300"
+                      className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-accent/10 text-accent border border-accent/20 text-sm font-semibold hover:bg-accent hover:text-accent-foreground transition-all duration-300"
                     >
                       <Github className="h-4 w-4" />
                       {t("code")}

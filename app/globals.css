@@ -4,31 +4,31 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Core Design System Tokens */
-  --background: #05050A;
-  --foreground: #F8FAFC;
+  /* Core Design System Tokens (Comfortable Dark Theme) */
+  --background: #09090B; /* Zinc 950 */
+  --foreground: #FAFAFA; /* Zinc 50 */
   
   /* Brand Identity Colors */
-  --primary: #00FFCC; 
-  --primary-foreground: #05050A;
+  --primary: #FAFAFA; 
+  --primary-foreground: #09090B;
   
-  --secondary: #B026FF;
-  --secondary-foreground: #F8FAFC;
+  --secondary: #27272A; /* Zinc 800 */
+  --secondary-foreground: #FAFAFA;
   
-  --accent: #FF007F;
-  --accent-foreground: #F8FAFC;
+  --accent: #3B82F6; /* Soft Blue 500 for subtle highlights */
+  --accent-foreground: #FAFAFA;
 
   /* Component Surface Tokens */
-  --card: rgba(15, 15, 25, 0.2);
-  --card-foreground: #F8FAFC;
-  --popover: rgba(10, 10, 18, 0.6);
-  --popover-foreground: #F8FAFC;
+  --card: rgba(24, 24, 27, 0.7); /* Zinc 900 */
+  --card-foreground: #FAFAFA;
+  --popover: rgba(24, 24, 27, 0.9);
+  --popover-foreground: #FAFAFA;
   
-  --muted: #1A1A2E;
-  --muted-foreground: #8B8C9E;
+  --muted: #27272A;
+  --muted-foreground: #A1A1AA; /* Zinc 400 */
   
-  --destructive: #FF3366;
-  --destructive-foreground: #FFFFFF;
+  --destructive: #EF4444; /* Red 500 */
+  --destructive-foreground: #FAFAFA;
   
   /* Elegant, barely-there borders */
   --border: rgba(255, 255, 255, 0.05);
@@ -44,15 +44,15 @@
 }
 
 .dark {
-  --background: #05050A;
-  --foreground: #F8FAFC;
-  --card: rgba(15, 15, 25, 0.3);
-  --card-foreground: #F8FAFC;
-  --primary: #00FFCC;
-  --accent: #FF007F;
-  --border: rgba(255, 255, 255, 0.08);
+  --background: #09090B;
+  --foreground: #FAFAFA;
+  --card: rgba(24, 24, 27, 0.8);
+  --card-foreground: #FAFAFA;
+  --primary: #FAFAFA;
+  --accent: #3B82F6;
+  --border: rgba(255, 255, 255, 0.1);
   --glass-bg: rgba(255, 255, 255, 0.02);
-  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.05);
 }
 
 @theme inline {
@@ -125,8 +125,8 @@
   }
 
   ::selection {
-    background: rgba(0, 255, 204, 0.3); /* Cyan selection */
-    color: #05050A;
+    background: rgba(255, 255, 255, 0.15); /* Soft selection */
+    color: #FAFAFA;
   }
 
   [dir="rtl"] { direction: rtl; }
@@ -263,24 +263,23 @@
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #00FFCC 0%, #B026FF 50%, #FF007F 100%);
+  background: linear-gradient(135deg, #FAFAFA 0%, #A1A1AA 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: shimmer 4s linear infinite;
 }
 
 .gradient-text-static {
-  background: linear-gradient(135deg, #00FFCC 0%, #B026FF 100%);
+  background: linear-gradient(135deg, #FAFAFA 0%, #D4D4D8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Extreme Neon Text Glow */
+/* Subdued Glow effect */
 .neon-text-glow {
-  text-shadow: 0 0 10px rgba(0,255,204,0.4), 0 0 30px rgba(0,255,204,0.2), 0 0 60px rgba(176,38,255,0.2);
+  text-shadow: none;
 }
 
 .neon-border {

@@ -6,6 +6,7 @@ import { BackgroundShapes } from "@/components/ui/background-shapes"
 import "./globals.css"
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://abdeltawab.com"),
   title: {
     default: "عبد التواب شعبان | مطور واجهات أمامية محترف",
     template: "%s | عبد التواب شعبان"
@@ -35,12 +36,26 @@ export const metadata: Metadata = {
     siteName: "Portfolio | Abdeltawab",
     locale: "ar_SA",
     type: "website",
+    images: [
+      {
+        url: "/Logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Abdeltawab Sha`ban Logo",
+      }
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Abdeltawab Sha`ban | Front-End Developer",
     description: "Professional Front-End Developer specializing in modern web technologies.",
+    images: ["/Logo.png"],
   },
+  icons: {
+    icon: "/Logo.png",
+    apple: "/Logo.png",
+  },
+  manifest: "/site.webmanifest",
 }
 
 export default function RootLayout({
