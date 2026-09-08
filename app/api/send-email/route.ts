@@ -112,8 +112,75 @@ export async function POST(request: NextRequest) {
       `,
     }
 
-    // Send email
+    // Send email to Admin
     await transporter.sendMail(mailOptions)
+
+    // Auto-Reply Email Content
+    const autoReplyOptions = {
+      from: `"Abdo Front-End" <${process.env.EMAIL_USER}>`,
+      to: email,
+      subject: `Thank you for your message, ${name}!`,
+      html: `
+        <!DOCTYPE html>
+        <html dir="ltr" lang="en">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Thank You for Reaching Out</title>
+        </head>
+        <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #f4f4f5; text-align: center;">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #f4f4f5; padding: 40px 0;">
+            <tr>
+              <td align="center">
+                <table width="600" border="0" cellspacing="0" cellpadding="0" style="background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); text-align: left; margin: 0 auto;">
+                  
+                  <!-- Header -->
+                  <tr>
+                    <td style="background-color: #2563eb; padding: 40px 30px; text-align: center;">
+                      <h1 style="color: #ffffff; margin: 0; font-size: 24px; font-weight: 600; letter-spacing: -0.5px;">Thank You, ${name}!</h1>
+                    </td>
+                  </tr>
+                  
+                  <!-- Message Content -->
+                  <tr>
+                    <td style="padding: 40px 30px 40px 30px;">
+                      <p style="color: #334155; font-size: 16px; line-height: 1.6; margin: 0 0 20px 0;">
+                        Hello <strong>${name}</strong>,<br><br>
+                        This is an automated message to let you know that I have received your inquiry. Thank you for reaching out to me!
+                      </p>
+                      
+                      <div style="background-color: #f8fafc; border-left: 4px solid #2563eb; border-radius: 0 6px 6px 0; padding: 20px; margin-bottom: 20px;">
+                        <p style="color: #475569; font-size: 14px; margin: 0; font-style: italic;">
+                          "I will review your message regarding <strong>${subject}</strong> and get back to you as soon as possible."
+                        </p>
+                      </div>
+                      
+                      <p style="color: #334155; font-size: 16px; line-height: 1.6; margin: 0;">
+                        Best regards,<br>
+                        <strong>Abdo Front-End</strong>
+                      </p>
+                    </td>
+                  </tr>
+                  
+                  <!-- Footer -->
+                  <tr>
+                    <td style="background-color: #f8fafc; padding: 25px 30px; text-align: center; border-top: 1px solid #e2e8f0;">
+                      <p style="color: #64748b; margin: 0; font-size: 13px;">Please do not reply to this automated email.</p>
+                      <p style="color: #94a3b8; margin: 5px 0 0 0; font-size: 12px;">© ${new Date().getFullYear()} Abdo Front-End. All rights reserved.</p>
+                    </td>
+                  </tr>
+                  
+                </table>
+              </td>
+            </tr>
+          </table>
+        </body>
+        </html>
+      `,
+    }
+    
+    // Send auto-reply to the user
+    await transporter.sendMail(autoReplyOptions)
 
     return NextResponse.json(
       { message: 'تم إرسال الرسالة بنجاح!' },
