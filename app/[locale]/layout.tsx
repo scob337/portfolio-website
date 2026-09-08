@@ -126,10 +126,10 @@ export default async function LocaleLayout({
               alternateName: "عبد التواب شعبان",
               jobTitle: "Front-End Developer",
               description: "Professional front-end developer specializing in React, Next.js, and modern web technologies.",
-              url: "https://abdeltawab.com",
+              url: "https://abdo-web-portfolio.vercel.app/",
               email: "scob198350@gmail.com",
               telephone: "+201117218756",
-              image: "https://abdeltawab.com/Logo.png",
+              image: "https://abdo-web-portfolio.vercel.app//Logo.png",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Giza",
@@ -160,8 +160,8 @@ export default async function LocaleLayout({
         />
       </head>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased relative`}>
-        <a 
-          href="#main-content" 
+        <a
+          href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-md transition-all duration-300"
         >
           {locale === "ar" ? "تجاوز إلى المحتوى" : "Skip to content"}

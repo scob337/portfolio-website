@@ -150,9 +150,9 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     alternates: {
       languages: {
-        "en": "https://abdeltawab.com/articles/ecommerce-website",
-        "ar": "https://abdeltawab.com/ar/articles/ecommerce-website",
-        "x-default": "https://abdeltawab.com/articles/ecommerce-website",
+        "en": "https://abdo-web-portfolio.vercel.app//articles/ecommerce-website",
+        "ar": "https://abdo-web-portfolio.vercel.app//ar/articles/ecommerce-website",
+        "x-default": "https://abdo-web-portfolio.vercel.app//articles/ecommerce-website",
       }
     }
   }
@@ -238,7 +238,7 @@ export default async function EcommerceWebsitePage() {
         __html: JSON.stringify({
           "@context": "https://schema.org", "@type": "Article",
           "headline": content.title, "description": content.subtitle,
-          "image": "https://abdeltawab.com/articles/ecommerce-website.svg",
+          "image": "https://abdo-web-portfolio.vercel.app//articles/ecommerce-website.svg",
           "datePublished": "2024-02-01",
           "author": { "@type": "Person", "name": "Abdeltawab Sha`ban" },
           "inLanguage": isArabic ? "ar" : "en"

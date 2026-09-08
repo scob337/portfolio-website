@@ -34,7 +34,7 @@ export async function generateMetadata(): Promise<Metadata> {
         : "Expert insights on web development and digital marketing",
       type: "website",
       locale: isArabic ? "ar_EG" : "en_US",
-      url: `https://abdeltawab.com${isArabic ? "/ar" : ""}/articles`,
+      url: `https://abdo-web-portfolio.vercel.app/${isArabic ? "/ar" : ""}/articles`,
       images: [
         {
           url: "/Logo.png",
@@ -55,11 +55,11 @@ export async function generateMetadata(): Promise<Metadata> {
       images: ["/Logo.png"]
     },
     alternates: {
-      canonical: `https://abdeltawab.com${isArabic ? "/ar" : ""}/articles`,
+      canonical: `https://abdo-web-portfolio.vercel.app/${isArabic ? "/ar" : ""}/articles`,
       languages: {
-        "en": "https://abdeltawab.com/articles",
-        "ar": "https://abdeltawab.com/ar/articles",
-        "x-default": "https://abdeltawab.com/articles",
+        "en": "https://abdo-web-portfolio.vercel.app//articles",
+        "ar": "https://abdo-web-portfolio.vercel.app//ar/articles",
+        "x-default": "https://abdo-web-portfolio.vercel.app//articles",
       }
     }
   }
@@ -220,7 +220,7 @@ export default async function ArticlesPage() {
             "description": isArabic
               ? "مجموعة من المقالات المتخصصة في تطوير الويب والتسويق الرقمي"
               : "A collection of specialized articles on web development and digital marketing",
-            "url": `https://abdeltawab.com${isArabic ? "/ar" : ""}/articles`,
+            "url": `https://abdo-web-portfolio.vercel.app/${isArabic ? "/ar" : ""}/articles`,
             "inLanguage": isArabic ? "ar" : "en",
             "mainEntity": {
               "@type": "ItemList",
@@ -232,13 +232,13 @@ export default async function ArticlesPage() {
                   "@type": "Article",
                   "headline": article.title,
                   "description": article.excerpt,
-                  "image": `https://abdeltawab.com${article.image}`,
+                  "image": `https://abdo-web-portfolio.vercel.app/${article.image}`,
                   "datePublished": article.publishDate,
                   "author": {
                     "@type": "Person",
                     "name": "Abdeltawab Sha`ban"
                   },
-                  "url": `https://abdeltawab.com${isArabic ? "/ar" : ""}/articles/${article.id}`
+                  "url": `https://abdo-web-portfolio.vercel.app/${isArabic ? "/ar" : ""}/articles/${article.id}`
                 }
               }))
             }

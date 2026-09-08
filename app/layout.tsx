@@ -6,7 +6,7 @@ import { BackgroundShapes } from "@/components/ui/background-shapes"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://abdeltawab.com"),
+  metadataBase: new URL("https://abdo-web-portfolio.vercel.app/"),
   title: {
     default: "عبد التواب شعبان | مطور واجهات أمامية محترف",
     template: "%s | عبد التواب شعبان"
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     "عبد التواب شعبان",
     "Abdeltawab Sha`ban"
   ],
-  authors: [{ name: "Abdeltawab Sha`ban", url: "https://abdeltawab.com" }],
+  authors: [{ name: "Abdeltawab Sha`ban", url: "https://abdo-web-portfolio.vercel.app/" }],
   creator: "Abdeltawab Sha`ban",
   themeColor: "#05050A",
   viewport: "width=device-width, initial-scale=1",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "عبد التواب شعبان | مطور واجهات أمامية",
     description: "استعرض مشاريعي وتجاربي في تطوير الويب الحديث والواجهات المبتكرة.",
-    url: "https://abdeltawab.com",
+    url: "https://abdo-web-portfolio.vercel.app/",
     siteName: "Portfolio | Abdeltawab",
     locale: "ar_SA",
     type: "website",

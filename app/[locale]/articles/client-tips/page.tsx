@@ -202,9 +202,9 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     alternates: {
       languages: {
-        "en": "https://abdeltawab.com/articles/client-tips",
-        "ar": "https://abdeltawab.com/ar/articles/client-tips",
-        "x-default": "https://abdeltawab.com/articles/client-tips",
+        "en": "https://abdo-web-portfolio.vercel.app//articles/client-tips",
+        "ar": "https://abdo-web-portfolio.vercel.app//ar/articles/client-tips",
+        "x-default": "https://abdo-web-portfolio.vercel.app//articles/client-tips",
       }
     }
   }
@@ -298,7 +298,7 @@ export default async function ClientTipsPage() {
         __html: JSON.stringify({
           "@context": "https://schema.org", "@type": "Article",
           "headline": content.title, "description": content.subtitle,
-          "image": "https://abdeltawab.com/articles/client-tips.svg",
+          "image": "https://abdo-web-portfolio.vercel.app//articles/client-tips.svg",
           "datePublished": "2024-02-05",
           "author": { "@type": "Person", "name": "Abdeltawab Sha`ban" },
           "inLanguage": isArabic ? "ar" : "en"

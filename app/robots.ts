@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: '/api/',
       },
     ],
-    sitemap: 'https://abdeltawab.com/sitemap.xml',
+    sitemap: 'https://abdo-web-portfolio.vercel.app//sitemap.xml',
   }
 }

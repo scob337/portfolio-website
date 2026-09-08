@@ -154,9 +154,9 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     alternates: {
       languages: {
-        "en": "https://abdeltawab.com/articles/landing-page-importance",
-        "ar": "https://abdeltawab.com/ar/articles/landing-page-importance",
-        "x-default": "https://abdeltawab.com/articles/landing-page-importance",
+        "en": "https://abdo-web-portfolio.vercel.app//articles/landing-page-importance",
+        "ar": "https://abdo-web-portfolio.vercel.app//ar/articles/landing-page-importance",
+        "x-default": "https://abdo-web-portfolio.vercel.app//articles/landing-page-importance",
       }
     }
   }
@@ -291,7 +291,7 @@ export default async function LandingPageImportancePage() {
             "@type": "Article",
             "headline": content.title,
             "description": content.subtitle,
-            "image": "https://abdeltawab.com/articles/landing-page.svg",
+            "image": "https://abdo-web-portfolio.vercel.app//articles/landing-page.svg",
             "datePublished": "2024-01-20",
             "author": {
               "@type": "Person",
