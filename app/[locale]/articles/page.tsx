@@ -57,9 +57,9 @@ export async function generateMetadata(): Promise<Metadata> {
     alternates: {
       canonical: `https://abdo-web-portfolio.vercel.app/${isArabic ? "/ar" : ""}/articles`,
       languages: {
-        "en": "https://abdo-web-portfolio.vercel.app//articles",
-        "ar": "https://abdo-web-portfolio.vercel.app//ar/articles",
-        "x-default": "https://abdo-web-portfolio.vercel.app//articles",
+        "en": "https://abdo-web-portfolio.vercel.app/articles",
+        "ar": "https://abdo-web-portfolio.vercel.app/ar/articles",
+        "x-default": "https://abdo-web-portfolio.vercel.app/articles",
       }
     }
   }

@@ -126,9 +126,9 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     alternates: {
       languages: {
-        "en": "https://abdo-web-portfolio.vercel.app//articles/website-importance-businesses-individuals",
-        "ar": "https://abdo-web-portfolio.vercel.app//ar/articles/website-importance-businesses-individuals",
-        "x-default": "https://abdo-web-portfolio.vercel.app//articles/website-importance-businesses-individuals",
+        "en": "https://abdo-web-portfolio.vercel.app/articles/website-importance-businesses-individuals",
+        "ar": "https://abdo-web-portfolio.vercel.app/ar/articles/website-importance-businesses-individuals",
+        "x-default": "https://abdo-web-portfolio.vercel.app/articles/website-importance-businesses-individuals",
       }
     }
   }
@@ -264,7 +264,7 @@ export default async function WebsiteImportancePage() {
             "@type": "Article",
             "headline": content.title,
             "description": content.subtitle,
-            "image": `https://abdo-web-portfolio.vercel.app//articles/website-importance.svg`,
+            "image": `https://abdo-web-portfolio.vercel.app/articles/website-importance.svg`,
             "author": {
               "@type": "Person",
               "name": "Abdeltawab Sha`ban"

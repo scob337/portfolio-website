@@ -125,8 +125,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-W8XVP7QZ');`,
           }}
         />
-
-        {/* End Google Tag Manager */}
         {/* End Google Tag Manager */}
         <meta name="google-adsense-account" content="ca-pub-1055762061541058" />
         <script
@@ -147,7 +145,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               url: "https://abdo-web-portfolio.vercel.app/",
               email: "scob198350@gmail.com",
               telephone: "+201117218756",
-              image: "https://abdo-web-portfolio.vercel.app//Logo.png",
+              image: "https://abdo-web-portfolio.vercel.app/Logo.png",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Giza",

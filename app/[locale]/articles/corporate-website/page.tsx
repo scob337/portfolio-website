@@ -146,9 +146,9 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     alternates: {
       languages: {
-        "en": "https://abdo-web-portfolio.vercel.app//articles/corporate-website",
-        "ar": "https://abdo-web-portfolio.vercel.app//ar/articles/corporate-website",
-        "x-default": "https://abdo-web-portfolio.vercel.app//articles/corporate-website",
+        "en": "https://abdo-web-portfolio.vercel.app/articles/corporate-website",
+        "ar": "https://abdo-web-portfolio.vercel.app/ar/articles/corporate-website",
+        "x-default": "https://abdo-web-portfolio.vercel.app/articles/corporate-website",
       }
     }
   }
@@ -234,7 +234,7 @@ export default async function CorporateWebsitePage() {
         __html: JSON.stringify({
           "@context": "https://schema.org", "@type": "Article",
           "headline": content.title, "description": content.subtitle,
-          "image": "https://abdo-web-portfolio.vercel.app//articles/corporate-website.svg",
+          "image": "https://abdo-web-portfolio.vercel.app/articles/corporate-website.svg",
           "datePublished": "2024-01-25",
           "author": { "@type": "Person", "name": "Abdeltawab Sha`ban" },
           "inLanguage": isArabic ? "ar" : "en"
