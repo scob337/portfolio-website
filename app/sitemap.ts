@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { articlesData } from '@/lib/articles'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://abdeltawab.com";
+  const baseUrl = "https://abdo-web-portfolio.vercel.app/";
   const locales = ["en", "ar"];
   const staticRoutes = ["", "/about", "/projects", "/articles", "/contact"];
 
@@ -43,7 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Articles
   articlesData.forEach(article => {
     const path = `/articles/${article.id}`;
-    
+
     // English
     entries.push({
       url: `${baseUrl}${path}`,
